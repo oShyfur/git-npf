@@ -1,0 +1,52 @@
+<form data-request="onSaveReorder">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-sm cbtn4 btn-primary pull-right mr10"
+                    href="<?= Backend::url('np/contents/siteblock/create')?>"><i class="icon-plus-square-o"></i> Create
+                    Block</a>
+                <button data-hotkey="ctrl+s, cmd+s" type="submit" class="btn btn-sm cbtn3 btn-success pull-right"><i
+                        class="icon-save"></i> Save
+                    Blocks</button>
+            </div>
+            <?php if(is_array($regions)):?>
+            <?php foreach($regions as $key=>$blocks):?>
+            <div class="region col-md-12 bg-info">
+                <h4><?= strtoupper($key);?></h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="<?= $key?>" class="region list-group">
+
+                            <?php if(is_array($blocks)):?>
+                            <?php foreach($blocks as $bkey => $block):?>
+                            <?php $editUrl = 'np/contents/siteblock/update/'.$block->id;?>
+                            <div class="list-group-item" data-index="<?=$bkey?>" data-id="<?=$block->id?>" data-region="<?=$key?>">
+                                <div class="row">
+                                    <div class="col-md-8" style="margin-top: 2px;">
+                                        <a class="drag-button"><i class="icon-arrows"></i></a>
+                                        <span><?= $block->title?></span>
+                                    </div>
+                                    <div class="col-md-4 block-action">
+                                        <!-- <a class="btn btn-sm btn-danger pull-right mr5"><i class="icon-trash-o"></i></a> -->
+                                        <?php if($block->type == 2):?>
+                                        <a class="btn btn-sm btn-warning pull-right"
+                                            href="<?= Backend::url($editUrl)?>"><i class="icon-pencil-square-o"></i></a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="blocks[<?= $key?>][]" value="<?= $block->id?>">
+                            </div>
+                            <?php endforeach;?>
+                            <?php endif;?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php endforeach;?>
+            <?php endif;?>
+        </div>
+    </div>
+
+</form>

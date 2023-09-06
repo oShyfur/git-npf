@@ -1,0 +1,13 @@
+title: InnovationContent
+modelClass: Np\Contents\Models\InnovationContent
+list: $/np/contents/models/innovationcontent/columns.yaml
+recordUrl: 'np/contents/innovationcontent/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,56 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    gazette_number:
+        label: 'গ্যাজেট নং'
+        span: left
+        type: text
+    mobile:
+        label: 'মোবাইল নাম্বার'
+        span: right
+        type: text
+    sector:
+        label: 'সেক্টর'
+        span: left
+        default: '0'
+        type: number
+    union:
+        label: 'ইউনিয়ন'
+        span: right
+        type: text
+    image:
+        label: 'গেজেটের ছবি'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    attachment:
+        label: 'গ্যাজেটের ফাইল (পিডিএফ)'
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: right
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

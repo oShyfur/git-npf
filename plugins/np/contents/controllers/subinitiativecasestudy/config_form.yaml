@@ -1,0 +1,10 @@
+name: SubInitiativeCaseStudy
+form: $/np/contents/models/subinitiativecasestudy/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeCaseStudy
+defaultRedirect: np/contents/subinitiativecasestudy
+create:
+    redirect: 'np/contents/subinitiativecasestudy/update/:id'
+    redirectClose: np/contents/subinitiativecasestudy
+update:
+    redirect: np/contents/subinitiativecasestudy
+    redirectClose: np/contents/subinitiativecasestudy

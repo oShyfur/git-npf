@@ -1,0 +1,47 @@
+fields:
+    initiative_category:
+        label: 'Initiative Category'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '-- Select Initiative Category --'
+        span: auto
+        required: 1
+        type: relation
+    body:
+        label: Description
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    sov_number:
+        label: 'Saved over Billion (Number)'
+        span: auto
+        default: '0'
+        type: number
+    bw_number:
+        label: 'Billion Workdays (Number)'
+        span: auto
+        default: '0'
+        type: number
+    bv_number:
+        label: 'Billion Visits (Number)'
+        span: auto
+        default: '0'
+        type: number
+    images:
+        label: Pictures
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

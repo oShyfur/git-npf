@@ -1,0 +1,10 @@
+name: Hospitalclinic
+form: $/np/contents/models/hospitalclinic/fields.yaml
+modelClass: Np\Contents\Models\Hospitalclinic
+defaultRedirect: np/contents/hospitalclinic
+create:
+    redirect: 'np/contents/hospitalclinic/update/:id'
+    redirectClose: np/contents/hospitalclinic
+update:
+    redirect: np/contents/hospitalclinic
+    redirectClose: np/contents/hospitalclinic

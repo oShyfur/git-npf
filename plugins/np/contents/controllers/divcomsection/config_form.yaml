@@ -1,0 +1,10 @@
+name: DivcomSection
+form: $/np/contents/models/divcomsection/fields.yaml
+modelClass: Np\Contents\Models\DivcomSection
+defaultRedirect: np/contents/divcomsection
+create:
+    redirect: 'np/contents/divcomsection/update/:id'
+    redirectClose: np/contents/divcomsection
+update:
+    redirect: np/contents/divcomsection
+    redirectClose: np/contents/divcomsection

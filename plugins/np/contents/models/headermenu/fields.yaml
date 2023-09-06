@@ -1,0 +1,32 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    parent:
+        label: Parent
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: 'Select Parent'
+        span: full
+        required: 0
+        type: relation
+        scope: onlyParent
+    link:
+        label: Link
+        span: auto
+        required: 1
+        cssClass: hide-caption
+        type: linkpicker
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        required: 1
+        default: '0'
+        type: number
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

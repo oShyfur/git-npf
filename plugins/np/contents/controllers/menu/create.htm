@@ -1,0 +1,44 @@
+<?php if ($this->fatalError): ?>
+<p class="flash-message static error"><?= e($this->fatalError) ?></p>
+<?php else: ?>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <?= $listWidget->render() ?>
+
+        </div>
+
+        <div class="col-md-6">
+
+
+            <form data-request="onCreate" data-request-success="this.reset();">
+                <?= $formWidget->render() ?>
+
+                <button class="btn btn-primary">
+                    Save
+                </button>
+                <?= Form::close() ?>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<?php endif ?>
+
+
+<style>
+    #LinkPicker-formLinkPath-container-link_path div>div.col-md-6 {
+        width: 100%;
+    }
+
+    #LinkPicker-formLinkPath-container-link_path div>div.col-md-3 {
+        display: none
+    }
+</style>

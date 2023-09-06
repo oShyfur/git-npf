@@ -1,0 +1,52 @@
+plugin:
+    name: 'np.contents::lang.plugin.name'
+    description: 'np.contents::lang.plugin.description'
+    author: NP
+    icon: oc-icon-adjust
+    homepage: ''
+permissions:
+    manage_notice:
+        tab: 'NP Contents'
+        label: 'Manage Notices'
+    manage_taxonomy:
+        tab: 'NP Contents'
+        label: 'Manage Taxonomys'
+    manage_blocks:
+        tab: 'NP Contents'
+        label: 'Manage Blocks'
+    manage_menu:
+        tab: 'NP Contents'
+        label: 'Manage Menus'
+navigation:
+    np-contents:
+        label: Contents
+        url: np/contents/contenttype
+        icon: icon-life-ring
+        permissions: {  }
+        sideMenu:
+            np-contents-ct:
+                label: Contents
+                url: np/contents/contenttype
+                icon: icon-sitemap
+            np-contents-taxonomy:
+                label: Taxonomy
+                url: np/contents/taxonomytype
+                icon: icon-sitemap
+                permissions:
+                    - manage_taxonomy
+            np-contents-blocks:
+                label: Blocks
+                url: np/contents/siteblock
+                icon: icon-sitemap
+                permissions:
+                    - manage_blocks
+            np-contents-menu:
+                label: Menu
+                url: np/contents/menu
+                icon: icon-sitemap
+                permissions:
+                    - manage_menu
+            # np-contents-forms:
+            #     label: Forms
+            #     url: np/contents/forms
+            #     icon: icon-sitemap

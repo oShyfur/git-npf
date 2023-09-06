@@ -1,0 +1,10 @@
+name: EventGovernment
+form: $/np/contents/models/eventgovernment/fields.yaml
+modelClass: Np\Contents\Models\EventGovernment
+defaultRedirect: np/contents/eventgovernment
+create:
+    redirect: 'np/contents/eventgovernment/update/:id'
+    redirectClose: np/contents/eventgovernment
+update:
+    redirect: np/contents/eventgovernment
+    redirectClose: np/contents/eventgovernment

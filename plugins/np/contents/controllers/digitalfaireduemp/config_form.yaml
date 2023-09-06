@@ -1,0 +1,10 @@
+name: DigitalfairEduEmp
+form: $/np/contents/models/digitalfaireduemp/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairEduEmp
+defaultRedirect: np/contents/digitalfaireduemp
+create:
+    redirect: 'np/contents/digitalfaireduemp/update/:id'
+    redirectClose: np/contents/digitalfaireduemp
+update:
+    redirect: np/contents/digitalfaireduemp
+    redirectClose: np/contents/digitalfaireduemp

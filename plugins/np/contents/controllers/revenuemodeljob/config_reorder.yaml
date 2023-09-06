@@ -1,0 +1,4 @@
+title: RevenueModelJob
+modelClass: Np\Contents\Models\RevenueModelJob
+toolbar:
+    buttons: reorder_toolbar

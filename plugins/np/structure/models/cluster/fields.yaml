@@ -1,0 +1,30 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    host:
+        label: 'DB Host'
+        span: auto
+        required: 1
+        type: text
+    username:
+        label: 'DB Username'
+        span: auto
+        required: 1
+        type: text
+    password:
+        label: 'DB Password'
+        span: auto
+        required: 1
+        type: text
+    status:
+        label: Status
+        span: full
+        default: 1
+        type: switch
+    dbs:
+        span: full
+        path: dbs
+        type: partial

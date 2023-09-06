@@ -1,0 +1,10 @@
+name: SubInitiativeAward
+form: $/np/contents/models/subinitiativeaward/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeAward
+defaultRedirect: np/contents/subinitiativeaward
+create:
+    redirect: 'np/contents/subinitiativeaward/update/:id'
+    redirectClose: np/contents/subinitiativeaward
+update:
+    redirect: np/contents/subinitiativeaward
+    redirectClose: np/contents/subinitiativeaward

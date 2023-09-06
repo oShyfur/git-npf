@@ -1,0 +1,10 @@
+name: CareerInfo
+form: $/np/contents/models/careerinfo/fields.yaml
+modelClass: Np\Contents\Models\CareerInfo
+defaultRedirect: np/contents/careerinfo
+create:
+    redirect: 'np/contents/careerinfo/update/:id'
+    redirectClose: np/contents/careerinfo
+update:
+    redirect: np/contents/careerinfo
+    redirectClose: np/contents/careerinfo

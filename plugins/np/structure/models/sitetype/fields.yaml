@@ -1,0 +1,19 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    parent:
+        label: Parent
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+        emptyOption: -- Select Parent --
+    status:
+        label: Status
+        span: auto
+        default: 1
+        required: 1
+        type: switch

@@ -1,0 +1,142 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    field_edu_achievements:
+        label: অর্জন
+        size: large
+        span: full
+        type: richeditor
+    field_edu_future_plan:
+        label: 'ভবিষৎ পরিকল্পনা'
+        size: large
+        span: full
+        type: richeditor
+    field_edu_outstanding_students:
+        label: 'মেধাবী ছাত্রবৃন্দ'
+        size: large
+        span: full
+        type: richeditor
+    field_edu_scholarship_info:
+        label: 'শিক্ষাবৃত্তি তথ্যসমুহ'
+        size: large
+        span: full
+        type: richeditor
+    field_history:
+        label: ইতিহাস
+        size: large
+        span: full
+        type: richeditor
+    field_student_class:
+        label: 'ছাত্র-ছাত্রীর সংখ্যা (শ্রেণীভিত্তিক)'
+        size: large
+        span: full
+        type: richeditor
+    field_managing_committee:
+        label: 'বর্তমান পরিচালনা কমিটির তথ্য'
+        size: large
+        span: full
+        type: richeditor
+    field_last_five_yrs_result:
+        label: 'বিগত ৫ বছরের সমাপনী/পাবলিক পরীক্ষার ফলাফল'
+        size: large
+        span: full
+        type: richeditor
+    field_contact:
+        label: যোগাযোগ
+        size: large
+        span: full
+        type: richeditor
+    field_description:
+        label: 'সংক্ষিপ্ত বর্ণনা'
+        size: large
+        span: full
+        type: richeditor
+    field_established_text:
+        label: প্রতিষ্ঠাকাল
+        span: auto
+        type: text
+    institute_type:
+        label: ধরণ
+        taxonomyType: '1'
+        span: auto
+        type: taxonomypicker
+    field_passing_rate:
+        label: 'পাশের হার'
+        span: auto
+        type: text
+    field_total_students:
+        label: 'মোট ছাত্র-ছাত্রীর সংখ্যা'
+        span: auto
+        type: text
+    image:
+        label: 'শিক্ষা প্রতিষ্ঠানের ছবি'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    field_photo_gallery_office_nid:
+        label: ফটোগ্যালারি
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\PhotoGallery
+        list: $/np/contents/models/photogallery/columns.yaml
+        formyaml: $/np/contents/models/photogallery/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: auto
+        type: recordfinder
+    field_e_directory_headmaster_principal_nid:
+        label: 'প্রধান শিক্ষক/ অধ্যক্ষ'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\Teachers
+        list: $/np/contents/models/teachers/columns.yaml
+        formyaml: $/np/contents/models/teachers/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: full
+        type: recordfinder
+    field_e_directory_teachers_profile_nid:
+        label: 'অন্যান্য শিক্ষকদের তালিকা'
+        prompt: 'Add New Teacher'
+        span: full
+        type: repeater
+        form:
+            fields:
+                teachers:
+                    label: 'শিক্ষক প্রোফাইল'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\Teachers
+                    list: $/np/contents/models/teachers/columns.yaml
+                    formyaml: $/np/contents/models/teachers/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,4 @@
+title: Ministry
+modelClass: Np\Structure\Models\Ministry
+toolbar:
+    buttons: reorder_toolbar

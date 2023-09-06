@@ -1,0 +1,10 @@
+name: Motto
+form: $/np/contents/models/motto/fields.yaml
+modelClass: Np\Contents\Models\Motto
+defaultRedirect: np/contents/motto
+create:
+    redirect: 'np/contents/motto/update/:id'
+    redirectClose: np/contents/motto
+update:
+    redirect: np/contents/motto
+    redirectClose: np/contents/motto

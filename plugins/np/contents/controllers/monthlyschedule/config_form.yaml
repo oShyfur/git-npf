@@ -1,0 +1,10 @@
+name: MonthlySchedule
+form: $/np/contents/models/monthlyschedule/fields.yaml
+modelClass: Np\Contents\Models\MonthlySchedule
+defaultRedirect: np/contents/monthlyschedule
+create:
+    redirect: 'np/contents/monthlyschedule/update/:id'
+    redirectClose: np/contents/monthlyschedule
+update:
+    redirect: np/contents/monthlyschedule
+    redirectClose: np/contents/monthlyschedule

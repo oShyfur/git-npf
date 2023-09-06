@@ -1,0 +1,221 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    image:
+        label: 'অফিসের ছবি'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    attachment:
+        label: 'সাংগঠনিক কাঠামো'
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    field_office_cism:
+        label: 'কী সেবা কীভাবে পাবেন'
+        size: large
+        span: full
+        type: richeditor
+    field_citizen_charter:
+        label: 'সিটিজেন চার্টার'
+        size: large
+        span: full
+        type: richeditor
+    field_important_info:
+        label: 'সাধারণ তথ্য'
+        size: large
+        span: full
+        type: richeditor
+    field_projects:
+        label: প্রকল্পসমূহ
+        size: large
+        span: full
+        type: richeditor
+    field_address:
+        label: যোগাযোগ
+        size: small
+        span: full
+        type: richeditor
+    field_e_directory_nid:
+        label: কর্মকর্তাবৃন্দ
+        prompt: 'Add New Officer'
+        span: full
+        type: repeater
+        form:
+            fields:
+                officer_list:
+                    label: 'কর্মকর্তা প্রোফাইল'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\OfficerList
+                    list: $/np/contents/models/officerlist/columns.yaml
+                    formyaml: $/np/contents/models/officerlist/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    required: 1
+                    type: recordfinder
+    field_staff_office_nid:
+        label: কর্মচারীবৃন্দ
+        prompt: 'Add New Staff'
+        span: full
+        type: repeater
+        form:
+            fields:
+                staff_list:
+                    label: 'কর্মচারী প্রোফাইল'
+                    nameFrom: title
+                    descriptionFrom: description
+                    prompt: 'Add new item'
+                    modelClass: Np\Contents\Models\StaffList
+                    list: $/np/contents/models/stafflist/columns.yaml
+                    formyaml: $/np/contents/models/stafflist/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_process_maps_nid:
+        label: 'প্রদেয় সেবাসমুহের তালিকা'
+        prompt: 'Add New Office Process Map'
+        span: full
+        type: repeater
+        form:
+            fields:
+                office_process_map:
+                    label: 'সেবা এবং ধাপ'
+                    nameFrom: title
+                    descriptionFrom: description
+                    prompt: 'Add new item'
+                    modelClass: Np\Contents\Models\OfficeProcessMap
+                    list: $/np/contents/models/officeprocessmap/columns.yaml
+                    formyaml: $/np/contents/models/officeprocessmap/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_notice_node_ref_nid:
+        label: বিজ্ঞপ্তি
+        prompt: 'Add New Notice'
+        span: full
+        type: repeater
+        form:
+            fields:
+                notices:
+                    label: নোটিশ
+                    nameFrom: title
+                    descriptionFrom: description
+                    prompt: 'Add new item'
+                    modelClass: Np\Contents\Models\Notices
+                    list: $/np/contents/models/notices/columns.yaml
+                    formyaml: $/np/contents/models/notices/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_ref_gov_download_nid:
+        label: ডাউনলোড
+        prompt: 'Add New File'
+        span: full
+        type: repeater
+        form:
+            fields:
+                files:
+                    label: ফাইল
+                    nameFrom: title
+                    descriptionFrom: description
+                    prompt: 'Add new item'
+                    modelClass: Np\Contents\Models\Files
+                    list: $/np/contents/models/files/columns.yaml
+                    formyaml: $/np/contents/models/files/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_law_circular_nid:
+        label: 'আইন ও সার্কুলার'
+        prompt: 'Add New Law & Policy'
+        span: full
+        type: repeater
+        form:
+            fields:
+                law_policy:
+                    label: 'আইন ও পলিসি'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\LawPolicy
+                    list: $/np/contents/models/lawpolicy/columns.yaml
+                    formyaml: $/np/contents/models/lawpolicy/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_photo_gallery_office_nid:
+        label: ফটোগ্যালারি
+        prompt: 'Add New Photo Gallery'
+        span: full
+        type: repeater
+        form:
+            fields:
+                photogallery:
+                    label: ফটোগ্যালারি
+                    nameFrom: name
+                    descriptionFrom: description
+                    prompt: 'Add new item'
+                    modelClass: Np\Contents\Models\PhotoGallery
+                    list: $/np/contents/models/photogallery/columns.yaml
+                    formyaml: $/np/contents/models/photogallery/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_info_officer_nid:
+        label: 'তথ্য প্রদানকারী কর্মকর্তা'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: full
+        cssClass: ''
+        type: recordfinder
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,49 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    field_address:
+        label: ঠিকানা
+        size: small
+        span: full
+        type: richeditor
+    field_history:
+        label: ইতিহাস
+        size: large
+        span: full
+        type: richeditor
+    field_editor:
+        label: 'সম্পাদকের নাম'
+        span: auto
+        type: text
+    field_contact_name:
+        label: 'তথ্য প্রদানকারী ব্যক্তির নাম'
+        span: auto
+        type: text
+    field_contact_designation:
+        label: 'তথ্য প্রদানকারী ব্যক্তির পদবি'
+        span: auto
+        type: text
+    field_contact_phone:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ফোন'
+        span: auto
+        type: text
+    field_contact_email:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ইমেইল'
+        span: auto
+        type: text
+    field_contact_number:
+        label: 'তথ্য প্রদানকারী ব্যক্তির মোবাইল'
+        span: auto
+        type: text
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

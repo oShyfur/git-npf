@@ -1,0 +1,4 @@
+title: OfficersProfile
+modelClass: Np\Contents\Models\OfficersProfile
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: DigitalfairVideo
+form: $/np/contents/models/digitalfairvideo/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairVideo
+defaultRedirect: np/contents/digitalfairvideo
+create:
+    redirect: 'np/contents/digitalfairvideo/update/:id'
+    redirectClose: np/contents/digitalfairvideo
+update:
+    redirect: np/contents/digitalfairvideo
+    redirectClose: np/contents/digitalfairvideo

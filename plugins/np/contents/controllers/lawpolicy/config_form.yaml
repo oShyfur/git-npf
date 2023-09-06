@@ -1,0 +1,10 @@
+name: LawPolicy
+form: $/np/contents/models/lawpolicy/fields.yaml
+modelClass: Np\Contents\Models\LawPolicy
+defaultRedirect: np/contents/lawpolicy
+create:
+    redirect: 'np/contents/lawpolicy/update/:id'
+    redirectClose: np/contents/lawpolicy
+update:
+    redirect: np/contents/lawpolicy
+    redirectClose: np/contents/lawpolicy

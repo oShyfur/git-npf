@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: Name
+        span: full
+        required: 1
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '1'
+        required: 1
+        type: number
+    status:
+        label: Status
+        span: auto
+        default: 1
+        type: switch
+    texonomy_type_id:
+        span: auto
+        type: text
+        cssClass: hidden

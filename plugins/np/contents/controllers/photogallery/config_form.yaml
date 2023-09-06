@@ -1,0 +1,10 @@
+name: PhotoGallery
+form: $/np/contents/models/photogallery/fields.yaml
+modelClass: Np\Contents\Models\PhotoGallery
+defaultRedirect: np/contents/photogallery
+create:
+    redirect: 'np/contents/photogallery/update/:id'
+    redirectClose: np/contents/photogallery
+update:
+    redirect: np/contents/photogallery
+    redirectClose: np/contents/photogallery

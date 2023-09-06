@@ -1,0 +1,3 @@
+docker build -t docker-reg.portal.gov.bd/npf_backennd:1.7 .
+docker-compose up -d
+docker push docker-reg.portal.gov.bd/npf_backennd:1.7

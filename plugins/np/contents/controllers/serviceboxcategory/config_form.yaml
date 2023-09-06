@@ -1,0 +1,10 @@
+name: ServiceBoxCategory
+form: $/np/contents/models/serviceboxcategory/fields.yaml
+modelClass: Np\Contents\Models\ServiceBoxCategory
+defaultRedirect: np/contents/serviceboxcategory
+create:
+    redirect: 'np/contents/serviceboxcategory/update/:id'
+    redirectClose: np/contents/serviceboxcategory
+update:
+    redirect: np/contents/serviceboxcategory
+    redirectClose: np/contents/serviceboxcategory

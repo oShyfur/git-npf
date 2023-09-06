@@ -1,0 +1,4 @@
+title: FooterMenu
+modelClass: Np\Contents\Models\FooterMenu
+toolbar:
+    buttons: reorder_toolbar

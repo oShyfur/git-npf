@@ -1,0 +1,10 @@
+name: SiteClone
+form: $/np/structure/models/siteclone/fields.yaml
+modelClass: Np\Structure\Models\SiteClone
+defaultRedirect: np/structure/siteclone
+create:
+    redirect: 'np/structure/siteclone/update/:id'
+    redirectClose: np/structure/siteclone
+update:
+    redirect: np/structure/siteclone
+    redirectClose: np/structure/siteclone

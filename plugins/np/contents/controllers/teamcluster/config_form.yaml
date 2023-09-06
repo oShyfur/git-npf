@@ -1,0 +1,10 @@
+name: TeamCluster
+form: $/np/contents/models/teamcluster/fields.yaml
+modelClass: Np\Contents\Models\TeamCluster
+defaultRedirect: np/contents/teamcluster
+create:
+    redirect: 'np/contents/teamcluster/update/:id'
+    redirectClose: np/contents/teamcluster
+update:
+    redirect: np/contents/teamcluster
+    redirectClose: np/contents/teamcluster

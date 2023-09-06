@@ -1,0 +1,10 @@
+name: PhysicalLocation
+form: $/np/contents/models/physicallocation/fields.yaml
+modelClass: Np\Contents\Models\PhysicalLocation
+defaultRedirect: np/contents/physicallocation
+create:
+    redirect: 'np/contents/physicallocation/update/:id'
+    redirectClose: np/contents/physicallocation
+update:
+    redirect: np/contents/physicallocation
+    redirectClose: np/contents/physicallocation

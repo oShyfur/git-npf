@@ -1,0 +1,10 @@
+name: HotelMotelGuesthouse
+form: $/np/contents/models/hotelmotelguesthouse/fields.yaml
+modelClass: Np\Contents\Models\HotelMotelGuesthouse
+defaultRedirect: np/contents/hotelmotelguesthouse
+create:
+    redirect: 'np/contents/hotelmotelguesthouse/update/:id'
+    redirectClose: np/contents/hotelmotelguesthouse
+update:
+    redirect: np/contents/hotelmotelguesthouse
+    redirectClose: np/contents/hotelmotelguesthouse

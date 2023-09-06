@@ -1,0 +1,5 @@
+title: OfficerList
+nameFrom: sortable_label
+modelClass: Np\Contents\Models\OfficerList
+toolbar:
+    buttons: reorder_toolbar

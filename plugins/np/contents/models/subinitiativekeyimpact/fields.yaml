@@ -1,0 +1,29 @@
+fields:
+    initiative_category:
+        label: 'Initiative Category'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '-- Select Initiative Category --'
+        span: auto
+        required: 1
+        type: relation
+    initiative_sub_category:
+        label: 'Initiative Sub-Category'
+        emptyOption: '-- Select Initiative Sub-Category --'
+        required: 1
+        showSearch: true
+        span: auto
+        dependsOn:
+            - initiative_category
+        type: dropdown
+    body:
+        label: Description
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

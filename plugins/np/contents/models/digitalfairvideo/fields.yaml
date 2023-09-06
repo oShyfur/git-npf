@@ -1,0 +1,31 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    video_link:
+        label: 'Youtube Link'
+        span: full
+        required: 1
+        type: text
+    digitalfair_year:
+        label: 'Digital Fair Year'
+        taxonomyType: '38'
+        span: left
+        required: 1
+        type: taxonomypicker
+    sort_order:
+        label: 'Sort Order'
+        span: right
+        default: '0'
+        type: number
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

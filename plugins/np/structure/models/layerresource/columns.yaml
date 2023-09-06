@@ -1,0 +1,10 @@
+columns:
+    ministry_id:
+        label: Ministry
+        type: text
+    layer_id:
+        label: Layer
+        type: text
+    content_types:
+        label: 'Content Types'
+        type: switch

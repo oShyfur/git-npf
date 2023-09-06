@@ -1,0 +1,89 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    designation:
+        label: পদবি
+        taxonomyType: '10'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    field_word:
+        label: 'ওয়ার্ড নং'
+        span: auto
+        type: text
+    image:
+        label: ছবি
+        mode: file
+        imageWidth: '280'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        # required: 1
+        imageHeight: '320'
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    field_phone_residence:
+        label: 'ফোন (বাসা)'
+        span: auto
+        type: text
+    field_phone_office:
+        label: 'ফোন (অফিস)'
+        span: auto
+        type: text
+    field_fax_office:
+        label: 'ফ্যাক্স (অফিস)'
+        span: auto
+        type: text
+    field_fax_residence:
+        label: 'ফ্যাক্স (বাসা)'
+        span: auto
+        type: text
+    field_mobile:
+        label: মোবাইল
+        span: auto
+        required: 1
+        type: text
+    field_email:
+        label: ইমেইল
+        span: auto
+        type: text
+    field_own_district:
+        label: 'নিজ জেলা'
+        span: auto
+        type: text
+    field_highest_educational_degree:
+        label: 'সর্বশেষ শিক্ষাগত যোগ্যতা'
+        taxonomyType: '35'
+        span: auto
+        type: taxonomypicker
+    field_permanent_address:
+        label: 'স্থায়ী ঠিকানা'
+        size: large
+        span: auto
+        type: richeditor
+    field_present_address:
+        label: 'বর্তমান ঠিকানা'
+        size: large
+        span: auto
+        type: richeditor
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        type: number
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

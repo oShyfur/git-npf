@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: Name
+        type: text
+    code:
+        label: Code
+        type: text
+    'parent[name]':
+        label: Parent
+        type: text
+    status:
+        label: Status
+        type: switch

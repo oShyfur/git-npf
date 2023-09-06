@@ -1,0 +1,10 @@
+name: DcenterInstitute
+form: $/np/contents/models/dcenterinstitute/fields.yaml
+modelClass: Np\Contents\Models\DcenterInstitute
+defaultRedirect: np/contents/dcenterinstitute
+create:
+    redirect: 'np/contents/dcenterinstitute/update/:id'
+    redirectClose: np/contents/dcenterinstitute
+update:
+    redirect: np/contents/dcenterinstitute
+    redirectClose: np/contents/dcenterinstitute

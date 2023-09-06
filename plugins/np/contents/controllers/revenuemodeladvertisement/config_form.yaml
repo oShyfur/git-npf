@@ -1,0 +1,10 @@
+name: RevenueModelAdvertisement
+form: $/np/contents/models/revenuemodeladvertisement/fields.yaml
+modelClass: Np\Contents\Models\RevenueModelAdvertisement
+defaultRedirect: np/contents/revenuemodeladvertisement
+create:
+    redirect: 'np/contents/revenuemodeladvertisement/update/:id'
+    redirectClose: np/contents/revenuemodeladvertisement
+update:
+    redirect: np/contents/revenuemodeladvertisement
+    redirectClose: np/contents/revenuemodeladvertisement

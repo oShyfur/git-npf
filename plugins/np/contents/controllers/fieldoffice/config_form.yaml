@@ -1,0 +1,10 @@
+name: FieldOffice
+form: $/np/contents/models/fieldoffice/fields.yaml
+modelClass: Np\Contents\Models\FieldOffice
+defaultRedirect: np/contents/fieldoffice
+create:
+    redirect: 'np/contents/fieldoffice/update/:id'
+    redirectClose: np/contents/fieldoffice
+update:
+    redirect: np/contents/fieldoffice
+    redirectClose: np/contents/fieldoffice

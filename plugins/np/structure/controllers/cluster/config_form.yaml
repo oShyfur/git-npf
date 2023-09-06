@@ -1,0 +1,10 @@
+name: Cluster
+form: $/np/structure/models/cluster/fields.yaml
+modelClass: Np\Structure\Models\Cluster
+defaultRedirect: np/structure/cluster
+create:
+    redirect: 'np/structure/cluster/update/:id'
+    redirectClose: np/structure/cluster
+update:
+    redirect: np/structure/cluster
+    redirectClose: np/structure/cluster

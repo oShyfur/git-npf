@@ -1,0 +1,13 @@
+list: $/np/contents/models/teamname/columns.yaml
+modelClass: Np\Contents\Models\TeamName
+title: TeamName
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/contents/teamname/update/:id'

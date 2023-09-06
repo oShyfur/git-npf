@@ -1,0 +1,74 @@
+<div class="control-tabs secondary-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#CT">Content Types</a></li>
+        <li><a href="#BLOCKS">Blocks</a></li>
+        <li><a href="#TT">Taxonomy Types</a></li>
+        <li><a href="#FORMS">Forms</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active">
+
+
+
+            <?= $this->makePartial('grid', 
+                        [
+                            'layers'=>$layers,
+                            'resource'=>'content_types',
+                            'data'=>$content_types,
+                            'saved_resources'=>$saved_resources,
+                        ]
+                    )?>
+
+
+        </div>
+        <div class="tab-pane">
+
+
+            <?= $this->makePartial('grid', 
+                        [
+                            'layers'=>$layers,
+                            'resource'=>'blocks',
+                            'data'=>$blocks,
+                            'saved_resources'=>$saved_resources
+                        ]
+                    )?>
+
+
+        </div>
+
+        <div class="tab-pane">
+
+
+            <?= $this->makePartial('grid', 
+                            [
+                                'layers'=>$layers,
+                                'resource'=>'taxonomies',
+                                'data'=>$taxonomies,
+                                'saved_resources'=>$saved_resources
+                            ]
+                        )?>
+
+
+        </div>
+
+
+
+        <div class="tab-pane">
+
+
+            <?= $this->makePartial('grid', 
+                        [
+                            'layers'=>$layers,
+                            'resource'=>'forms',
+                            'data'=>$forms,
+                            'saved_resources'=>$saved_resources
+                        ]
+                    )?>
+
+
+        </div>
+
+
+
+    </div>
+</div>

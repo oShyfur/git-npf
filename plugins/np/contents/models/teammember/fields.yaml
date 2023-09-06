@@ -1,0 +1,75 @@
+fields:
+    name:
+        label: Name
+        span: full
+        required: 1
+        type: text
+    team_designation:
+        label: Designation
+        taxonomyType: '56'
+        span: auto
+        required: 0
+        type: taxonomypicker
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        type: number
+    team_cluster:
+        label: 'Team Cluster'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '-- Select Team Cluster --'
+        span: auto
+        required: 0
+        type: relation
+    team_name:
+        label: Team
+        emptyOption: '-- Select Team --'
+        required: 0
+        showSearch: true
+        span: auto
+        dependsOn:
+            - team_cluster
+        type: dropdown
+    email:
+        label: Email
+        span: full
+        required: 0
+        type: text
+        comment: "Please use ';' (semi-colon) between multiple Emails [ john1@mycompany.com; john2@mycompany.com ]"
+    skype:
+        label: Skype
+        span: full
+        required: 0
+        type: text
+        comment: "Please use ';' (semi-colon) between multiple Skypes [ john1.mycompany; john2.mycompany ]"
+    phone:
+        label: Phone
+        span: full
+        required: 0
+        type: text
+        comment: "Please use ';' (semi-colon) between multiple Phone  [ +8809639663311; +8809639663311 ]"
+    body:
+        label: Description
+        size: large
+        span: full
+        required: 0
+        type: richeditor
+    image:
+        label: Photo
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,10 @@
+name: Addldivcom
+form: $/np/contents/models/addldivcom/fields.yaml
+modelClass: Np\Contents\Models\Addldivcom
+defaultRedirect: np/contents/addldivcom
+create:
+    redirect: 'np/contents/addldivcom/update/:id'
+    redirectClose: np/contents/addldivcom
+update:
+    redirect: np/contents/addldivcom
+    redirectClose: np/contents/addldivcom

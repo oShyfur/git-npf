@@ -1,0 +1,10 @@
+name: InitiativeTcv
+form: $/np/contents/models/initiativetcv/fields.yaml
+modelClass: Np\Contents\Models\InitiativeTcv
+defaultRedirect: np/contents/initiativetcv
+create:
+    redirect: 'np/contents/initiativetcv/update/:id'
+    redirectClose: np/contents/initiativetcv
+update:
+    redirect: np/contents/initiativetcv
+    redirectClose: np/contents/initiativetcv

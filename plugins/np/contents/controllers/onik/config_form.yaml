@@ -1,0 +1,10 @@
+name: Onik
+form: $/np/contents/models/onik/fields.yaml
+modelClass: Np\Contents\Models\Onik
+defaultRedirect: np/contents/onik
+create:
+    redirect: 'np/contents/onik/update/:id'
+    redirectClose: np/contents/onik
+update:
+    redirect: np/contents/onik
+    redirectClose: np/contents/onik

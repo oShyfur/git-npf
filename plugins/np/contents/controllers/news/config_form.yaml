@@ -1,0 +1,10 @@
+name: News
+form: $/np/contents/models/news/fields.yaml
+modelClass: Np\Contents\Models\News
+defaultRedirect: np/contents/news
+create:
+    redirect: 'np/contents/news/update/:id'
+    redirectClose: np/contents/news
+update:
+    redirect: np/contents/news
+    redirectClose: np/contents/news

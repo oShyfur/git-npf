@@ -1,0 +1,10 @@
+name: Hatbazar
+form: $/np/contents/models/hatbazar/fields.yaml
+modelClass: Np\Contents\Models\Hatbazar
+defaultRedirect: np/contents/hatbazar
+create:
+    redirect: 'np/contents/hatbazar/update/:id'
+    redirectClose: np/contents/hatbazar
+update:
+    redirect: np/contents/hatbazar
+    redirectClose: np/contents/hatbazar

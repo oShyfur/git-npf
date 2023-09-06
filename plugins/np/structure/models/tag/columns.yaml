@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: false
+    status:
+        label: Status
+        type: switch
+        sortable: false

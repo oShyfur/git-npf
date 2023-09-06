@@ -1,0 +1,12 @@
+list: $/np/contents/models/siteblocks/columns.yaml
+modelClass: Np\Contents\Models\SiteBlocks
+title: SiteBlock
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/contents/siteblock/update/:id'

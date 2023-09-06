@@ -1,0 +1,84 @@
+fields:
+    id_number:
+        label: আইডি
+        span: left
+        type: number
+    sort_order:
+        label: 'Sort Order'
+        span: right
+        required: 1
+        type: number
+    name:
+        label: নাম
+        span: left
+        required: 1
+        type: text
+    phone_office:
+        label: 'ফোন (অফিস)'
+        span: auto
+        type: text
+    phone_residence:
+        label: 'ফোন (বাসা)'
+        span: auto
+        type: text
+    fax:
+        label: ফ্যাক্স
+        span: auto
+        type: text
+    email:
+        label: ইমেইল
+        span: auto
+        type: text
+    mobile:
+        label: মোবাইল
+        span: auto
+        type: text
+    designation:
+        label: পদবি
+        taxonomyType: '40'
+        span: left
+        required: 1
+        type: taxonomypicker
+    officer_category:
+        label: Category
+        taxonomyType: '39'
+        span: right
+        default: 'null'
+        required: 0
+        type: taxonomypicker
+    image:
+        label: ছবি
+        mode: image
+        imageWidth: '280'
+        imageHeight: '320'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 0
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    attachment:
+        label: 'জীবন বৃত্তান্ত'
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf Only'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

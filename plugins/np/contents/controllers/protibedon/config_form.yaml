@@ -1,0 +1,10 @@
+name: Protibedon
+form: $/np/contents/models/protibedon/fields.yaml
+modelClass: Np\Contents\Models\Protibedon
+defaultRedirect: np/contents/protibedon
+create:
+    redirect: 'np/contents/protibedon/update/:id'
+    redirectClose: np/contents/protibedon
+update:
+    redirect: np/contents/protibedon
+    redirectClose: np/contents/protibedon

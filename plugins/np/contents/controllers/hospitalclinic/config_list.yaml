@@ -1,0 +1,13 @@
+list: $/np/contents/models/hospitalclinic/columns.yaml
+modelClass: Np\Contents\Models\Hospitalclinic
+title: Hospitalclinic
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/contents/hospitalclinic/update/:id'

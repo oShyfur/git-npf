@@ -1,0 +1,21 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+        width: 40%
+    head_master:
+        label: Head Master
+        relation: head_master
+        select: title
+        sortable: true
+
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

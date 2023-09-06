@@ -1,0 +1,12 @@
+columns:
+    fqdn:
+        label: FQDN
+        type: text
+        searchable: true
+    'site[name]':
+        label: Site
+        type: text
+        searchable: true
+    status:
+        label: Status
+        type: switch

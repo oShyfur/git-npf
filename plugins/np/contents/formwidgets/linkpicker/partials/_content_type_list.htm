@@ -1,0 +1,30 @@
+<div id="<?= $this->getId('popup') ?>" class="popup">
+    <?= Form::open() ?>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title"> Find Content Types</h4>
+        <hr>
+    </div>
+
+
+    <div class="modal-body">
+        <ul class="list">
+            <?php foreach($list as $item):?>
+            <?php $item['table_name'] = str_replace('\\','/',$item['table_name']);?>
+            <li>
+                <a href="#" data-control="popup" data-handler="<?= $this->getEventHandler('onSelectContentType') ?>"
+                    data-request-data="model:'<?=$item['table_name'] ?>'"><?= $item['name']?></a>
+            </li>
+            <?php endforeach;?>
+        </ul>
+
+    </div>
+
+
+
+
+    <div class="modal-footer">
+
+    </div>
+    <?= Form::close() ?>
+</div>

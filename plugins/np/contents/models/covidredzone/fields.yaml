@@ -1,0 +1,71 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    area:
+        label: 'রেড জোনের আওতাধীন এলাকার নাম'
+        span: full
+        type: text
+    date:
+        label: 'ঘোষিত রেড জোনের মেয়াদকাল শেষ তারিখ'
+        mode: date
+        span: left
+        required: 1
+        type: datepicker
+    days:
+        label: 'ঘোষিত রেড জোনের মেয়াদ (দিন)'
+        span: right
+        default: '0'
+        required: 1
+        type: number
+    test_center:
+        label: 'করোনা টেস্টিং সেন্টার'
+        size: large
+        span: full
+        type: richeditor
+    ambulance:
+        label: 'জরুরি এম্বুলেন্স সেবা (যোগাযোগ নম্বরসহ)'
+        size: large
+        span: full
+        type: richeditor
+    tele_medicine:
+        label: 'টেলি মেডিসিন'
+        size: large
+        span: full
+        type: richeditor
+    isolation_center:
+        label: 'কোয়ারেন্টাইন ও আইসোলেশন সেন্টার-এর নাম, ঠিকানা ও যোগাযোগ নম্বর (যদি থাকে)'
+        size: large
+        span: full
+        type: richeditor
+    covid_hospital:
+        label: 'কোভিড চিকিৎসা হাসপাতাল (যোগাযোগ নম্বরসহ)'
+        size: large
+        span: full
+        type: richeditor
+    noncovid_hospital:
+        label: 'সাধারণ (নন-কোভিড) চিকিৎসা হাসপাতাল (যোগাযোগ নম্বরসহ)'
+        size: large
+        span: full
+        type: richeditor
+    emergency_number:
+        label: 'জরুরি নম্বর (ফোকাল পয়েন্ট/আইন শৃঙ্খলা/পরিষেবা ইত্যাদির জন্য যোগাযোগ নম্বর)'
+        size: large
+        span: full
+        type: richeditor
+    further_progress:
+        label: 'রেড জোন সময়সীমা পরবর্তী অগ্রগতি'
+        size: large
+        span: full
+        type: richeditor
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

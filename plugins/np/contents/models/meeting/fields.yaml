@@ -1,0 +1,47 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    publish_date:
+        label: 'Meeting Date'
+        mode: datetime
+        span: full
+        required: 1
+        type: datepicker
+    field_meeting_notice:
+        label: 'সভার নোটিসসমূহ'
+        size: small
+        span: auto
+        type: richeditor
+    field_dcmeeting_member:
+        label: সদস্যগণ
+        size: small
+        span: auto
+        type: richeditor
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    attachments:
+        label: কার্যবিবরণী
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        type: switch

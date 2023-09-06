@@ -1,0 +1,10 @@
+name: SubInitiativeSystemAnalysis
+form: $/np/contents/models/subinitiativesystemanalysis/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeSystemAnalysis
+defaultRedirect: np/contents/subinitiativesystemanalysis
+create:
+    redirect: 'np/contents/subinitiativesystemanalysis/update/:id'
+    redirectClose: np/contents/subinitiativesystemanalysis
+update:
+    redirect: np/contents/subinitiativesystemanalysis
+    redirectClose: np/contents/subinitiativesystemanalysis

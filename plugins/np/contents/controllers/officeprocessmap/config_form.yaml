@@ -1,0 +1,10 @@
+name: OfficeProcessMap
+form: $/np/contents/models/officeprocessmap/fields.yaml
+modelClass: Np\Contents\Models\OfficeProcessMap
+defaultRedirect: np/contents/officeprocessmap
+create:
+    redirect: 'np/contents/officeprocessmap/update/:id'
+    redirectClose: np/contents/officeprocessmap
+update:
+    redirect: np/contents/officeprocessmap
+    redirectClose: np/contents/officeprocessmap

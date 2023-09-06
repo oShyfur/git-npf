@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: Id
+        type: text
+        searchable: true
+        sortable: false
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: false
+    english_name:
+        label: Name En
+        type: partial
+        path: english_name
+        sortable: false

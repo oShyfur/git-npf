@@ -1,0 +1,22 @@
+<?= Form::open(['class' => 'deleteform']) ?>
+<input type="hidden" name="checked[]" value="<?= $record->id?>">
+
+<div class=" actions">
+
+    <a class="btn btn-primary action" href="#" data-request="onMenuAdd"
+        data-request-data="id: '<?= $record->id?>', action:'add'">
+        <i class="oc-icon-plus"></i>
+    </a>
+
+    <a class="btn btn-primary action" href="#" data-request="onMenuEdit" data-request-data="id: '<?= $record->id?>'">
+        <i class="oc-icon-pencil"></i>
+    </a>
+    <a class="btn btn-danger action" href="#" data-request="onDelete" data-request-confirm="Are you sure?">
+        <i class="oc-icon-trash"></i>
+    </a>
+
+
+</div>
+
+
+<?= Form::close() ?>

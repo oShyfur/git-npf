@@ -1,0 +1,51 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    slogan:
+        label: 'Slogan'
+        span: full
+        required: 1
+        type: textarea
+    initiative_category:
+        label: 'Initiative Category'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '-- Select Initiative Category --'
+        span: auto
+        required: 1
+        type: relation
+    initiative_sub_category:
+            label: Initiative Sub-Category
+            emptyOption: '-- Select Initiative Sub-Category --'
+            required: 1
+            showSearch: true
+            span: auto
+            dependsOn:
+                - initiative_category
+            type: dropdown
+    body:
+        label: 'Description'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    image:
+        label: Picture
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

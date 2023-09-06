@@ -1,0 +1,30 @@
+<div id="<?= $this->getId('popup') ?>" class="popup">
+    <?= Form::open() ?>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title"> Select Form </h4>
+        <hr>
+    </div>
+
+
+    <div class="modal-body">
+        <ul class="list">
+            <?php foreach($forms as $code=>$name):?>
+            <li>
+                <a href="#" data-request="<?= $this->getEventHandler('onSelectForm') ?>" data-dismiss="popup"
+                    data-request-data="form:'<?=$code ?>'"><?= $name?></a>
+            </li>
+            <?php endforeach;?>
+        </ul>
+
+    </div>
+
+
+
+
+    <div class="modal-footer">
+
+    </div>
+    <?= Form::close() ?>
+</div>

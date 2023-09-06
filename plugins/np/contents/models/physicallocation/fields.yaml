@@ -1,0 +1,20 @@
+fields:
+    address:
+        label: Address
+        size: ''
+        span: full
+        required: 1
+        type: textarea
+    latitude:
+        label: Latitude
+        span: auto
+        type: text
+    longitude:
+        label: Longitude
+        span: auto
+        type: text
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,19 @@
+columns:
+    id:
+        label: ID
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    'parent[name]':
+        label: Parent
+        type: text
+        searchable: false
+        sortable: false
+    status:
+        label: Status
+        type: switch

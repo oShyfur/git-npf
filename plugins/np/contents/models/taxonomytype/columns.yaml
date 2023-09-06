@@ -1,0 +1,14 @@
+columns:
+    name:
+        label: Name
+        type: text
+    # 'parent[name]':
+    #     label: 'Parent Taxonomy'
+    #     type: text
+    #     searchable: false
+    #     sortable: false
+    Taxonomylist:
+        label: View
+        type: partial
+        clickable: false
+        sortable: false

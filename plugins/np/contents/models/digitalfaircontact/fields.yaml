@@ -1,0 +1,109 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    digitalfair_year:
+        label: 'Digital Fair Year'
+        taxonomyType: '38'
+        span: full
+        required: 1
+        type: taxonomypicker
+    agriculture_email:
+        label: 'Agriculture (Email)'
+        span: left
+        type: text
+    agriculture_mobile:
+        label: 'Agriculture (Mobile) [English]'
+        span: right
+        type: text
+    health_email:
+        label: 'Health (Email)'
+        span: left
+        type: text
+    health_mobile:
+        label: 'Health (Mobile) [English]'
+        span: right
+        type: text
+    land_email:
+        label: 'Land Management (Email)'
+        span: left
+        type: text
+    land_mobile:
+        label: 'Land Management (Mobile) [English]'
+        span: right
+        type: text
+    utility_email:
+        label: 'Utility (Email)'
+        span: left
+        type: text
+    utility_mobile:
+        label: 'Utility (Mobile) [English]'
+        span: right
+        type: text
+    license_certificate_passport_email:
+        label: 'License/Certificate/Passport (Email)'
+        span: left
+        type: text
+    license_certificate_passport_mobile:
+        label: 'License/Certificate/Passport (Mobile) [English]'
+        span: right
+        type: text
+    law_email:
+        label: 'Law & Order (Email)'
+        span: left
+        type: text
+    law_mobile:
+        label: 'Law & Order (Mobile) [English]'
+        span: right
+        type: text
+    others_email:
+        label: 'Others (Email)'
+        span: left
+        type: text
+    others_mobile:
+        label: 'Others (Mobile) [English]'
+        span: right
+        type: text
+    dcenter_institute_email:
+        label: 'Digital Center & Other Institution (Email)'
+        span: left
+        type: text
+    dcenter_institute_mobile:
+        label: 'Digital Center & Other Institution (Mobile) [English]'
+        span: right
+        type: text
+    startup_inventor_email:
+        label: 'Startups & Inventors (Email)'
+        span: left
+        type: text
+    startup_inventor_mobile:
+        label: 'Startups & Inventors (Mobile) [English]'
+        span: right
+        type: text
+    education_email:
+        label: 'Education (Email)'
+        span: left
+        type: text
+    education_mobile:
+        label: 'Education (Mobile) [English]'
+        span: right
+        type: text
+    employment_email:
+        label: 'Employment (Email)'
+        span: left
+        type: text
+    employment_mobile:
+        label: 'Employment (Mobile) [English]'
+        span: right
+        type: text
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

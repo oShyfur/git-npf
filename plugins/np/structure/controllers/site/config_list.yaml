@@ -1,0 +1,14 @@
+list: $/np/structure/models/site/columns.yaml
+modelClass: Np\Structure\Models\Site
+title: Site
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+        searchOnEnter: true
+recordUrl: 'np/structure/site/update/:id'
+filter: config_filter.yaml

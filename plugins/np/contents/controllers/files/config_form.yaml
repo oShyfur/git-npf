@@ -1,0 +1,10 @@
+name: Files
+form: $/np/contents/models/files/fields.yaml
+modelClass: Np\Contents\Models\Files
+defaultRedirect: np/contents/files
+create:
+    redirect: 'np/contents/files/update/:id'
+    redirectClose: np/contents/files
+update:
+    redirect: np/contents/files
+    redirectClose: np/contents/files

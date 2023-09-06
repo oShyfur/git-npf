@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="<?= App::getLocale() ?>" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="robots" content="noindex">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="backend-base-path" content="<?= Backend::baseUrl() ?>">
+    <meta name="csrf-token" content="<?= csrf_token() ?>">
+    <link rel="icon" type="image/png" href="<?= e(Backend\Models\BrandSetting::getFavicon()) ?>">
+    <title><?= e(trans('backend::lang.auth.title')) ?></title>
+    <!-- <p>Js For Captcha</p> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+
+    <?php
+            $coreBuild = System\Models\Parameter::get('system::core.build', 1);
+            $styles = [
+                Url::asset('modules/system/assets/ui/'),
+                Backend::skinAsset('assets/css/october.css'),
+                Backend::skinAsset('assets/css/loginStyle.css'),
+            ];
+            $scripts = [
+                Backend::skinAsset('assets/js/vendor/jquery.min.js'),
+                Backend::skinAsset('assets/js/vendor/jquery-migrate.min.js'),
+                Url::asset('modules/system/assets/js/framework.js'),
+                Url::asset('modules/system/assets/ui/storm-min.js'),
+                Backend::skinAsset('assets/js/october-min.js'),
+                Url::to('modules/backend/assets/js/auth/auth.js'),
+                Url::asset('modules/system/assets/js/lang/lang.'.App::getLocale().'.js'),
+            ];
+        ?>
+
+    <?php foreach ($styles as $style) : ?>
+    <link href="<?= $style . '?v=' . $coreBuild; ?>" rel="stylesheet">
+    <link href="<?= $style . '?v=' . $coreBuild; ?>" rel="preload" as="style">
+    <?php endforeach; ?>
+
+    <?php foreach ($scripts as $script) : ?>
+    <script data-cfasync="false" src="<?= $script . '?v=' . $coreBuild; ?>"></script>
+    <link href="<?= $script . '?v=' . $coreBuild; ?>" rel="preload" as="script">
+    <?php endforeach; ?>
+    <?= $this->makeAssets() ?>
+    <?= Block::placeholder('head') ?>
+    <?= $this->makeLayoutPartial('custom_styles') ?>
+    <?= $this->fireViewEvent('backend.layout.extendHead', ['layout' => 'auth.htm']) ?>
+
+</head>
+<body>
+<div class="wrapper">
+    <header class="bg-violet">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-md">
+                            <a class="navbar-brand" href="#">
+                                <span><img src="<?= url('/plugins/np/contents/assets/loginImages/logo_bn.png') ?>"
+                                           class="w-25" alt=""></span>
+                                <span class="fz-0 fw-bold text-light">এডমিন প্যানেল</span>
+                            </a>
+                            <button id="pull"
+                                    class="btn btn-transparent btn-sm shadow-none border text-light d-lg-none"><i
+                                class="fas fa-bars pe-none"></i></button>
+                            <ul class="navbar-nav fz-0 d-none d-lg-flex">
+                                <li class="nav-item"><a href="//npfreport.portal.gov.bd" class="nav-link"
+                                                        target="_blank">রিপোর্টিং টুলস</a></li>
+                                <li class="nav-item"><a href="//bangladesh.gov.bd/" class="nav-link" target="_blank">জাতীয়
+                                    তথ্য বাতায়ন</a></li>
+                                <li class="nav-item"><a href="//www.nothi.gov.bd/login" class="nav-link"
+                                                        target="_blank">নথি</a></li>
+                                <li class="nav-item"><a href="//t.ly/WNfT" class="nav-link" target="_blank">বাংলাদেশ
+                                    ই-ডিরেক্টরি</a></li>
+                                <li class="nav-item"><a href="//t.ly/6pO3" class="nav-link" target="_blank">দর্শনীয়
+                                    স্থানসমুহ</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div><!--/col-12-->
+            </div><!--/row-->
+        </div><!--/container-->
+    </header><!--/header-->
+    <div class="mainbody">
+        <div class="login container bg-light">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 pull-md-2">
+
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                            <div class="card card-body shadow">
+                                <!-- <form>
+                                  <div class="mb-3">
+                                    <label for="user" class="col-form-label col-form-label-sm fz-0 text-muted">
+                                      <span><i class="fas fa-user"></i></span>
+                                      <span>ইউজার আইডি</span>
+                                    </label>
+                                    <input type="text" class="form-control shadow-none rounded-0" id="user" placeholder="**********">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="pass" class="col-form-label col-form-label-sm fz-0 text-muted">
+                                      <span><i class="fas fa-lock"></i></span>
+                                      <span>পাসওয়ার্ড</span>
+                                    </label>
+                                    <input type="password" class="form-control shadow-none rounded-0" id="pass" placeholder="**********">
+                                  </div>
+                                  <div class="mb-3 text-end">
+                                    <a href="#" class="fz-0">*পাসওয়ার্ড রিসেট করুন</a>
+                                  </div>
+                                  <div class="mb-3 d-flex align-items-center">
+                                    <div class="card card-body p-0 col-5">
+                                      <img src="assets/images/captcha-demo.png" style="height: 70px;" alt="">
+                                    </div>
+                                    <div class="card card-body text-center p-0 border-0">
+                                      <a href="#" class="text-dark"><div class="icon"><i class="fas fa-retweet"></i></div></a>
+                                      <a href="#" class="text-dark"><div class="icon"><i class="fas fa-volume-up"></i></div></a>
+                                    </div>
+                                    <div class="card card-body p-0 border-0 col-5">
+                                      <input type="text" class="form-control shadow-none py-4" id="captcha" placeholder="ক্যাপচা ফলাফল লিখুন">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 text-center">
+                                    <button type="submit" class="btn btn-green shadow-none fw-bold" style="border-radius: .8rem; padding-left:60px; padding-right:60px;">লগইন <i class="fas fa-sign-in-alt"></i></button>
+                                  </div>
+                                  <div class="mb-3 text-center">
+                                    <label class="text-muted">অথবা</label>
+                                  </div>
+                                  <div class="mb-3 text-center">
+                                    <button type="submit" class="btn btn-gray shadow-none px-4 fz-0" style="border-radius: 2rem;"><span><img src="assets/images/button-mygov-logo.png" style="height: 15px;" alt=""></span> | <span>একসেবা দিয়ে লগেইন</span></button>
+                                  </div>
+                                  <div class="mb-1 text-center">
+                                    <a href="#" class="fz-0"><i class="fab fa-facebook-square"></i> জাতীয় তথ্য বাতায়ন ফেসবুক গ্রুপ</a>
+                                  </div>
+                                </form> -->
+                                <!--/form-->
+                                <?= Block::placeholder('body') ?>
+                            </div><!--/card card-body-->
+                        </div><!--/col-12-->
+                        <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                            <div class="card mb-2 shadow">
+                                <div class="card-header text-center text-light bg-blue">
+                                    ব্যবহারের সহয়িকা
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled m-0">
+                                        <li class="mb-1"><a
+                                            href="https://bangladesh.gov.bd/site/page/a3a8cd46-f9db-487b-bbac-4dbf13006a9b"
+                                            class="text-decoration-none d-flex align-items-center" target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-clone fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>ইউজার গাইডলাইন</u></span>
+                                        </a></li>
+                                        <li class="mb-1"><a
+                                            href="https://bangladesh.gov.bd/site/page/a9ce5ac6-edfd-4c42-9fbc-b7168d5bc399"
+                                            class="text-decoration-none d-flex align-items-center" target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-photo-video fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>ভিডিও টিউটোরিয়াল</u></span>
+                                        </a></li>
+                                        <li class="mb-1"><a
+                                            href="http://www.muktopaath.gov.bd/course-search?type=tag&id=522&name=জাতীয়%20তথ্য%20বাতায়ন%20ব্যবস্থাপনা&page=1"
+                                            class="text-decoration-none d-flex align-items-center" target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-globe-asia fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>অনলাইন কোর্স</u></span>
+                                        </a></li>
+                                        <li class="mb-1"><a
+                                            href="https://bangladesh.gov.bd/site/files/36ad8a2c-a97b-4d01-b8a1-dc893acc1e88"
+                                            class="text-decoration-none d-flex align-items-center" target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-file fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>জাতীয় তথ্য বাতায়নের গুরুত্বপূর্ণ ডকুমেন্টসমুহ</u></span>
+                                        </a></li>
+                                        <li class="mb-1"><a href="#"
+                                                            class="text-decoration-none d-flex align-items-center"
+                                                            target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-file-alt fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>জাতীয় তথ্য বাতায়নের ব্যবস্থাপনা সংক্রান্ত জরুরী নোটিশ</u></span>
+                                        </a></li>
+                                        <li class="mb-1"><a
+                                            href="https://bangladesh.gov.bd/site/page/5c238920-a65f-4168-9c2b-70c39dc7cb1c"
+                                            class="text-decoration-none d-flex align-items-center" target="_blank">
+                                            <div class="border-violet icon-circle">
+                                                <div style="width: 30px;"><i class="fas fa-mobile fz-0"></i></div>
+                                            </div>
+                                            <span class="fz-0 ms-1"><u>মোবাইল অ্যাপসমূহ</u></span>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div><!--/card-->
+                            <div class="card shadow">
+                                <div class="card-header text-center bg-violet text-light">
+                                    সাপোর্ট সংক্রান্ত
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled m-0">
+                                        <li class="mb-1">
+                                            <label class="d-flex align-items-center">
+                                                <span class="text-muted me-2"><i class=" fas fa-angle-right"></i></span>
+                                                <span class="fz-0">সাপোর্ট সংক্রান্তে ফোন করুন</span>
+                                            </label>
+                                            <div class="d-flex align-items-center ms-2">
+                                                <div class="icon-circle text-light border-green bg-green me-2"><i
+                                                    class="fas fa-phone-alt fz-0"></i></div>
+                                                <div class="fz-0 fw-bold">+৮৮০ ৯৬৩৯৬৬৩৩১১</div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-1">
+                                            <label class="d-flex align-items-center">
+                                                <span class="text-muted me-2"><i class=" fas fa-angle-right"></i></span>
+                                                <span class="fz-0">নতুন ডোমেইন এর আবেদন ফরম</span>
+                                            </label>
+                                            <div class="d-flex align-items-center ms-2">
+                                                <div class="icon-circle text-light border-green bg-green me-2"><i
+                                                    class="fas fa-globe-asia fz-0"></i></div>
+                                                <div class="fz-0 fw-bold"><a href="http://npftr.portal.gov.bd/new-domain" style="color:#FF6347;">npftr.portal.gov.bd/new-domain</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="mb-1">
+                                            <label class="d-flex align-items-center">
+                                                <span class="text-muted me-2"><i class=" fas fa-angle-right"></i></span>
+                                                <span class="fz-0">সাপোর্ট সংক্রান্তে মেইল করুন</span>
+                                            </label>
+                                            <div class="d-flex align-items-center ms-2">
+                                                <div class="icon-circle text-light border-green bg-green me-2"><i
+                                                    class="fas fa-envelope fz-0"></i></div>
+                                                <div class="fz-0 fw-bold"><a href="mailto:support@portal.gov.bd"
+                                                                             class="text-decoration-none">support@portal.gov.bd</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="d-flex align-items-center">
+                                                <span class="text-muted me-2"><i class=" fas fa-angle-right"></i></span>
+                                                <span
+                                                    class="fz-0">জাতীয় তথ্য বাতায়ন সংক্রান্ত যে কোন সমস্যা নিয়ে লিখুন</span>
+                                            </label>
+                                            <div class="d-flex align-items-center ms-2">
+                                                <div class="icon-circle text-light border-green bg-green me-2"><i
+                                                    class="fas fa-globe-asia fz-0"></i></div>
+                                                <div class="fz-0 fw-bold"><a href="http://supportdesk.portal.gov.bd/"
+                                                                             class="text-decoration-none"
+                                                                             target="_blank">supportdesk.portal.gov.bd</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--/card-->
+                        </div><!--/col-12-->
+                    </div><!--/inner row-->
+
+                </div><!--/col-12-->
+            </div><!--/row-->
+        </div><!--/container-->
+    </div><!--/mainbody-->
+    <footer class="container pt-md-4 bg-light">
+        <div class="row justify-content-center align-items-md-center justify-content-md-end pt-md-5 pe-md-4">
+            <div class="col-8 col-md-3 col-lg-2 mb-1 fz-0 fw-bold text-md-end">
+                <span>কারিগরি সহযোগিতা</span>
+            </div>
+            <div class="col-8 col-md-3 col-lg-2 mb-1">
+                <img src="<?= url('/plugins/np/contents/assets/loginImages/gov-logo-set.png') ?>" class="w-100"/>
+            </div>
+        </div>
+    </footer><!--/footer-->
+
+    <div class="sidebar d-lg-none bg-light shadow">
+        <ul class="list-unstyled fz-0">
+            <li class="nav-item"><a href="#" class="nav-link active">রিপোর্টিং টুলস</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">জাতীয় তথ্য বাতায়ন</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">নথি</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">বাংলাদেশ ই-ডিরেক্টরি</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">দর্শনীয় স্থানসমুহ</a></li>
+        </ul>
+    </div>
+    <!--/sidebar-->
+</div><!--/wrapper-->
+<!-- model -->
+<div class="modal fade" id="otp_send_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center reportText" id="exampleModalLongTitle"><strong>
+                    আপনার কাছে একটি OTP পাঠানো হচ্ছে...
+                </strong></h5>
+            </div>
+            <div class="modal-body">
+                <!-- <div id="addloderUpdate" style="position: relative;"></div> -->
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-report" role="progressbar" aria-valuenow="" aria-valuemin="0"
+                         aria-valuemax="100" style="width: 0%;">
+                        0%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Flash Messages -->
+<div id="layout-flash-messages"><?= $this->makeLayoutPartial('flash_messages') ?></div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+<!--<script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/all.min.js"></script>-->
+<script src="<?= url('/modules/system/assets/js/loginMain.js') ?>"></script>
+
+<!-- Support Social Widget Links Start -->
+<div id="batworld"></div>
+<script>
+    window.ba_sw_id = 'd0f7e42a-0faa-472c-aacd-83cef5168928';
+    var s1 = document.createElement('script');
+    s1.setAttribute('src', 'https://feedback.oss.net.bd/src/0.1.3/social_widget_link.js');
+    document.body.appendChild(s1);
+</script>
+<!-- Support Social Widget Links End -->
+<!-- Global site tag (gtag.js) - Google Analytics Start -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XL3REV1DHW"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XL3REV1DHW');
+    gtag('event', '<?php echo $_SERVER["HTTP_HOST"]; ?> (Backend)', {
+        'event_category': 'Backend'
+    });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics End -->
+<!--/login Captcha-->
+
+<script type="text/javascript">
+
+    // document.getElementById("login_captcha").onclick = humanBeing;
+    // //$secrectKey = "6LexXcwdAAAAAD9_oz7UBkvgJOnEqRohsZ0xHvWT";
+    // function humanBeing() {
+    //   var response = grecaptcha.getResponse();
+    //     //alert(response);
+    //     if(response.length == 0)
+    //   {
+    //     alert('Please Verify You Are Not a Robot !');
+    //     return false;
+    //   }
+    // };
+    $(function () {
+        const _token = $('meta[name="csrf-token"]').attr('content');
+        // Check otp, show message and login button active
+        let myInterval;
+        const otp_send_button = $('.otp-send-button'), mobile_submit_button = $('.mobile_submit_button'),
+            otp_validation_message = $('.otp-validation-message'), otp_question = $(".otp-question"),
+            otp_ans = $('#otp-ans'), login_form_submit = $('.login-form-submit'),
+            login_submit_button = $('.login_submit_button');
+        otp_send_button.attr('disabled', 'disabled');
+        let randomNum1 = Math.ceil(Math.random() * 20), randomNum2 = Math.ceil(Math.random() * 20),
+            total = randomNum1 + randomNum2;
+        otp_question.html(randomNum1 + " + " + randomNum2);
+        otp_ans.keyup(function () {
+            let input = $(this).val();
+            if (parseInt(input) === total) {
+                otp_validation_message.html('ভ্যালিডেশন সম্পূর্ণ হয়েছে');
+                otp_send_button.removeAttr('disabled');
+            } else if (input === '') {
+                otp_validation_message.html('যাচাই করুন');
+                otp_send_button.attr('disabled', 'disabled');
+            } else {
+                otp_validation_message.html('ভ্যালিডেশন ব্যর্থ হয়েছে');
+                otp_send_button.attr('disabled', 'disabled');
+            }
+        });
+        // Reset button refresh captcha
+        $('.signin-reset').on("click", function () {
+            randomNum1 = Math.ceil(Math.random() * 20);
+            randomNum2 = Math.ceil(Math.random() * 20);
+            total = randomNum1 + randomNum2;
+            otp_question.html(randomNum1 + " + " + randomNum2);
+            otp_ans.val('');
+            email_error.html('');
+            password_error.html('');
+            $('.server_error_message').html('');
+            otp_send_button.attr('disabled', 'disabled');
+            otp_validation_message.html('যাচাই করুন');
+            $('.otp_send_after_hide').show();
+            $('.otp_send_after_show').hide();
+        });
+        // Otp send to user and login process
+        const email = $('#user-name'), password = $('#password'), email_error = $('.email_error'),
+            password_error = $('.password_error'), otp_input_box = $('.otp_input_box'), otp_error = $('.otp_error'),
+            otp_send_model = $('#otp_send_model');
+        otp_send_button.on("click", function () {
+            $('.server_error_message').html('');
+            if (email.val() === '') {
+                email_error.html('অনুগ্রহ করে আপনার ইউজার আইডিটি লিখুন');
+                return false;
+            } else email_error.html('');
+            if (password.val() === '') {
+                password_error.html('অনুগ্রহ করে আপনার পাসওয়ার্ডটি লিখুন');
+                return false;
+            } else password_error.html('');
+            $('#signin_secure_type').val('')
+            otp_send_button.prop('disabled', true);
+            $.ajax({
+                type: 'POST',
+                url: './send/two-step-check',
+                data: {_token: _token, login: email.val(), password: password.val()},
+                success: function (response) {
+                    otp_send_button.prop('disabled', false);
+                    if (response.error) $('.server_error_message').html(response.error);
+                    else {
+                        $('.server_error_message').html('');
+                        if (response.secure_login === 'yes') sendOtp();
+                        else login_form_submit.submit();
+                    }
+                }
+            });
+        });
+
+        function sendOtp() {
+            $('#signin_secure_type').val('otp')
+            $.ajax({
+                type: 'POST',
+                url: './send/otp',
+                data: {_token: _token, login: email.val(), password: password.val()},
+                beforeSend: function () {
+                    otp_send_model.modal({backdrop: 'static', keyboard: false});
+                    otp_send_model.modal('show');
+                    progressBarProgress();
+                },
+                success: function (response) {
+                    setTimeout(() => {
+                        otp_send_model.modal('hide')
+                        $('.otp_send_after_show_error_email').hide();
+                        if (response.error) $('.server_error_message').html(response.error);
+                        else {
+                            otpTimeExpiration();
+                            $('.otp_send_after_hide').hide();
+                            $('.otp_send_after_show').show();
+                            $('.otp_send_address').html(response.mail_address);
+                            $('.phone_otp_error').html('');
+                            otp_error.html('');
+                            // Active because try again process if disabled this process
+                            $(".otp_input_box").prop('disabled', false);
+                            login_submit_button.removeAttr('disabled');
+                            $('#otp_countdown_text').show();
+                            $('#otp_expired_text').hide();
+                            $('.mobile-otp-resend').hide();
+                            $('.email-otp-resend').show();
+                        }
+                    }, 2000);
+                },
+                error: function(error){
+                    console.log(error.responseText);
+                    // $('#otp_send_model').modal('hide');
+                    otp_send_model.modal('hide');
+                    otpTimeExpiration();
+                    $('.otp_send_after_hide').hide();
+                    $('.otp_send_after_show').hide();
+                    $('.otp_send_after_show_error_email').show();
+                    $('.phone_otp_error').html('');
+                    otp_error.html('');
+                    // Active because try again process if disabled this process
+                    $(".otp_input_box").prop('disabled', false);
+                    login_submit_button.removeAttr('disabled');
+                    $('#otp_countdown_text').show();
+                    $('#otp_expired_text').hide();
+                    $('.mobile-otp-resend').hide();
+                    $('.email-otp-resend').show();
+
+                    setTimeout(function() {
+                        otp_send_model.modal('hide');
+                    }, 1500);
+                }
+            });
+        }
+
+        mobile_submit_button.on("click", function () {
+            $.ajax({
+                type: 'POST',
+                url: './send/otp',
+                data: {_token: _token, login: email.val(), password: password.val(), medium: 'phone'},
+                beforeSend: function () {
+                    otp_send_model.modal({backdrop: 'static', keyboard: false});
+                    otp_send_model.modal('show');
+                    progressBarProgress();
+                },
+                success: function (response) {
+                    setTimeout(() => {
+                        otp_send_model.modal('hide')
+                        $('.otp_send_after_show_error_email').hide();
+                        if (response.error) $('.phone_otp_error').html(response.error);
+                        else {
+                            otpTimeExpiration();
+                            $('.otp_send_after_hide').hide();
+                            $('.otp_send_after_show').show();
+                            $('.otp_send_address').html(response.mail_address);
+                            $('.phone_otp_error').html('');
+                            otp_error.html('');
+                            // Active because try again process if disabled this process
+                            $(".otp_input_box").prop('disabled', false);
+                            login_submit_button.removeAttr('disabled');
+                            $('#otp_countdown_text').show();
+                            $('#otp_expired_text').hide();
+                            $('.mobile-otp-resend').show();
+                            $('.email-otp-resend').hide();
+                        }
+                    }, 2000);
+                }
+            });
+        });
+
+        login_form_submit.submit(async function (e) {
+            if ($('#signin_secure_type').val() === 'otp') {
+                e.preventDefault()
+                if (otp_input_box.val() === '') {
+                    otp_error.html('অনুগ্রহ করে আপনার OTP লিখুন');
+                    return false;
+                } else otp_error.html('');
+                var form = this;
+                await $.ajax({
+                    type: 'POST',
+                    url: './send/check-validate-otp',
+                    data: {_token: _token, login: email.val(), otp: otp_input_box.val()},
+                    success: function (response) {
+                        if (response.response_type === true && response.data === 'valid_login') form.submit();
+                        else if (response.response_type === false && response.data === 'invalid_login') $('.signin-reset').trigger("click");
+                        else if (response.response_type === false && response.data === 'invalid_attempt') $('.signin-reset').trigger("click");
+                        else if (response.response_type === false && response.data === 'invalid_otp') otp_error.html('আপনার দেওয়া OTP ভুল পুনরায় আবার চেষ্টা করুন');
+                    }
+                });
+            }
+
+            if ($('#signin_secure_type').val() === 'captcha') {
+                e.preventDefault()
+            }
+        });
+
+        const addLeadingZeros = (num, totalLength) => String(num).padStart(totalLength, '0');
+
+        function otpTimeExpiration() {
+            clearInterval(myInterval);
+            let countDownDate = new Date().getTime() + 302000;
+            myInterval = setInterval(function () {
+                let now = new Date().getTime();
+                let distance = countDownDate - now;
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance < 1) {
+                    clearInterval(myInterval);
+                    $(".otp_input_box").prop('disabled', true);
+                    login_submit_button.attr('disabled', 'disabled');
+                    $('#otp_countdown_text').hide();
+                    $('#otp_expired_text').show();
+                } else $('.otp_countdown').html(addLeadingZeros(minutes, 2) + ":" + addLeadingZeros(seconds, 2));
+            }, 1000);
+        }
+
+        function progressBarProgress() {
+            let percentage = 0;
+            let x = setInterval(function () {
+                percentage = percentage + 15;
+                if (percentage > 99) {
+                    percentage = 100;
+                    clearInterval(x);
+                }
+                progress_bar_process(percentage);
+            }, 1000);
+            progress_bar_process(percentage);
+        }
+
+        function progress_bar_process(percentage) {
+            $('.progress-bar-report').text(percentage + '%');
+            $('.progress-bar-report').css('width', percentage + '%');
+        }
+    });
+
+</script>
+</body>
+</html>

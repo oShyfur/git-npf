@@ -1,0 +1,10 @@
+name: ExternalLinks
+form: $/np/contents/models/externallinks/fields.yaml
+modelClass: Np\Contents\Models\ExternalLinks
+defaultRedirect: np/contents/externallinks
+create:
+    redirect: 'np/contents/externallinks/update/:id'
+    redirectClose: np/contents/externallinks
+update:
+    redirect: np/contents/externallinks
+    redirectClose: np/contents/externallinks

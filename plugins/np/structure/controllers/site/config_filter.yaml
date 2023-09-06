@@ -1,0 +1,24 @@
+scopes:
+
+  layer:
+    label: Layers
+    modelClass: Np\Structure\Models\Layer
+    conditions: layer_id in (:filtered)
+  
+  status:
+    label: Status
+    type: group
+    conditions: status in (:filtered)
+    options:
+      1: Stage
+      2: Live
+  
+  go_live:
+    label: Go Live
+    type: daterange
+    conditions: go_live_date >= ':after' AND go_live_date <= ':before'
+
+  domain:
+    label: Domain
+    type: text
+    conditions: id in (select site_id from np_structure_domains where fqdn = :value)

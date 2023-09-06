@@ -1,0 +1,10 @@
+name: StudyBangladesh
+form: $/np/contents/models/studybangladesh/fields.yaml
+modelClass: Np\Contents\Models\StudyBangladesh
+defaultRedirect: np/contents/studybangladesh
+create:
+    redirect: 'np/contents/studybangladesh/update/:id'
+    redirectClose: np/contents/studybangladesh
+update:
+    redirect: np/contents/studybangladesh
+    redirectClose: np/contents/studybangladesh

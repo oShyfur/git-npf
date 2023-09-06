@@ -1,0 +1,10 @@
+name: SubInitiativeChallenge
+form: $/np/contents/models/subinitiativechallenge/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeChallenge
+defaultRedirect: np/contents/subinitiativechallenge
+create:
+    redirect: 'np/contents/subinitiativechallenge/update/:id'
+    redirectClose: np/contents/subinitiativechallenge
+update:
+    redirect: np/contents/subinitiativechallenge
+    redirectClose: np/contents/subinitiativechallenge

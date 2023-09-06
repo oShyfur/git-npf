@@ -1,0 +1,10 @@
+name: DB
+form: $/np/structure/models/db/fields.yaml
+modelClass: Np\Structure\Models\DB
+defaultRedirect: np/structure/db
+create:
+    redirect: 'np/structure/db/update/:id'
+    redirectClose: np/structure/db
+update:
+    redirect: np/structure/db
+    redirectClose: np/structure/db

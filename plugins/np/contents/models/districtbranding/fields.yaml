@@ -1,0 +1,57 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    slogan:
+        label: 'জেলা ব্র্যান্ডিং এর শ্লোগান'
+        span: auto
+        type: text
+    video_link:
+        label: 'ইউটিউব লিঙ্ক'
+        span: auto
+        type: text
+    details_plan:
+        label: 'জেলা ব্র্যান্ডিং এর কর্মপরিকল্পনা'
+        size: large
+        span: full
+        type: richeditor
+    image:
+        label: 'জেলা ব্র্যান্ডিং এর লোগো'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    images:
+        label: ছবি
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

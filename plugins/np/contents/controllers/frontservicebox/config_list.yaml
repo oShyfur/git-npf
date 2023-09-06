@@ -1,0 +1,16 @@
+title: FrontServiceBox
+modelClass: Np\Contents\Models\FrontServiceBox
+list: $/np/contents/models/frontservicebox/columns.yaml
+recordUrl: 'np/contents/frontservicebox/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort: 'created_at'
+defaultSort:
+    column: updated_at
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,15 @@
+scopes:
+
+  region:
+    label: Filter by Region
+    type: group
+    conditions: region in (:filtered)
+    options:
+      top: Top
+      left: Left
+      right: Right
+      footer: Footer
+      flash: Flash
+      right_common: Right Common
+  
+ 

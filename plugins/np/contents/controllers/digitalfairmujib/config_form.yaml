@@ -1,0 +1,10 @@
+name: DigitalfairMujib
+form: $/np/contents/models/digitalfairmujib/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairMujib
+defaultRedirect: np/contents/digitalfairmujib
+create:
+    redirect: 'np/contents/digitalfairmujib/update/:id'
+    redirectClose: np/contents/digitalfairmujib
+update:
+    redirect: np/contents/digitalfairmujib
+    redirectClose: np/contents/digitalfairmujib

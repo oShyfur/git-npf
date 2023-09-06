@@ -1,0 +1,10 @@
+name: Project
+form: $/np/contents/models/project/fields.yaml
+modelClass: Np\Contents\Models\Project
+defaultRedirect: np/contents/project
+create:
+    redirect: 'np/contents/project/update/:id'
+    redirectClose: np/contents/project
+update:
+    redirect: np/contents/project
+    redirectClose: np/contents/project

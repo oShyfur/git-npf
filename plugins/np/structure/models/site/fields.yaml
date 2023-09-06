@@ -1,0 +1,264 @@
+tabs:
+    fields:
+        uuid:
+            label: UUID
+            span: full
+            context:
+                - update
+                - preview
+            disabled: 1
+            required: 1
+            readOnly: 1
+            type: text
+            tab: Basic
+        name:
+            label: Name
+            span: full
+            type: text
+            tab: Basic
+        ministry:
+            label: 'Line Ministry'
+            nameFrom: name_with_domain
+            descriptionFrom: description
+            emptyOption: 'Select Line Ministry'
+            span: storm
+            cssClass: col-md-6
+            required: 1
+            type: relation
+            tab: Basic
+
+        directorate:
+            label: 'Line Directorate'
+            nameFrom: name_with_domain
+            descriptionFrom: description
+            emptyOption: 'Select Line Directorate'
+            span: storm
+            cssClass: col-md-6
+            required: 1
+            type: relation
+            tab: Basic
+
+        layer:
+            label: Layer
+            nameFrom: name
+            descriptionFrom: description
+            span: storm
+            cssClass: col-md-6
+            required: 1
+            type: relation
+            tab: Basic
+        level_id:
+            label: Level
+            emptyOption: 'Select Level'
+            showSearch: true
+            span: storm
+            cssClass: col-md-6
+            dependsOn:
+                - layer
+            type: dropdown
+            tab: Basic
+        site_title_line1:
+            label: 'Site Title Line 1'
+            span: auto
+            required: 1
+            type: text
+            tab: Basic
+        site_title_line2:
+            label: 'Site Title Line 2'
+            span: auto
+            type: text
+            tab: Basic
+        site_type:
+            label: 'Site Type'
+            nameFrom: name
+            descriptionFrom: description
+            emptyOption: '-- Select Site Type --'
+            span: auto
+            type: relation
+            tab: Basic
+        parent:
+            label: 'Site Parent'
+            emptyOption: '-- Select Site Parent --'
+            showSearch: true
+            span: auto
+            default: null
+            type: dropdown
+            tab: Basic
+
+        divisional_hierarchy_id:
+            label: 'Divisional Hierarchy'
+            nameFrom: name
+            emptyOption: '-- Select Site Divisional Hierarchy --'
+            showSearch: true
+            span: auto
+            default: null
+            type: dropdown
+            tab: Basic
+
+        district_hierarchy_id:
+            label: 'District Hierarchy'
+            emptyOption: '-- Select Site District Hierarchy --'
+            showSearch: true
+            span: auto
+            default: null
+            type: dropdown
+            tab: Basic
+
+        site_email:
+            label: 'Site Email'
+            span: auto
+            type: text
+            tab: Basic
+        site_theme_code:
+            label: 'Site Theme'
+            showSearch: true
+            span: auto
+            default: np-default
+            required: 1
+            type: dropdown
+            tab: Basic
+        status:
+            label: Status
+            options:
+                1: Stage
+                2: Live
+            showSearch: true
+            span: auto
+            default: '1'
+            required: 1
+            type: dropdown
+            tab: Basic
+        slogan:
+            label: Slogan
+            span: auto
+            type: text
+            tab: Basic
+        site_mission:
+            label: Mission
+            size: ''
+            span: auto
+            type: textarea
+            tab: Basic
+        tags:
+            span: left
+            path: tags
+            type: partial
+            tab: Basic
+        logo:
+            label: Logo
+            mode: image
+            imageWidth: '100'
+            fileTypes: 'png,jpg'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Basic
+        site_default_lang:
+            label: 'Default Language'
+            showSearch: true
+            span: auto
+            default: bn
+            type: dropdown
+            tab: Basic
+        languages:
+            label: Languages
+            nameFrom: name
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: Basic
+        active:
+            label: Active
+            span: auto
+            default: 1
+            type: switch
+            tab: Basic
+        site_meta:
+            label: 'SIte Meta'
+            prompt: 'Add new item'
+            span: full
+            type: repeater
+            tab: 'Site Meta'
+            form:
+                fields:
+                    key:
+                        label: Key
+                        span: auto
+                        type: text
+                    value:
+                        label: Value
+                        span: auto
+                        type: text
+        domain:
+            span: auto
+            path: domains
+            type: partial
+            tab: Domains
+        users:
+            span: full
+            path: users
+            type: partial
+            tab: 'Site Users'
+        cluster:
+            label: Cluster
+            nameFrom: name
+            required: 1
+            descriptionFrom: description
+            emptyOption: '--Select Cluster--'
+            span: auto
+            type: relation
+            tab: 'Cluster Mapping'
+        db:
+            label: DB
+            emptyOption: 'Select DB'
+            required: 1
+            showSearch: true
+            span: auto
+            dependsOn:
+                - cluster
+            type: dropdown
+            tab: 'Cluster Mapping'
+        _oisf_ministry:
+            label: Ministry
+            type: dropdown
+            span: storm
+            tab: 'Oisf Mapping'
+            options: getOisfMinistryOptions
+            cssClass: col-md-3
+            emptyOption: '--Select--'
+        _oisf_layer:
+            label: Layer
+            type: dropdown
+            dependsOn: _oisf_ministry
+            span: storm
+            tab: 'Oisf Mapping'
+            options: getOisfLayerOptions
+            cssClass: col-md-3
+            emptyOption: '--Select--'
+        oisf_office_id:
+            label: Office
+            type: dropdown
+            dependsOn: _oisf_layer
+            span: storm
+            tab: 'Oisf Mapping'
+            cssClass: col-md-3
+            emptyOption: '--Select--'
+            options: getOfficeOptions
+        is_run_migration:
+            label: 'Run Migration ?'
+            options:
+                - 'No'
+                - 'Yes'
+            showSearch: true
+            span: auto
+            default: '0'
+            type: dropdown
+            tab: 'Site Resources'
+        site_resource:
+            span: full
+            path: site_resource
+            type: partial
+            tab: 'Site Resources'

@@ -1,0 +1,29 @@
+
+    <div class="link-picker">
+        <div class="input-group">
+            <!-- <input type="text" id="<?= $id ?>" name="<?= $name ?>[link]" value="<?= $value['link'] ?>" class="form-control" autocomplete="off" /> -->
+            <input type="text" id="<?= $id ?>" name="<?= $name ?>[link]" value="<?= $value['link'] ? $value['link']:'#' ?>" class="form-control" autocomplete="off" />
+            <div class="input-group-btn">
+                <button class="btn btn-primary find-record" data-control="popup" data-size="huge"
+                    data-handler="<?= $this->getEventHandler('onFindLink') ?>" data-request-data="linkfinder_flag: 1"
+                    type="button">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="captions">
+
+            <?php foreach($locales as $key=>$localeName):?>
+           
+                <input type="text" id="<?= $id.'-caption_'.$key ?>" name="<?= $name ?>[caption][<?=$key?>]"
+                    value="<?= isset($value['caption'][$key])?$value['caption'][$key]:'' ?>" class="form-control"
+                    autocomplete="off" placeholder="Caption <?= $key?>" />
+
+            <?php endforeach;?>
+
+        </div>
+    
+    </div>
+
+    

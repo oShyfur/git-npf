@@ -1,0 +1,16 @@
+title: ServiceBox
+modelClass: Np\Contents\Models\ServiceBox
+list: $/np/contents/models/servicebox/columns.yaml
+recordUrl: 'np/contents/servicebox/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort: 'created_at'
+defaultSort:
+    column: updated_at
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

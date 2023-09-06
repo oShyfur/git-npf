@@ -1,0 +1,10 @@
+name: SubInitiativeKeyImpact
+form: $/np/contents/models/subinitiativekeyimpact/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeKeyImpact
+defaultRedirect: np/contents/subinitiativekeyimpact
+create:
+    redirect: 'np/contents/subinitiativekeyimpact/update/:id'
+    redirectClose: np/contents/subinitiativekeyimpact
+update:
+    redirect: np/contents/subinitiativekeyimpact
+    redirectClose: np/contents/subinitiativekeyimpact

@@ -1,0 +1,10 @@
+name: DcSectionWiseForm
+form: $/np/contents/models/dcsectionwiseform/fields.yaml
+modelClass: Np\Contents\Models\DcSectionWiseForm
+defaultRedirect: np/contents/dcsectionwiseform
+create:
+    redirect: 'np/contents/dcsectionwiseform/update/:id'
+    redirectClose: np/contents/dcsectionwiseform
+update:
+    redirect: np/contents/dcsectionwiseform
+    redirectClose: np/contents/dcsectionwiseform

@@ -1,0 +1,168 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    is_superuser:
+        context: [create, update]
+        tab: backend::lang.user.permissions
+        label: backend::lang.user.superuser
+        type: switch
+        comment: backend::lang.user.superuser_comment
+    is_admin:
+        context: [create, update]
+        tab: backend::lang.user.permissions
+        label: Is Central Portal user ?
+        type: switch
+        comment: 'Central Portal User. not user to specific site'
+
+    is_sso:
+        context: [create, update, relation]
+        label: Is SSO User ?
+        disabled: 1
+        readOnly: 1
+        type: switch
+        comment: 'SSO user'
+
+    _ministry:
+        label: Ministry
+        type: dropdown
+        dependsOn: is_sso
+        span: storm
+        cssClass: col-md-3
+        emptyOption: --Select--
+        trigger:
+            action: show
+            field: is_sso
+            condition: checked
+
+    _layer:
+        label: Layer
+        type: dropdown
+        dependsOn: _ministry
+        span: storm
+        cssClass: col-md-3
+        emptyOption: --Select--
+        trigger:
+            action: show
+            field: is_sso
+            condition: checked
+
+    _office:
+        label: Office
+        type: dropdown
+        dependsOn: _layer
+        span: storm
+        cssClass: col-md-3
+        emptyOption: --Select--
+        trigger:
+            action: show
+            field: is_sso
+            condition: checked
+    _employee:
+        label: Employee
+        type: dropdown
+        dependsOn: _office
+        span: storm
+        cssClass: col-md-3 employee-selector
+        emptyOption: --Select--
+        trigger:
+            action: show
+            field: is_sso
+            condition: checked
+
+
+tabs:
+    defaultTab: backend::lang.user.account
+    icons:
+        backend::lang.user.account: icon-user
+        backend::lang.user.groups: icon-users
+        backend::lang.user.permissions: icon-key
+
+    fields:
+        login:
+            span: left
+            label: backend::lang.user.login
+
+        email:
+            span: right
+            label: backend::lang.user.email
+
+        send_invite:
+            context: [create,relation]
+            type: checkbox
+            label: backend::lang.user.send_invite
+            comment: backend::lang.user.send_invite_comment
+            default: true
+
+        first_name:
+            span: left
+            label: backend::lang.user.first_name
+            required: 1
+
+        last_name:
+            span: right
+            label: backend::lang.user.last_name
+            required: 0
+
+        designation:
+            span: left
+            label: Designation
+            required: true
+
+        phone:
+            span: right
+            label: Phone
+            required: true
+            comment: 'Mobile No. will be 11 digits and format will be like that 017XXXXXXXXX'
+
+        password:
+            type: password
+            span: left
+            label: backend::lang.user.password
+            comment: 'A lowercase letter [a-z], A capital (uppercase) letter [A-Z], A number [0-9],A special character [@!$#%&?], Minimum 8 characters'
+
+        password_confirmation:
+            type: password
+            span: right
+            label: backend::lang.user.password_confirmation
+
+        secure_login:
+            label: Two-step authentication
+            type: switch
+            comment: "we'll ask for a verification code via your email address or phone number"
+
+        role:
+            context: [create, update,relation]
+            label: backend::lang.user.role_field
+            commentAbove: backend::lang.user.role_comment
+            type: radio
+            options: getUserRoles
+
+        groups:
+            context: [create, update]
+            label: backend::lang.user.groups
+            commentAbove: backend::lang.user.groups_comment
+            type: checkboxlist
+            tab: backend::lang.user.groups
+
+        allowed_ct:
+            label: Content content_types
+            type: checkboxlist
+            quickselect: true
+            options: getContentTypes
+            tab: Content Types
+
+secondaryTabs:
+    fields:
+        btn_impersonate:
+            context: [create, update]
+            label: ''
+            context: [update]
+            type: partial
+        avatar:
+            label: backend::lang.user.avatar
+            type: fileupload
+            mode: image
+            imageHeight: 250
+            imageWidth: 250

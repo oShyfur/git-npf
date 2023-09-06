@@ -1,0 +1,20 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/np/contents/models/menu/columns.yaml
+
+# Model Class name
+modelClass: Np\Contents\Models\Menu
+
+# List Title
+title: Manage Menus
+
+# Link URL for each record
+recordUrl: np/contents/menu/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: backend::lang.list.no_records
+
+showTree: true

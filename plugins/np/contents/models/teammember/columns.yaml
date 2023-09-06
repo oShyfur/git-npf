@@ -1,0 +1,35 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+        # width: 20%
+    team_designation_taxonomy[name]:
+        label: Designation
+        type: text
+        searchable: true
+        sortable: true
+        # width: 20%
+    'team_cluster[title]':
+        label: 'Team Cluster'
+        type: text
+        searchable: false
+        sortable: false
+    'team_name[title]':
+        label: 'Team'
+        type: text
+        searchable: false
+        sortable: false
+    sort_order:
+        label: 'Sort Order'
+        type: number
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true
+    

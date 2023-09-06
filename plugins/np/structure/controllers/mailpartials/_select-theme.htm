@@ -1,0 +1,44 @@
+
+<form method="POST">
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <h4 class="modal-title">Select Theme to Copy</h4>
+</div>
+
+<div class="modal-body">
+    <div>
+        <select name="theme" id="theme" class="form-cobtrol select">
+            
+            <?php foreach( $themes as $code => $name ):?>
+                <option value="<?= $code?>"><?= $name?></option>
+            <?php endforeach;?>
+
+        </select>
+    </div>
+
+  
+
+</div>
+
+               
+<div class="modal-footer">
+   
+            
+            <button
+                
+                data-request="onDuplicate"
+                data-request-data="redirect:0,id:<?= $model->id?>"
+                data-load-indicator="<?= e(trans('system::lang.mail_templates.saving_layout')) ?>"
+                class="btn btn-primary">
+                Submit
+
+            </button>
+
+           
+        
+</div>    
+
+</form>
+                
+              

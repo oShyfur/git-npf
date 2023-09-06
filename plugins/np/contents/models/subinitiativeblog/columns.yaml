@@ -1,0 +1,32 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    'initiative_category[title]':
+        label: Initiative Category
+        type: text
+        searchable: false
+        sortable: false
+    'initiative_sub_category[title]':
+        label: Initiative Sub-Category
+        type: text
+        searchable: false
+        sortable: false
+    is_pin:
+        label: Pin
+        type: switch
+        sortable: true
+    is_popular:
+        label: Popular
+        type: switch
+        sortable: true
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

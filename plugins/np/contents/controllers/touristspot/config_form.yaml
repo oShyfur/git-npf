@@ -1,0 +1,10 @@
+name: TouristSpot
+form: $/np/contents/models/touristspot/fields.yaml
+modelClass: Np\Contents\Models\TouristSpot
+defaultRedirect: np/contents/touristspot
+create:
+    redirect: 'np/contents/touristspot/update/:id'
+    redirectClose: np/contents/touristspot
+update:
+    redirect: np/contents/touristspot
+    redirectClose: np/contents/touristspot

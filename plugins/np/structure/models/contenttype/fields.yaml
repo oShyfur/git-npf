@@ -1,0 +1,115 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    code:
+        label: Code
+        span: auto
+        required: 1
+        type: text
+    table_name:
+        label: Model
+        emptyOption: 'Select Model'
+        showSearch: true
+        span: auto
+        type: dropdown
+        options: getModelList
+    icon:
+        label: 'Icon Code'
+        span: auto
+        type: text
+        comment: 'Icons are vailable here https://octobercms.com/docs/ui/icon'
+    config:
+        label: Configuration
+        span: auto
+        size: giant
+        type: codeeditor
+        language: json
+        cssClass: jsoneditor
+        commentHtml: true
+        comment : "<a target='__blank' href='https://jsoneditoronline.org/'>json Editor</a>"
+    frequency:
+        label: Frequency
+        span: auto
+        required: 1
+        type: text
+    is_common:
+        label: 'Is Common ?'
+        span: auto
+        type: switch
+    status:
+        label: Status
+        span: auto
+        default: 1
+        type: switch   
+        
+    settings:
+            dependsOn:
+                - table_name
+            stretch: true
+            comment: 'Comments here'
+            commentHtml: true
+            span: full
+            cssClass: frameless
+            tab: rainlab.builder::lang.list.tab_columns
+            type: datatable
+            btnAddRowLabel: rainlab.builder::lang.list.btn_add_column
+            btnDeleteRowLabel: rainlab.builder::lang.list.btn_delete_column
+            columns:
+                field: 
+                    title: rainlab.builder::lang.list.column_dbfield_label
+                    type: autocomplete
+                   
+                displayName:
+                    title: rainlab.builder::lang.list.column_name_label
+                type:
+                    title: rainlab.builder::lang.list.column_type_label
+                    
+                    type: dropdown
+                    options: 
+                        text: rainlab.builder::lang.list.column_type_text
+                        html_text: Html Text
+                        dropdown: Dropdown
+                        taxonomy: Texonomy
+                        relation: Relation
+                        file: File
+                        date: rainlab.builder::lang.list.column_type_date
+                
+                in_list:
+                    title: In List
+                    type: checkbox
+                    width: 80px
+                in_details:
+                    title: In Details
+                    type: checkbox
+                    width: 80px
+                related_column:
+                    title: Relation Col
+                search:
+                    title: Searchable
+                    type: checkbox
+                    width: 80px
+                search_mode:
+                    title: Search Mode
+                    type: dropdown
+                    options: 
+                        exact: Exact
+                        all: All
+                        any: Any
+                link:
+                    title: Linkable
+                    type: checkbox
+                    width: 80px
+                sortable:
+                    title: Sortable
+                    type: checkbox
+                    width: 80px
+                sort_direction:
+                    title: Sort Direction
+                    default: desc
+                    trigger:
+                        action: show
+                        field: sortable
+                        condition: checked

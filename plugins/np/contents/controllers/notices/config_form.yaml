@@ -1,0 +1,10 @@
+name: Notices
+form: $/np/contents/models/notices/fields.yaml
+modelClass: Np\Contents\Models\Notices
+defaultRedirect: np/contents/notices
+create:
+    redirect: 'np/contents/notices/update/:id'
+    redirectClose: np/contents/notices
+update:
+    redirect: np/contents/notices
+    redirectClose: np/contents/notices

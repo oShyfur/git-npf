@@ -1,0 +1,10 @@
+name: Leaders
+form: $/np/contents/models/leaders/fields.yaml
+modelClass: Np\Contents\Models\Leaders
+defaultRedirect: np/contents/leaders
+create:
+    redirect: 'np/contents/leaders/update/:id'
+    redirectClose: np/contents/leaders
+update:
+    redirect: np/contents/leaders
+    redirectClose: np/contents/leaders

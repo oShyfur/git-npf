@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Menu
+
+# Model Form Field configuration
+form: $/np/contents/models/menu/fields.yaml
+
+# Model Class name
+modelClass: Np\Contents\Models\Menu
+
+# Default redirect location
+defaultRedirect: np/contents/menu
+
+# Create page
+create:
+    title: Create Menu
+    redirect: np/contents/menu/update/:id
+    redirectClose: np/contents/menu
+
+# Update page
+update:
+    title: Edit Menu
+    redirect: np/contents/menu
+    redirectClose: np/contents/menu
+
+# Preview page
+preview:
+    title: Preview Menu

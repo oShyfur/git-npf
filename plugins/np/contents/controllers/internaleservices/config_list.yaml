@@ -1,0 +1,13 @@
+title: InternalEservices
+modelClass: Np\Contents\Models\InternalEservices
+list: $/np/contents/models/internaleservices/columns.yaml
+recordUrl: 'np/contents/internaleservices/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

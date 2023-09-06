@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+    # 'parent[name]':
+    #     label: 'Parent Taxonomy'
+    #     type: text
+    #     searchable: false
+    #     sortable: false
+    status:
+        label: Status
+        type: switch

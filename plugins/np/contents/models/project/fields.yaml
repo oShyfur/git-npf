@@ -1,0 +1,82 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    field_project_work_description:
+        label: 'কাজের বর্ননা'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    attachments:
+        label: ফাইল
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    field_project_allotment_taka:
+        label: 'বরাদ্দের পরিমাণ (টাকায়)'
+        span: auto
+        type: text
+    field_project_allotment_others:
+        label: 'বরাদ্দের পরিমাণ (অন্যান্য)'
+        size: large
+        span: full
+        type: richeditor
+    field_project_time_duration_start:
+        label: 'প্রকল্প শুরু'
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    field_project_time_duration_end:
+        label: 'প্রকল্প শেষ'
+        mode: date
+        span: auto
+        type: datepicker
+    field_project_ward:
+        label: ওয়ার্ড
+        span: auto
+        type: text
+    field_latest_update_date:
+        label: 'সর্বশেষ হালনাগাদের তারিখ'
+        mode: date
+        span: auto
+        type: datepicker
+    field_project_latest_status:
+        label: 'অগ্রগতির হার'
+        size: large
+        span: full
+        type: richeditor
+    project_implemented_or_proposed:
+        label: 'প্রকল্পের স্ট্যাটাস'
+        taxonomyType: '5'
+        span: auto
+        type: taxonomypicker
+    projects:
+        label: 'প্রকল্পের নাম'
+        taxonomyType: '4'
+        span: auto
+        type: taxonomypicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,33 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    innovation_content_category:
+        label: 'Innovation Content Type'
+        taxonomyType: '27'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    attachment:
+        label: 'Innovation File'
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

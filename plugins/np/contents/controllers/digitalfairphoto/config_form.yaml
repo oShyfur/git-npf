@@ -1,0 +1,10 @@
+name: DigitalfairPhoto
+form: $/np/contents/models/digitalfairphoto/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairPhoto
+defaultRedirect: np/contents/digitalfairphoto
+create:
+    redirect: 'np/contents/digitalfairphoto/update/:id'
+    redirectClose: np/contents/digitalfairphoto
+update:
+    redirect: np/contents/digitalfairphoto
+    redirectClose: np/contents/digitalfairphoto

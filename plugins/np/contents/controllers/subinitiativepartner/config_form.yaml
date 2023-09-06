@@ -1,0 +1,10 @@
+name: SubInitiativePartner
+form: $/np/contents/models/subinitiativepartner/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativePartner
+defaultRedirect: np/contents/subinitiativepartner
+create:
+    redirect: 'np/contents/subinitiativepartner/update/:id'
+    redirectClose: np/contents/subinitiativepartner
+update:
+    redirect: np/contents/subinitiativepartner
+    redirectClose: np/contents/subinitiativepartner

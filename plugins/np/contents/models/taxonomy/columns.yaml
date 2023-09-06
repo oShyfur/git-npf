@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: Id
+        width: 10%
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: false
+    texonomy_type[name]:
+        label: 'Taxonomy Type'
+        sortable: true
+    sort_order:
+        label: 'Sort Order'
+        type: number
+        sortable: true

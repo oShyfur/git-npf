@@ -1,0 +1,10 @@
+name: CalendarEvent
+form: $/np/contents/models/calendarevent/fields.yaml
+modelClass: Np\Contents\Models\CalendarEvent
+defaultRedirect: np/contents/calendarevent
+create:
+    redirect: 'np/contents/calendarevent/update/:id'
+    redirectClose: np/contents/calendarevent
+update:
+    redirect: np/contents/calendarevent
+    redirectClose: np/contents/calendarevent

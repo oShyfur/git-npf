@@ -1,0 +1,10 @@
+name: TcvMediaHomePage
+form: $/np/contents/models/tcvmediahomepage/fields.yaml
+modelClass: Np\Contents\Models\TcvMediaHomePage
+defaultRedirect: np/contents/tcvmediahomepage
+create:
+    redirect: 'np/contents/tcvmediahomepage/update/:id'
+    redirectClose: np/contents/tcvmediahomepage
+update:
+    redirect: np/contents/tcvmediahomepage
+    redirectClose: np/contents/tcvmediahomepage

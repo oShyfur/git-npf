@@ -1,0 +1,10 @@
+name: TeamName
+form: $/np/contents/models/teamname/fields.yaml
+modelClass: Np\Contents\Models\TeamName
+defaultRedirect: np/contents/teamname
+create:
+    redirect: 'np/contents/teamname/update/:id'
+    redirectClose: np/contents/teamname
+update:
+    redirect: np/contents/teamname
+    redirectClose: np/contents/teamname

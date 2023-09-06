@@ -1,0 +1,32 @@
+<?php namespace Np\Structure\Updates;
+
+use Schema;
+use October\Rain\Database\Updates\Migration;
+
+class BuilderTableCreateNpStructureDomains extends Migration
+{
+    public function up()
+    {
+        Schema::create('np_structure_domains', function ($table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id')->unsigned();
+            $table->integer('site_id')->unsigned();
+            $table->string('fqdn', 200);
+            $table->boolean('is_secure')->default(0);
+            $table->boolean('is_redirect')->default(0);
+            $table->string('redirect_url', 200)->nullable();
+            $table->boolean('status')->default(1);
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('np_structure_domains');
+    }
+}

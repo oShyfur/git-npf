@@ -1,0 +1,45 @@
+<div class="row">
+    <?php foreach($list as $key => $ct):?>
+    <div class="col-md-2 box">
+        <?php $path = 'np/contents/'.$ct['code']?>
+        <a href="<?php echo Backend::url($path)?>">
+            <i class="<?php echo $ct['icon'] ?> icon-5x"></i>
+            <div><?= $ct['name']?></div>
+            <?php if($contentLastUpdate[$key]['over_date'] > 0) { ?>
+                <small class="alert-frequency" title="You should update or create this content type as soon as possible">Expired <?= $contentLastUpdate[$key]['over_date'] ?> days ago</small>
+            <?php } else { ?>
+                <small class="alert-frequency-in-date">Expires in <?= $contentLastUpdate[$key]['in_date'] ?> days </small>
+            <?php } ?>
+
+        </a>
+    </div>
+    <?php endforeach;?>
+</div>
+<style>
+    .alert-frequency{
+        position: absolute;
+        top: -12px;
+        border: 2px solid;
+        padding: 4px;
+        border-radius: 25px;
+        right: 34px;
+        background: #d06666;
+        color: #fff;
+
+    }
+    .alert-frequency-in-date{
+        position: absolute;
+        top: -12px;
+        border: 2px solid;
+        padding: 3px;
+        border-radius: 25px;
+        right: 34px;
+        background: #f7f7f7;
+        color: #008000;
+
+    }
+    .small-alert{
+        font-weight: bold;
+        color: red;
+    }
+</style>

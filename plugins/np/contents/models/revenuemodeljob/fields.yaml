@@ -1,0 +1,49 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    attachment:
+        label: সংযুক্তি
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    publish_date:
+        label: 'প্রকাশের তারিখ'
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    archive_date:
+        label: 'আর্কাইভের তারিখ'
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        type: number
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

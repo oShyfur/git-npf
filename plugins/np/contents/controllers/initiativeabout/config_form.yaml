@@ -1,0 +1,10 @@
+name: InitiativeAbout
+form: $/np/contents/models/initiativeabout/fields.yaml
+modelClass: Np\Contents\Models\InitiativeAbout
+defaultRedirect: np/contents/initiativeabout
+create:
+    redirect: 'np/contents/initiativeabout/update/:id'
+    redirectClose: np/contents/initiativeabout
+update:
+    redirect: np/contents/initiativeabout
+    redirectClose: np/contents/initiativeabout

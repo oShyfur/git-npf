@@ -1,0 +1,10 @@
+name: Download
+form: $/np/contents/models/download/fields.yaml
+modelClass: Np\Contents\Models\Download
+defaultRedirect: np/contents/download
+create:
+    redirect: 'np/contents/download/update/:id'
+    redirectClose: np/contents/download
+update:
+    redirect: np/contents/download
+    redirectClose: np/contents/download

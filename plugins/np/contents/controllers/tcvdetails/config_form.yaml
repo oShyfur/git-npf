@@ -1,0 +1,10 @@
+name: TcvDetails
+form: $/np/contents/models/tcvdetails/fields.yaml
+modelClass: Np\Contents\Models\TcvDetails
+defaultRedirect: np/contents/tcvdetails
+create:
+    redirect: 'np/contents/tcvdetails/update/:id'
+    redirectClose: np/contents/tcvdetails
+update:
+    redirect: np/contents/tcvdetails
+    redirectClose: np/contents/tcvdetails

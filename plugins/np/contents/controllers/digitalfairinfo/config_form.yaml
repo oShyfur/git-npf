@@ -1,0 +1,10 @@
+name: DigitalfairInfo
+form: $/np/contents/models/digitalfairinfo/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairInfo
+defaultRedirect: np/contents/digitalfairinfo
+create:
+    redirect: 'np/contents/digitalfairinfo/update/:id'
+    redirectClose: np/contents/digitalfairinfo
+update:
+    redirect: np/contents/digitalfairinfo
+    redirectClose: np/contents/digitalfairinfo

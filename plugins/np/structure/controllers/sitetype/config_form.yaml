@@ -1,0 +1,10 @@
+name: SiteType
+form: $/np/structure/models/sitetype/fields.yaml
+modelClass: Np\Structure\Models\SiteType
+defaultRedirect: np/structure/sitetype
+create:
+    redirect: 'np/structure/sitetype/update/:id'
+    redirectClose: np/structure/sitetype
+update:
+    redirect: np/structure/sitetype
+    redirectClose: np/structure/sitetype

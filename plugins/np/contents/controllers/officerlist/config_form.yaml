@@ -1,0 +1,10 @@
+name: OfficerList
+form: $/np/contents/models/officerlist/fields.yaml
+modelClass: Np\Contents\Models\OfficerList
+defaultRedirect: np/contents/officerlist
+create:
+    redirect: 'np/contents/officerlist/update/:id'
+    redirectClose: np/contents/officerlist
+update:
+    redirect: np/contents/officerlist
+    redirectClose: np/contents/officerlist

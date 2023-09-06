@@ -1,0 +1,10 @@
+name: SimplifyingGovernmentVideo
+form: $/np/contents/models/simplifyinggovernmentvideo/fields.yaml
+modelClass: Np\Contents\Models\SimplifyingGovernmentVideo
+defaultRedirect: np/contents/simplifyinggovernmentvideo
+create:
+    redirect: 'np/contents/simplifyinggovernmentvideo/update/:id'
+    redirectClose: np/contents/simplifyinggovernmentvideo
+update:
+    redirect: np/contents/simplifyinggovernmentvideo
+    redirectClose: np/contents/simplifyinggovernmentvideo

@@ -1,0 +1,20 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+        width: 20%
+    service_box_category:
+        label: Category
+        relation: service_box_category
+        select: title
+        sortable: true
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

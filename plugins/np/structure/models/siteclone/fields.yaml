@@ -1,0 +1,22 @@
+fields:
+    source_site_id:
+        label: 'Source Url'
+        span: auto
+        required: 1
+        type: text
+        comment: 'any domain like www.sylhet.gov.bd, sylhetdiv.gov.bd without http'
+    destination_site_id:
+        label: 'Destination Url'
+        span: auto
+        required: 1
+        type: text
+        comment: 'Old data will be removed permanentlly'
+    resources:
+        label: Resources
+        options:
+            menu: Menu
+            banner: Banner
+            serviceBox: 'Service Box'
+        span: auto
+        required: 1
+        type: checkboxlist

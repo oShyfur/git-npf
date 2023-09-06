@@ -1,0 +1,10 @@
+name: Layer
+form: $/np/structure/models/layer/fields.yaml
+modelClass: Np\Structure\Models\Layer
+defaultRedirect: np/structure/layer
+create:
+    redirect: 'np/structure/layer/update/:id'
+    redirectClose: np/structure/layer
+update:
+    redirect: np/structure/layer
+    redirectClose: np/structure/layer

@@ -1,0 +1,19 @@
+columns:
+    'initiative_category[title]':
+        label: 'Initiative Category'
+        type: text
+        searchable: false
+        sortable: false
+    'initiative_sub_category[title]':
+        label: 'Initiative Sub-Category'
+        type: text
+        searchable: false
+        sortable: false
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

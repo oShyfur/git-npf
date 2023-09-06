@@ -1,0 +1,38 @@
+fields:
+    block_title:
+        label: 'Block Title'
+        span: left
+        required: 1
+        type: text
+    name:
+        label: Name
+        span: right
+        required: 1
+        type: text
+    image:
+        label: Picture
+        mode: image
+        imageWidth: '200'
+        imageHeight: '220'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    profile_link:
+        label: 'Profile Link'
+        span: right
+        type: linkpicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

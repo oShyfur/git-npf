@@ -1,0 +1,27 @@
+<div class="relation-widget" id="<?= $this->getId() ?>">
+    <?php
+    if($multiple):
+    ?>
+    <select name="<?= $name?>[]" id="<?= $this->getId() ?>" multiple class="form-control custom-select">
+        <option value=""> -- Select -- </option>
+        <?php foreach($taxonomy as $id=>$name) :?>
+        <option <?php
+        if(is_array($selectedValue) && in_array($id, $selectedValue)){
+            echo "selected=selected";
+        }else{
+            echo $selectedValue == $id? "selected=selected":"" ;
+        }
+?> value="<?=$id ?>"> <?= $name?> </option>
+        <?php endforeach;?>
+    </select>
+    <?php else: ?>
+
+        <select name="<?= $name?>" id="<?= $this->getId() ?>" class="form-control custom-select">
+            <option value=""> -- Select -- </option>
+            <?php foreach($taxonomy as $id=>$name) :?>
+            <option <?php echo $selectedValue == $id? "selected=selected":"" ;?> value="<?=$id ?>"> <?= $name?> </option>
+            <?php endforeach;?>
+        </select>
+        <?php endif; ?>
+
+</div>

@@ -1,0 +1,16 @@
+columns:
+    source_site_id:
+        label: 'Source Site'
+        type: text
+        sortable: false
+        select: name
+        relation: source_site
+    destination_site:
+        label: 'Destination Site'
+        type: text
+        sortable: false
+        select: name
+        relation: destination_site
+    cloned_at:
+        label: 'Clone At'
+        type: datetime

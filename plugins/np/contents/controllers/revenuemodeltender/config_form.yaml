@@ -1,0 +1,10 @@
+name: RevenueModelTender
+form: $/np/contents/models/revenuemodeltender/fields.yaml
+modelClass: Np\Contents\Models\RevenueModelTender
+defaultRedirect: np/contents/revenuemodeltender
+create:
+    redirect: 'np/contents/revenuemodeltender/update/:id'
+    redirectClose: np/contents/revenuemodeltender
+update:
+    redirect: np/contents/revenuemodeltender
+    redirectClose: np/contents/revenuemodeltender

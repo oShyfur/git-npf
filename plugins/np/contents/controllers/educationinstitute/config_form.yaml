@@ -1,0 +1,10 @@
+name: EducationInstitute
+form: $/np/contents/models/educationinstitute/fields.yaml
+modelClass: Np\Contents\Models\EducationInstitute
+defaultRedirect: np/contents/educationinstitute
+create:
+    redirect: 'np/contents/educationinstitute/update/:id'
+    redirectClose: np/contents/educationinstitute
+update:
+    redirect: np/contents/educationinstitute
+    redirectClose: np/contents/educationinstitute

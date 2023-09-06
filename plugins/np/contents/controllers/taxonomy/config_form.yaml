@@ -1,0 +1,10 @@
+name: Taxonomy
+form: $/np/contents/models/taxonomy/fields.yaml
+modelClass: Np\Contents\Models\Taxonomy
+defaultRedirect: np/contents/taxonomy
+create:
+    redirect: 'np/contents/taxonomy/update/:id'
+    redirectClose: np/contents/taxonomy
+update:
+    redirect: np/contents/taxonomy
+    redirectClose: np/contents/taxonomy

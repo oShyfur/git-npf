@@ -1,0 +1,401 @@
+/* responsive variables */
+/* colors variable */
+/* font size variable */
+/* base css for common design for support all component */
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  background: url("/assets/images/23.png") left bottom no-repeat, url("/assets/images/231.png") right top repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.mainbody {
+  position: relative;
+  min-height: calc(100vh - 111px);
+}
+
+/* breakpoint for responsive */
+/* background color */
+.bg-pink {
+  background: #FF006E;
+}
+
+.bg-blue {
+  background: #487fec;
+}
+
+.bg-green {
+  background: #1bbc60;
+}
+
+.bg-red {
+  background: #F94144;
+}
+
+.bg-yellow {
+  background: #F9C74F;
+}
+
+.bg-violet {
+  background: #9e5bba;
+}
+
+.bg-darkgray {
+  background: #212529;
+}
+
+.bg-gray {
+  background: #b1b1b1;
+}
+
+/* text color */
+.text-pink {
+  color: #ff338b;
+}
+
+.text-blue {
+  color: #769ff1;
+}
+
+.text-green {
+  color: #2ae078;
+}
+
+.text-red {
+  color: #fb7275;
+}
+
+.text-yellow {
+  color: #fbd780;
+}
+
+.text-violet {
+  color: #b37fc9;
+}
+
+.text-darkgray {
+  color: #383f45;
+}
+
+.text-gray {
+  color: #cbcbcb;
+}
+
+/* custom button bg color and hover */
+.btn-pink {
+  background: #FF006E;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background: #b3004d;
+  color: #fff;
+}
+
+.btn-blue {
+  background: #487fec;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: #1655d2;
+  color: #fff;
+}
+
+.btn-green {
+  background: #1bbc60;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background: #11793e;
+  color: #fff;
+}
+
+.btn-red {
+  background: #F94144;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #e6070b;
+  color: #fff;
+}
+
+.btn-yellow {
+  background: #F9C74F;
+  color: #000;
+}
+
+.btn-yellow:hover {
+  background: #f3ae08;
+  color: #000;
+}
+
+.btn-violet {
+  background: #9e5bba;
+  color: #fff;
+}
+
+.btn-violet:hover {
+  background: #753b8d;
+  color: #fff;
+}
+
+.btn-darkgray {
+  background: #212529;
+  color: #fff;
+}
+
+.btn-darkgray:hover {
+  background: black;
+  color: #fff;
+}
+
+.btn-gray {
+  background: #b1b1b1;
+  color: #fff;
+}
+
+.btn-gray:hover {
+  background: #8b8b8b;
+  color: #fff;
+}
+
+/* outline button */
+.btn-outline-pink {
+  border: 1px solid #FF006E;
+  color: #FF006E;
+}
+
+.btn-outline-pink:hover {
+  border-color: #cc0058;
+  background: #FF006E;
+  color: #fff;
+}
+
+.btn-outline-blue {
+  border: 1px solid #487fec;
+  color: #487fec;
+}
+
+.btn-outline-blue:hover {
+  border-color: #1a5fe7;
+  background: #487fec;
+  color: #fff;
+}
+
+.btn-outline-green {
+  border: 1px solid #1bbc60;
+  color: #1bbc60;
+}
+
+.btn-outline-green:hover {
+  border-color: #158f49;
+  background: #1bbc60;
+  color: #fff;
+}
+
+.btn-outline-red {
+  border: 1px solid #F94144;
+  color: #F94144;
+}
+
+.btn-outline-red:hover {
+  border-color: #f71013;
+  background: #F94144;
+  color: #fff;
+}
+
+.btn-outline-yellow {
+  border: 1px solid #F9C74F;
+  color: #F9C74F;
+}
+
+.btn-outline-yellow:hover {
+  border-color: #f7b71e;
+  background: #F9C74F;
+  color: #000;
+}
+
+.btn-outline-violet {
+  border: 1px solid #9e5bba;
+  color: #9e5bba;
+}
+
+.btn-outline-violet:hover {
+  border-color: #84439f;
+  background: #9e5bba;
+  color: #fff;
+}
+
+.btn-outline-darkgray {
+  border: 1px solid #212529;
+  color: #212529;
+}
+
+.btn-outline-darkgray:hover {
+  border-color: #0a0c0d;
+  background: #212529;
+  color: #fff;
+}
+
+.btn-outline-gray {
+  border: 1px solid #b1b1b1;
+  color: #b1b1b1;
+}
+
+.btn-outline-gray:hover {
+  border-color: #989898;
+  background: #b1b1b1;
+  color: #fff;
+}
+
+/* border color */
+.border-pink {
+  border-color: #FF006E !important;
+}
+
+.border-blue {
+  border-color: #487fec !important;
+}
+
+.border-green {
+  border-color: #1bbc60 !important;
+}
+
+.border-red {
+  border-color: #F94144 !important;
+}
+
+.border-yellow {
+  border-color: #F9C74F !important;
+}
+
+.border-violet {
+  border-color: #9e5bba !important;
+}
+
+.border-darkgray {
+  border-color: #212529 !important;
+}
+
+.border-gray {
+  border-color: #b1b1b1 !important;
+}
+
+/* font size for all aspect */
+.fz-0 {
+  font-size: 0.75rem;
+}
+
+.fz-1 {
+  font-size: 0.85rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000001;
+}
+
+header ul li + li {
+  margin-left: 5px;
+}
+
+header ul li a {
+  background: #ffffff;
+}
+
+header ul li a.active {
+  background: #1bbc60;
+  color: #ffffff !important;
+}
+
+footer {
+  background: url("/assets/images/Mask_Group_4.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer .vertical-bar {
+  height: 30px;
+  border-right: 2px solid #b1b1b1;
+}
+
+.sidebar {
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  right: -230px;
+  top: 67px;
+  z-index: 1000001;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.sidebar ul li + li {
+  border-top: 1px solid #b1b1b1 !important;
+}
+
+.sidebar ul li a:hover {
+  background: #b1b1b1;
+}
+
+.sidebar.on {
+  right: 0;
+}
+
+.login {
+  position: relative;
+  padding-top: 80px;
+  min-height: calc(100vh - 111px);
+}
+
+.login .icon-circle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: #9e5bba;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.login #captcha::-webkit-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.login #captcha:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.login #captcha::-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.login #captcha::placeholder {
+  font-size: 0.8rem;
+}
+
+#layout-canvas .flash-message {display:none}
+.flash-message {position:fixed;width:500px;left:50%;top:50px;margin-left:-250px;color:#fff;font-size:14px;padding:10px 30px 10px 15px;z-index:1030000;word-wrap:break-word;text-align:center;-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.12),0 1px 4px rgba(0,0,0,0.24);box-shadow:0 1px 6px rgba(0,0,0,0.12),0 1px 4px rgba(0,0,0,0.24);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.flash-message.fade {opacity:0;filter:alpha(opacity=0);-webkit-transition:all 0.5s,width 0s;transition:all 0.5s,width 0s;-webkit-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}
+.flash-message.fade.in {opacity:1;filter:alpha(opacity=100);-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.flash-message.success {background:#8da85e}
+.flash-message.error {background:#c30}
+.flash-message.warning {background:#f0ad4e}
+.flash-message.info {background:#5fb6f5}
+.flash-message button {float:none;position:absolute;right:10px;top:8px;color:white;outline:none;background: none !important;border: none;}
+.flash-message button:hover {color:white}
+.flash-message.static {position:static !important;width:auto !important;display:block !important;margin-left:0 !important;-webkit-box-shadow:none;box-shadow:none}
+@media (max-width:768px) {.flash-message {left:10px;right:10px;top:10px;margin-left:0;width:auto }}

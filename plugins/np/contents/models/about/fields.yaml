@@ -1,0 +1,107 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    body:
+        label: 'Home Page Info'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    image:
+        label: 'Home Page Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    slogan:
+        label: Slogan
+        span: full
+        required: 1
+        type: textarea
+    strategy_details:
+        label: 'Strartegy Info'
+        size: large
+        span: full
+        required: 0
+        type: richeditor
+    strategy_points:
+        label: 'Strartegy Points'
+        size: large
+        span: full
+        required: 0
+        type: richeditor
+    image1:
+        label: 'Strartegy Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 0
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    simplify_slogan:
+        label: Simplify Slogan
+        span: full
+        required: 1
+        type: textarea
+    simplify_details:
+        label: 'Simplify Details'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    image2:
+        label: 'Simplify Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    model_change_details:
+        label: 'Model Change Details'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    model_change_points:
+        label: 'Model Change Points'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    initiative_slogan:
+        label: 'Initiative Slogan'
+        span: full
+        required: 1
+        type: textarea
+    initiative_details:
+        label: 'Initiative Info'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,5 @@
+title: StaffList
+modelClass: Np\Contents\Models\StaffList
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

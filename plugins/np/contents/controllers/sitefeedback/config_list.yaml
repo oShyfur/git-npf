@@ -1,0 +1,12 @@
+list: $/np/contents/models/sitefeedback/columns.yaml
+modelClass: Np\Contents\Models\SiteFeedback
+title: SiteFeedback
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+recordOnClick: "$.popup({handler:'onViewFeedback',extraData:{record_id:':id'}})"
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

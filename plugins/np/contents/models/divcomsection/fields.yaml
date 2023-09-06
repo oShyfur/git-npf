@@ -1,0 +1,164 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    field_dc_section_citizen_service:
+        label: 'নাগরিক সেবা'
+        size: large
+        span: full
+        type: richeditor
+    field_dc_section_current_project:
+        label: 'চলতি প্রকল্পসমূহ'
+        size: large
+        span: full
+        type: richeditor
+    field_dc_section_duties:
+        label: কার্যক্রম
+        size: large
+        span: full
+        type: richeditor
+    field_contact:
+        label: যোগাযোগ
+        size: large
+        span: auto
+        type: richeditor
+    field_dc_section_others:
+        label: অন্যান্য
+        size: large
+        span: auto
+        type: richeditor
+    image:
+        label: 'শাখার সাংগঠনিক কাঠামো'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    field_dcsection_forms_nid:
+        label: 'শাখার ফর্মসমূহ'
+        prompt: 'Add শাখাভিত্তিক ফরম'
+        span: full
+        type: repeater
+        form:
+            fields:
+                dc_section_wise_form:
+                    label: 'শাখাভিত্তিক ফরম'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\DcSectionWiseForm
+                    list: $/np/contents/models/dcsectionwiseform/columns.yaml
+                    formyaml: $/np/contents/models/dcsectionwiseform/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_law_policy_nid:
+        label: 'আইন ও পলিসি'
+        prompt: 'Add আইন ও পলিসি'
+        span: full
+        type: repeater
+        form:
+            fields:
+                law_policy:
+                    label: 'আইন ও পলিসি'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\LawPolicy
+                    list: $/np/contents/models/lawpolicy/columns.yaml
+                    formyaml: $/np/contents/models/lawpolicy/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_meeting_nid:
+        label: সভা
+        prompt: 'Add মিটিং'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meeting:
+                    label: মিটিং
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\Meeting
+                    list: $/np/contents/models/meeting/columns.yaml
+                    formyaml: $/np/contents/models/meeting/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_protibedon_nid:
+        label: প্রতিবেদন
+        prompt: 'Add প্রতিবেদন'
+        span: full
+        type: repeater
+        form:
+            fields:
+                protibedon:
+                    label: প্রতিবেদন
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\Protibedon
+                    list: $/np/contents/models/protibedon/columns.yaml
+                    formyaml: $/np/contents/models/protibedon/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_staff_office_nid:
+        label: কর্মচারীবৃন্দ
+        prompt: 'Add কর্মচারী প্রোফাইল'
+        span: full
+        type: repeater
+        form:
+            fields:
+                staff_list:
+                    label: 'কর্মচারী প্রোফাইল'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\StaffList
+                    list: $/np/contents/models/stafflist/columns.yaml
+                    formyaml: $/np/contents/models/stafflist/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_section_oc_nid:
+        label: 'ভারপ্রাপ্ত কর্মকর্তা'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: full
+        type: recordfinder
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

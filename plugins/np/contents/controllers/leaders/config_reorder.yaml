@@ -1,0 +1,5 @@
+title: Leaders
+nameFrom: title
+modelClass: Np\Contents\Models\Leaders
+toolbar:
+    buttons: reorder_toolbar

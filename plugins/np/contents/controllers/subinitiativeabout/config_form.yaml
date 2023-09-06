@@ -1,0 +1,10 @@
+name: SubInitiativeAbout
+form: $/np/contents/models/subinitiativeabout/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeAbout
+defaultRedirect: np/contents/subinitiativeabout
+create:
+    redirect: 'np/contents/subinitiativeabout/update/:id'
+    redirectClose: np/contents/subinitiativeabout
+update:
+    redirect: np/contents/subinitiativeabout
+    redirectClose: np/contents/subinitiativeabout

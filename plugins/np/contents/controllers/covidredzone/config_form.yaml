@@ -1,0 +1,10 @@
+name: CovidRedZone
+form: $/np/contents/models/covidredzone/fields.yaml
+modelClass: Np\Contents\Models\CovidRedZone
+defaultRedirect: np/contents/covidredzone
+create:
+    redirect: 'np/contents/covidredzone/update/:id'
+    redirectClose: np/contents/covidredzone
+update:
+    redirect: np/contents/covidredzone
+    redirectClose: np/contents/covidredzone

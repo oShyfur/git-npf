@@ -1,0 +1,10 @@
+name: InitiativeCategory
+form: $/np/contents/models/initiativecategory/fields.yaml
+modelClass: Np\Contents\Models\InitiativeCategory
+defaultRedirect: np/contents/initiativecategory
+create:
+    redirect: 'np/contents/initiativecategory/update/:id'
+    redirectClose: np/contents/initiativecategory
+update:
+    redirect: np/contents/initiativecategory
+    redirectClose: np/contents/initiativecategory

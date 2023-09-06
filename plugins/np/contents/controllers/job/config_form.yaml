@@ -1,0 +1,10 @@
+name: Job
+form: $/np/contents/models/job/fields.yaml
+modelClass: Np\Contents\Models\Job
+defaultRedirect: np/contents/job
+create:
+    redirect: 'np/contents/job/update/:id'
+    redirectClose: np/contents/job
+update:
+    redirect: np/contents/job
+    redirectClose: np/contents/job

@@ -1,0 +1,10 @@
+name: Union
+form: $/np/contents/models/union/fields.yaml
+modelClass: Np\Contents\Models\Union
+defaultRedirect: np/contents/union
+create:
+    redirect: 'np/contents/union/update/:id'
+    redirectClose: np/contents/union
+update:
+    redirect: np/contents/union
+    redirectClose: np/contents/union

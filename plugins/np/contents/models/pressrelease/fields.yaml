@@ -1,0 +1,42 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    attachments:
+        label: ফাইল
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        required: 0
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    youtube_link:
+        label: 'Youtube Link'
+        span: auto
+        type: text
+    publish_date:
+        label: 'Publish Date'
+        mode: date
+        span: auto
+        type: datepicker
+    archive_date:
+        label: 'Archive Date'
+        mode: date
+        span: auto
+        type: datepicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

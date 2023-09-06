@@ -1,0 +1,35 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    image:
+        label: 'Service Box Icon'
+        mode: image
+        imageWidth: '208'
+        imageHeight: '107'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        required: 1
+        type: fileupload
+    sort_order:
+        label: 'Sort Order'
+        span: right
+        required: 1
+        default: '0'
+        type: number
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

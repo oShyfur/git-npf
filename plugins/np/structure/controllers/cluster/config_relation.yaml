@@ -1,0 +1,6 @@
+dbs:
+    label: DB
+    list: ~/plugins/np/structure/models/db/columns.yaml
+    form: ~/plugins/np/structure/models/db/fields.yaml
+    manage:
+        context: relation

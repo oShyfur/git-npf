@@ -1,0 +1,22 @@
+fields:
+    welcome:
+        label: 'Welcome Text'
+        size: large
+        span: full
+        type: text
+        required: 1
+    title:
+        label: 'Motto'
+        span: full
+        required: 0
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

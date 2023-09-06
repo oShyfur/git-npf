@@ -1,0 +1,126 @@
+fields:
+    type:
+        label: Type
+        options:
+            1: Block
+            2: 'List / View'
+            3: 'Predefine Block'
+        emptyOption: '--Select--'
+        showSearch: true
+        span: left
+        required: 0
+        type: dropdown
+    predefined_template_code:
+        label: 'Predefine Blocks'
+        emptyOption: '--Select--'
+        showSearch: true
+        span: auto
+        dependsOn:
+            - type
+        trigger:
+            action: show
+            field: type
+            condition: 'value[3]'
+        type: dropdown
+    title:
+        label: Title
+        span: left
+        required: 1
+        type: text
+    partial_code:
+        label: Partial
+        emptyOption: '--Select--'
+        showSearch: true
+        span: right
+        dependsOn:
+            - type
+        trigger:
+            action: hide
+            field: type
+            condition: 'value[3]'
+        type: dropdown
+    body:
+        label: Body
+        size: large
+        span: full
+        required: 0
+        type: richeditor
+    region:
+        label: Region
+        options:
+            top: Top
+            left: Left
+            right: Right
+            footer: Footer
+            flash: Flash
+            right_common: 'Right Common'
+        emptyOption: 'Select region'
+        showSearch: true
+        span: auto
+        required: 1
+        trigger:
+            action: hide
+            field: type
+            condition: 'value[2]'
+        type: dropdown
+    sort_order:
+        label: Position
+        span: auto
+        default: '0'
+        trigger:
+            action: hide
+            field: type
+            condition: 'value[2]'
+        type: number
+    publish_date:
+        label: 'Publish Date'
+        mode: datetime
+        span: auto
+        default: now
+        trigger:
+            action: hide
+            field: type
+            condition: 'value[2]'
+        type: datepicker
+    archive_date:
+        label: 'Archive Date'
+        mode: datetime
+        span: auto
+        trigger:
+            action: hide
+            field: type
+            condition: 'value[2]'
+        type: datepicker
+    title_color:
+        label: 'Title Color'
+        span: auto
+        type: colorpicker
+        comment: '(Example: #ff0000)'
+    title_bgcolor:
+        label: 'Titile Background'
+        span: auto
+        type: colorpicker
+        comment: '(Example: #ff0000)'
+    layer_id:
+        label: 'Select Layer'
+        options:
+            1: 'মন্ত্রণালয়ের অফিসসমূহ'
+            2: 'দপ্তর অফিসসমূহ'
+            3: 'অন্যান্য অফিসসমূহ'
+            4: 'বিভাগীয় অফিসসমূহ'
+            5: 'জেলা অফিসসমূহ'
+            6: 'উপজেলা অফিসসমূহ'
+            7: 'আঞ্চলিক অফিসসমূহ'
+            8: Embassy
+        span: full
+        type: checkboxlist
+    show_title:
+        label: 'Show  Title'
+        span: auto
+        default: 1
+        type: switch
+    status:
+        label: Status
+        span: auto
+        default: 1
+        type: switch

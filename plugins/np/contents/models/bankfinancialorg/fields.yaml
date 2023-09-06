@@ -1,0 +1,82 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    category_of_bank_financial_org:
+        label: 'ব্যাংক ও আর্থিক প্রতিষ্ঠানের ধরণ'
+        taxonomyType: '17'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    field_bank_finance_estd:
+        label: প্রতিষ্ঠাকাল
+        mode: date
+        span: auto
+        type: datepicker
+    field_bank_finance_branch_name:
+        label: 'শাখার নাম'
+        size: large
+        span: full
+        required: 1
+        stretch: 0
+        type: richeditor
+    field_bank_branch_address:
+        label: ঠিকানা
+        size: large
+        span: full
+        type: richeditor
+    field_bank_atm_location:
+        label: 'এটিএম এর ঠিকানা'
+        size: large
+        span: full
+        type: richeditor
+    field_head_name:
+        label: 'প্রতিষ্ঠান প্রধানের নাম'
+        span: auto
+        type: text
+    field_head_designation:
+        label: 'প্রতিষ্ঠান প্রধানের পদবি'
+        span: auto
+        type: text
+    field_head_phone:
+        label: 'প্রতিষ্ঠান প্রধানের ফোন'
+        span: auto
+        type: text
+    field_head_mobile:
+        label: 'প্রতিষ্ঠান প্রধানের মোবাইল'
+        span: auto
+        type: text
+    field_head_email:
+        label: 'প্রতিষ্ঠান প্রধানের ইমেইল'
+        span: auto
+        type: text
+    field_contact_name:
+        label: 'তথ্য প্রদানকারী ব্যক্তির নাম'
+        span: auto
+        type: text
+    field_contact_designation:
+        label: 'তথ্য প্রদানকারী ব্যক্তির পদবি'
+        span: auto
+        type: text
+    field_contact_phone:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ফোন'
+        span: auto
+        type: text
+    field_contact_mobile:
+        label: 'তথ্য প্রদানকারী ব্যক্তির মোবাইল'
+        span: auto
+        type: text
+    field_contact_email:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ইমেইল'
+        span: auto
+        type: text
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        type: switch

@@ -1,0 +1,10 @@
+name: Domain
+form: $/np/structure/models/domain/fields.yaml
+modelClass: Np\Structure\Models\Domain
+defaultRedirect: np/structure/domain
+create:
+    redirect: 'np/structure/domain/update/:id'
+    redirectClose: np/structure/domain
+update:
+    redirect: np/structure/domain
+    redirectClose: np/structure/domain

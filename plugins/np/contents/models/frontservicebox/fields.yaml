@@ -1,0 +1,54 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    title_color:
+        label: 'Title Color'
+        span: auto
+        type: colorpicker
+        comment: '(Example: #ff0000)'
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        type: number
+    image:
+        label: Image
+        mode: image
+        imageWidth: '150'
+        imageHeight: '150'
+        fileTypes: png
+        useCaption: true
+        thumbOptions:
+            mode: auto
+            extension: png
+        span: full
+        type: fileupload
+        comment: 'png Image Only'
+    link1:
+        label: 'Link 1'
+        span: full
+        type: linkpicker
+    link2:
+        label: Link2
+        span: full
+        type: linkpicker
+    link3:
+        label: 'Link 3'
+        span: full
+        type: linkpicker
+    link4:
+        label: Link4
+        span: full
+        type: linkpicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

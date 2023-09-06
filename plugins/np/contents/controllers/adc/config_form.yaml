@@ -1,0 +1,10 @@
+name: Adc
+form: $/np/contents/models/adc/fields.yaml
+modelClass: Np\Contents\Models\Adc
+defaultRedirect: np/contents/adc
+create:
+    redirect: 'np/contents/adc/update/:id'
+    redirectClose: np/contents/adc
+update:
+    redirect: np/contents/adc
+    redirectClose: np/contents/adc

@@ -1,0 +1,20 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+        width: 40%
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    is_pin:
+        label: Pin
+        type: switch
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true
+

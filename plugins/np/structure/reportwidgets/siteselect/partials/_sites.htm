@@ -1,0 +1,45 @@
+<div class="report-widget">
+    <h3>Select a site</h3>
+
+    <div class="row">
+        <div class="col-md-6">
+            <select class="form-control custom-select" name="current_site" id="current_site">
+                <?php if ($user->adminLevelUser()) : ?>
+                    <option value="">Select a Site</option>
+                <?php endif; ?>
+                <?php foreach ($sites as $site) : ?>
+                <?php 
+                    $site_id = $site['id'];
+                    $site_name = $site['name'];
+                    $site_fqdn = '';
+                    $fqdn_data = Np\Structure\Models\Domain::where('site_id',$site_id)->first();
+                    if(!empty($fqdn_data)){
+                        $site_fqdn = $fqdn_data->fqdn;
+                    }
+                ?>
+                <?php if (!empty($site_fqdn)) : ?>
+                    <option value="<?php echo $site_id; ?>"><?php echo $site_name; ?> (<?php echo $site_fqdn; ?>)</option>
+                <?php else: ?>
+                    <option value="<?php echo $site_id; ?>"><?php echo $site_name; ?> </option>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="col-md-4">Make this site as my default site? <input class="form-input" type="checkbox"
+                name="default" id="default"></div>
+        <div class="col-md-2">
+            <button data-request="<?= $this->getEventHandler('onSiteSelect') ?>" class="btn btn-primary">Go</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <button data-request="onCacheClearSelectedSite" class="btn btn-danger" data-request-confirm="Are you sure?" > Clear Cache [Selected site] </button>
+            <?php if ($user->adminLevelUser()) : ?>
+            <!-- <button data-request="onCacheClear" class="btn btn-danger" data-request-confirm="Are you sure?" disabled>Clear Cache [All]</button> -->
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+

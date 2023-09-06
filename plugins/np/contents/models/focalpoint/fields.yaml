@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: বিষয়
+        span: full
+        required: 1
+        type: text
+    focal_point:
+        label: 'ফোকাল পয়েন্ট কর্মকর্তা'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: auto
+        type: recordfinder
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

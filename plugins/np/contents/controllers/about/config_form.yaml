@@ -1,0 +1,10 @@
+name: About
+form: $/np/contents/models/about/fields.yaml
+modelClass: Np\Contents\Models\About
+defaultRedirect: np/contents/about
+create:
+    redirect: 'np/contents/about/update/:id'
+    redirectClose: np/contents/about
+update:
+    redirect: np/contents/about
+    redirectClose: np/contents/about

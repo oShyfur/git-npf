@@ -1,0 +1,155 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table np_structure_clusters'
+    - builder_table_create_np_structure_clusters.php
+1.0.3:
+    - 'Created table np_structure_dbs'
+    - builder_table_create_np_structure_dbs.php
+1.0.4:
+    - 'Created table np_structure_sites'
+    - builder_table_create_np_structure_sites.php
+1.0.5:
+    - 'Created table np_structure_layers'
+    - builder_table_create_np_structure_layers.php
+1.0.7:
+    - 'Created table np_structure_tags'
+    - builder_table_create_np_structure_tags.php
+1.0.8:
+    - 'Created table np_structure_domains'
+    - builder_table_create_np_structure_domains.php
+1.0.10:
+    - 'Created table np_structure_site_tag'
+    - builder_table_create_np_structure_site_tag.php
+1.0.11:
+    - 'Created table np_structure_site_user'
+    - builder_table_create_np_structure_site_user.php
+1.0.12:
+    - 'add designation & phone fields to ebackend users table'
+    - migration1025.php
+1.0.13:
+    - 'add is_admin column to backend_users table'
+    - migration1026.php
+1.0.14:
+    - 'Created table np_structure_content_types'
+    - builder_table_create_np_structure_content_types.php
+1.0.15:
+    - 'Created table np_structure_blocks'
+    - builder_table_create_np_structure_blocks.php
+1.0.16:
+    - 'Created table np_structure_site_resources'
+    - builder_table_create_np_structure_site_resources.php
+1.0.17:
+    - 'add content_html_en to table system_mail_partials'
+    - migration1039.php
+1.0.18:
+    - 'add content_html_en to table system_mail_templates'
+    - migration1040.php
+1.0.19:
+    - 'add old_id old_password to backend user table'
+    - migration1042.php
+1.0.20:
+    - 'Created table np_structure_ministries'
+    - builder_table_create_np_structure_ministries.php
+1.0.21:
+    - 'Created table np_structure_layers_resources'
+    - builder_table_create_np_structure_layers_resources.php
+1.0.22:
+    - 'Created table np_structure_texonomy_types.php'
+    - builder_table_create_np_structure_texonomy_types.php
+1.0.23:
+    - 'Created table np_structure_geo_divisions'
+    - builder_table_create_np_structure_geo_divisions.php
+1.0.24:
+    - 'Created table np_structure_geo_districts'
+    - builder_table_create_np_structure_geo_districts.php
+1.0.25:
+    - 'Created table np_structure_geo_upazilas'
+    - builder_table_create_np_structure_geo_upazilas.php
+1.0.26:
+    - 'Created table np_structure_geo_unions'
+    - builder_table_create_np_structure_geo_unions.php
+1.0.27:
+    - 'Added geo fields to table sites'
+    - migration1027.php
+1.0.28:
+    - 'Seeded np core data'
+    - seeder_core_data.php
+1.0.29:
+    - 'add old_id to taxonomy_type table'
+    - migration1029.php
+1.0.30:
+    - 'rename field settings to config in content_type table'
+    - migration1030.php
+1.0.31:
+    - 'Updated table np_structure_site_user'
+    - builder_table_update_np_structure_site_user.php
+1.0.32:
+    - 'add  is_sso field to backend_users table'
+    - migration1032.php
+1.0.33:
+    - 'add oisf_office_id to sites table'
+    - migration1033.php
+1.0.34:
+    - 'change oisf_office_id to integer type'
+    - migration1034.php
+1.0.35:
+    - 'Updated table np_structure_content_types'
+    - builder_table_update_np_structure_content_types.php
+1.0.36:
+    - 'add  allowed_ct field to backend_users table'
+    - migration1036.php
+1.0.37:
+    - 'Updated table np_structure_blocks'
+    - builder_table_update_np_structure_blocks.php
+1.0.38:
+    - 'Updated table np_structure_blocks'
+    - builder_table_update_np_structure_blocks_2.php
+1.0.39:
+    - 'Created table np_structure_site_locale'
+    - builder_table_create_np_structure_site_locale.php
+1.0.40:
+    - 'update mail layout and templates code name'
+    - migration1041.php
+1.0.41:
+    - 'Created table np_structure_site_clone'
+    - builder_table_create_np_structure_site_clone.php
+1.0.42:
+    - 'Updated table np_structure_blocks'
+    - builder_table_update_np_structure_blocks_3.php
+1.0.43:
+    - 'Updated table np_structure_site_resources'
+    - migration1043.php
+1.0.44:
+    - 'Updated table np_structure_layer_resources'
+    - migration1044.php
+1.0.45:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites.php
+1.0.46:
+    - 'Updated table np_structure_blocks'
+    - builder_table_update_np_structure_blocks_4.php
+1.0.47:
+    - 'Created table np_structure_site_types'
+    - builder_table_create_np_structure_site_types.php
+1.0.48:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites_2.php
+1.0.49:
+    - 'Updated table np_structure_content_types'
+    - builder_table_update_np_structure_content_types_2.php
+1.0.50:
+    - 'Updated table np_structure_content_types'
+    - builder_table_update_np_structure_content_types_3.php
+1.0.51:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites_3.php
+1.0.52:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites_4.php
+1.0.53:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites_5.php
+1.0.54:
+    - 'Updated table np_structure_sites'
+    - builder_table_update_np_structure_sites_6.php

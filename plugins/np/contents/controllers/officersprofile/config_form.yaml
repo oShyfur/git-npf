@@ -1,0 +1,10 @@
+name: OfficersProfile
+form: $/np/contents/models/officersprofile/fields.yaml
+modelClass: Np\Contents\Models\OfficersProfile
+defaultRedirect: np/contents/officersprofile
+create:
+    redirect: 'np/contents/officersprofile/update/:id'
+    redirectClose: np/contents/officersprofile
+update:
+    redirect: np/contents/officersprofile
+    redirectClose: np/contents/officersprofile

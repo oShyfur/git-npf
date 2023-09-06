@@ -1,0 +1,10 @@
+name: RevenueModelJob
+form: $/np/contents/models/revenuemodeljob/fields.yaml
+modelClass: Np\Contents\Models\RevenueModelJob
+defaultRedirect: np/contents/revenuemodeljob
+create:
+    redirect: 'np/contents/revenuemodeljob/update/:id'
+    redirectClose: np/contents/revenuemodeljob
+update:
+    redirect: np/contents/revenuemodeljob
+    redirectClose: np/contents/revenuemodeljob

@@ -1,0 +1,22 @@
+<h2><?= e(trans('backend::lang.account.enter_email')) ?></h2>
+
+<?= Form::open() ?>
+<input type="hidden" name="postback" value="1" />
+
+<div class="form-elements" role="form">
+    <div class="form-group text-field horizontal-form october">
+
+        <input type="text" name="login" value="<?= e(post('login')) ?>" class="form-control form-control-sm shadow-none icon user" placeholder="<?= e(trans('backend::lang.account.login_placeholder')) ?> OR <?= e(trans('backend::lang.account.email_placeholder')) ?>" autocomplete="off" maxlength="255" />
+    </div>
+    <p class="pull-right forgot-password d-flex align-items-center mt-2">
+        <button type="submit" class="btn btn-outline-primary btn-sm shadow-none restore-button me-2">
+            <?= e(trans('backend::lang.account.restore')) ?>
+        </button>
+        <a href="<?= Backend::url('backend/auth') ?>" class="btn btn-outline-secondary shadow-none btn-sm">
+            <?= e(trans('backend::lang.form.cancel')) ?>
+        </a>
+    </p>
+</div>
+<?= Form::close() ?>
+
+<?= $this->fireViewEvent('backend.auth.extendRestoreView') ?>

@@ -1,0 +1,44 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        default: ''
+        required: 1
+        type: text
+    do:
+        label: 'তথ্য প্রদানকারী কর্মকর্তা'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: full
+        type: recordfinder
+    ao:
+        label: 'বিকল্প তথ্য প্রদানকারী কর্মকর্তা'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: full
+        type: recordfinder
+    aa:
+        label: 'আপীল কর্মকর্তা'
+        span: full
+        type: textarea
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

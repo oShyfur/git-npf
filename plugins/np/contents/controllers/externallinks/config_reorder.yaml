@@ -1,0 +1,4 @@
+title: ExternalLinks
+modelClass: Np\Contents\Models\ExternalLinks
+toolbar:
+    buttons: reorder_toolbar

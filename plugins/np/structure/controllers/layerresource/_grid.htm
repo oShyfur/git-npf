@@ -1,0 +1,45 @@
+<form data-request="onSaveLayerResource">
+
+    <input type="hidden" name="resource" value="<?= $resource ?>">
+    <input type="hidden" name="ministry_id" value="<?= isset($ministry_id)?$ministry_id:0?>">
+
+    <input type="submit" value="Save" class="btn btn-primary">
+
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th><?= strtoupper($resource)?></th>
+                <?php foreach($layers as $layer):?>
+
+                <th><?= $layer->name ?></th>
+
+                <?php endforeach?>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <?php foreach($data as $item):?>
+            <tr>
+                <th scope="row"><?= isset($item->title) ? $item->title : $item->name ?></th>
+
+                <?php foreach($layers as $layer):?>
+                <td><input type="checkbox" name="<?=$resource?>[<?=$layer->id?>][]" value="<?= $item->id?>"
+                        <?= isset($saved_resources[$resource][$layer->id][$item->id])?'checked':'' ?>>
+
+                </td>
+                <?php endforeach; ?>
+            </tr>
+
+            <?php endforeach;?>
+
+        </tbody>
+    </table>
+
+    <input type="submit" value="Save" class="btn btn-primary">
+
+</form>
+
+<br>

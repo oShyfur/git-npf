@@ -1,0 +1,63 @@
+fields:
+    title:
+        label: Title
+        span: full
+        type: text
+    parent:
+        label: Parent
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: 'Select Parent'
+        span: full
+        required: 0
+        type: relation
+        scope: onlyParent
+    link_type:
+        label: 'Link Type'
+        options:
+            external: External
+            contentref: 'Content Reference'
+            nolink: 'No Link'
+        showSearch: true
+        span: full
+        default: contentref
+        type: dropdown
+    link_path:
+        label: 'Link Path'
+        span: full
+        cssClass: hide-caption
+        trigger:
+            action: hide
+            field: link_type
+            condition: 'value[nolink]'
+        type: linkpicker
+    menu_text_color:
+        label: 'Text Color'
+        span: auto
+        default: white
+        type: colorpicker
+    menu_background_color:
+        label: 'Background color'
+        span: auto
+        default: grey
+        type: colorpicker
+    default_text_color:
+        label: 'Default Text Color'
+        span: auto
+        default: 1
+        type: switch
+    default_background_color:
+        label: 'Default Background Color'
+        span: auto
+        default: 1
+        type: switch
+    sort_order:
+        label: 'Sort Order'
+        span: full
+        default: '1'
+        type: number
+    status:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

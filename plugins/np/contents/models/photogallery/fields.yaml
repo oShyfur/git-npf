@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: নাম
+        span: left
+        required: 1
+        type: text
+    taken_date:
+        label: Date
+        mode: date
+        span: auto
+        placeholder: ''
+        type: datepicker
+    images:
+        label: Pictures
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    image:
+        label: 'Cover Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    is_pin:
+        label: 'Pin to Photo Gallery List'
+        span: auto
+        type: checkbox
+        comment: 'Please pin only 1 content'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

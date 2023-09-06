@@ -1,0 +1,13 @@
+list: $/np/contents/models/digitalfairphoto/columns.yaml
+modelClass: Np\Contents\Models\DigitalfairPhoto
+title: DigitalfairPhoto
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/contents/digitalfairphoto/update/:id'

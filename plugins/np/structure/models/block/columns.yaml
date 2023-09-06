@@ -1,0 +1,30 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    region:
+        label: Region
+        type: text
+        sortable: true
+    sort_order:
+        label: Order
+        type: number
+        sortable: true
+    status:
+        label: Status
+        type: switch
+        sortable: true
+    type:
+        label: Type
+        type: text
+        sortable: true
+    partial_code:
+        label: Partial
+        type: text
+        sortable: true
+    layer_id:
+        label: Layer
+        type: text
+        sortable: true

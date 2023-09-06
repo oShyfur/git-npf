@@ -1,0 +1,10 @@
+name: TopBanner
+form: $/np/contents/models/topbanner/fields.yaml
+modelClass: Np\Contents\Models\TopBanner
+defaultRedirect: np/contents/topbanner
+create:
+    redirect: 'np/contents/topbanner/update/:id'
+    redirectClose: np/contents/topbanner
+update:
+    redirect: np/contents/topbanner
+    redirectClose: np/contents/topbanner

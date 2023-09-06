@@ -1,0 +1,10 @@
+name: FooterMenu
+form: $/np/contents/models/footermenu/fields.yaml
+modelClass: Np\Contents\Models\FooterMenu
+defaultRedirect: np/contents/footermenu
+create:
+    redirect: 'np/contents/footermenu/update/:id'
+    redirectClose: np/contents/footermenu
+update:
+    redirect: np/contents/footermenu
+    redirectClose: np/contents/footermenu

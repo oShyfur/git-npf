@@ -1,0 +1,10 @@
+name: SpsData
+form: $/np/contents/models/spsdata/fields.yaml
+modelClass: Np\Contents\Models\SpsData
+defaultRedirect: np/contents/spsdata
+create:
+    redirect: 'np/contents/spsdata/update/:id'
+    redirectClose: np/contents/spsdata
+update:
+    redirect: np/contents/spsdata
+    redirectClose: np/contents/spsdata

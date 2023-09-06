@@ -1,0 +1,10 @@
+name: SocialMediaCorner
+form: $/np/contents/models/socialmediacorner/fields.yaml
+modelClass: Np\Contents\Models\SocialMediaCorner
+defaultRedirect: np/contents/socialmediacorner
+create:
+    redirect: 'np/contents/socialmediacorner/update/:id'
+    redirectClose: np/contents/socialmediacorner
+update:
+    redirect: np/contents/socialmediacorner
+    redirectClose: np/contents/socialmediacorner

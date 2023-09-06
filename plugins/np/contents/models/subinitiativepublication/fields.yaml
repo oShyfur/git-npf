@@ -1,0 +1,94 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    body:
+        label: 'Short Description'
+        size: large
+        span: full
+        required: 1
+        type: richeditor
+    initiative_category:
+        label: 'Initiative Category'
+        nameFrom: title
+        descriptionFrom: description
+        emptyOption: '-- Select Initiative Category --'
+        span: auto
+        required: 0
+        type: relation
+    initiative_sub_category:
+        label: 'Initiative Sub-Category'
+        emptyOption: '-- Select Initiative Sub-Category --'
+        required: 0
+        showSearch: true
+        span: auto
+        dependsOn:
+            - initiative_category
+        type: dropdown
+    image:
+        label: 'Cover Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    attachment:
+        label: Attachment
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    is_pin:
+        label: 'Is Pin?'
+        span: auto
+        default: 0
+        type: switch
+    is_feature:
+        label: 'Is Feature?'
+        span: auto
+        default: 0
+        type: switch
+    relevant_publication:
+        label: 'Relevant Publication'
+        prompt: 'Add New Publication'
+        span: full
+        type: repeater
+        form:
+            fields:
+                sub_initiative_publication:
+                    label: Publication
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\SubInitiativePublication
+                    list: $/np/contents/models/subinitiativepublication/columns.yaml
+                    formyaml: $/np/contents/models/subinitiativepublication/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    publish_date:
+        label: 'Publish Date'
+        mode: date
+        span: auto
+        default: now
+        required: 0
+        type: datepicker
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

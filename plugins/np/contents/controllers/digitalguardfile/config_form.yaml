@@ -1,0 +1,10 @@
+name: DigitalGuardFile
+form: $/np/contents/models/digitalguardfile/fields.yaml
+modelClass: Np\Contents\Models\DigitalGuardFile
+defaultRedirect: np/contents/digitalguardfile
+create:
+    redirect: 'np/contents/digitalguardfile/update/:id'
+    redirectClose: np/contents/digitalguardfile
+update:
+    redirect: np/contents/digitalguardfile
+    redirectClose: np/contents/digitalguardfile

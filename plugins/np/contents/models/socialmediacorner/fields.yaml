@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        hidden: 0
+        required: 1
+        type: text
+    field_social_media_url:
+        label: 'Link (Example: http://www.facebook.com/)'
+        span: auto
+        required: 1
+        type: text
+    social_link:
+        label: Type
+        taxonomyType: '28'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

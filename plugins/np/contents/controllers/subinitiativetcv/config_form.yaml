@@ -1,0 +1,10 @@
+name: SubInitiativeTcv
+form: $/np/contents/models/subinitiativetcv/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeTcv
+defaultRedirect: np/contents/subinitiativetcv
+create:
+    redirect: 'np/contents/subinitiativetcv/update/:id'
+    redirectClose: np/contents/subinitiativetcv
+update:
+    redirect: np/contents/subinitiativetcv
+    redirectClose: np/contents/subinitiativetcv

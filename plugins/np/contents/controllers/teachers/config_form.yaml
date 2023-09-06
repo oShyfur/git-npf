@@ -1,0 +1,10 @@
+name: Teachers
+form: $/np/contents/models/teachers/fields.yaml
+modelClass: Np\Contents\Models\Teachers
+defaultRedirect: np/contents/teachers
+create:
+    redirect: 'np/contents/teachers/update/:id'
+    redirectClose: np/contents/teachers
+update:
+    redirect: np/contents/teachers
+    redirectClose: np/contents/teachers

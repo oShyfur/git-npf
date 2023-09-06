@@ -1,0 +1,10 @@
+name: TenderInfo
+form: $/np/contents/models/tenderinfo/fields.yaml
+modelClass: Np\Contents\Models\TenderInfo
+defaultRedirect: np/contents/tenderinfo
+create:
+    redirect: 'np/contents/tenderinfo/update/:id'
+    redirectClose: np/contents/tenderinfo
+update:
+    redirect: np/contents/tenderinfo
+    redirectClose: np/contents/tenderinfo

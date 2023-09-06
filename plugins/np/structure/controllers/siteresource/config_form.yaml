@@ -1,0 +1,10 @@
+name: SiteResource
+form: $/np/structure/models/siteresource/fields.yaml
+modelClass: Np\Structure\Models\SiteResource
+defaultRedirect: np/structure/siteresource
+create:
+    redirect: 'np/structure/siteresource/update/:id'
+    redirectClose: np/structure/siteresource
+update:
+    redirect: np/structure/siteresource
+    redirectClose: np/structure/siteresource

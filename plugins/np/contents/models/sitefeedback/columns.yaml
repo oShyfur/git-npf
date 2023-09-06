@@ -1,0 +1,13 @@
+columns:
+    form_id:
+        label: form_id
+        type: text
+    data:
+        label: data
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

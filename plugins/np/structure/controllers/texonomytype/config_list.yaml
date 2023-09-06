@@ -1,0 +1,12 @@
+list: $/np/structure/models/texonomytype/columns.yaml
+modelClass: Np\Structure\Models\TexonomyType
+title: TexonomyType
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/structure/texonomytype/update/:id'

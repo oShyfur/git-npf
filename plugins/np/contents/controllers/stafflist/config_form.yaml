@@ -1,0 +1,10 @@
+name: StaffList
+form: $/np/contents/models/stafflist/fields.yaml
+modelClass: Np\Contents\Models\StaffList
+defaultRedirect: np/contents/stafflist
+create:
+    redirect: 'np/contents/stafflist/update/:id'
+    redirectClose: np/contents/stafflist
+update:
+    redirect: np/contents/stafflist
+    redirectClose: np/contents/stafflist

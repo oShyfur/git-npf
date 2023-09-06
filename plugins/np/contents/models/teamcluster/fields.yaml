@@ -1,0 +1,17 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        required: 1
+        type: number
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

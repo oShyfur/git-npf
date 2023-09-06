@@ -1,0 +1,10 @@
+name: GolpoNoyShotti
+form: $/np/contents/models/golponoyshotti/fields.yaml
+modelClass: Np\Contents\Models\GolpoNoyShotti
+defaultRedirect: np/contents/golponoyshotti
+create:
+    redirect: 'np/contents/golponoyshotti/update/:id'
+    redirectClose: np/contents/golponoyshotti
+update:
+    redirect: np/contents/golponoyshotti
+    redirectClose: np/contents/golponoyshotti

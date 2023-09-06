@@ -1,0 +1,10 @@
+name: FocalPoint
+form: $/np/contents/models/focalpoint/fields.yaml
+modelClass: Np\Contents\Models\FocalPoint
+defaultRedirect: np/contents/focalpoint
+create:
+    redirect: 'np/contents/focalpoint/update/:id'
+    redirectClose: np/contents/focalpoint
+update:
+    redirect: np/contents/focalpoint
+    redirectClose: np/contents/focalpoint

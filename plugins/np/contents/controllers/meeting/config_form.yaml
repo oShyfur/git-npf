@@ -1,0 +1,10 @@
+name: Meeting
+form: $/np/contents/models/meeting/fields.yaml
+modelClass: Np\Contents\Models\Meeting
+defaultRedirect: np/contents/meeting
+create:
+    redirect: 'np/contents/meeting/update/:id'
+    redirectClose: np/contents/meeting
+update:
+    redirect: np/contents/meeting
+    redirectClose: np/contents/meeting

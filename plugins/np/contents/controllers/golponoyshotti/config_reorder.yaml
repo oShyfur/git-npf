@@ -1,0 +1,5 @@
+title: GolpoNoyShotti
+modelClass: Np\Contents\Models\GolpoNoyShotti
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

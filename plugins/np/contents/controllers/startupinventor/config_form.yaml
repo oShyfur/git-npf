@@ -1,0 +1,10 @@
+name: startupinventor
+form: $/np/contents/models/startupinventor/fields.yaml
+modelClass: Np\Contents\Models\StartupInventor
+defaultRedirect: np/contents/startupinventor
+create:
+    redirect: 'np/contents/startupinventor/update/:id'
+    redirectClose: np/contents/startupinventor
+update:
+    redirect: np/contents/startupinventor
+    redirectClose: np/contents/startupinventor

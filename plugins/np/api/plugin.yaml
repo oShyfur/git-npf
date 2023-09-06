@@ -1,0 +1,6 @@
+plugin:
+    name: 'np.structure::lang.plugin.name'
+    description: 'np.structure::lang.plugin.description'
+    author: NP
+    icon: oc-icon-anchor
+    homepage: ''

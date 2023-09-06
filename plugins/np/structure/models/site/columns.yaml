@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+    # name_en:
+    #     label: Name En
+    #     type: partial
+    
+    uuid:
+        label: UUID
+        type: text
+        searchable: true

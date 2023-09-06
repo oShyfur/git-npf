@@ -1,0 +1,515 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table np_contents_notices'
+    - builder_table_create_np_contents_notices.php
+1.0.4:
+    - 'Created table np_contents_news'
+    - builder_table_create_np_contents_news.php
+1.0.7:
+    - 'Created table np_contents_menus'
+    - builder_table_create_np_contents_menus.php
+1.0.8:
+    - 'add softDelete to files tables'
+    - migration108.php
+1.0.16:
+    - 'Created table np_contents_service_box'
+    - builder_table_create_np_contents_service_box.php
+1.0.17:
+    - 'Created table np_contents_top_banner'
+    - builder_table_create_np_contents_top_banner.php
+1.0.18:
+    - 'Created table np_contents_central_esheba'
+    - builder_table_create_np_contents_central_esheba.php
+1.0.20:
+    - 'Created table np_contents_internal_esheba'
+    - builder_table_create_np_contents_internal_esheba.php
+1.0.21:
+    - 'Created table np_contents_sps_data'
+    - builder_table_create_np_contents_sps_data.php
+1.0.22:
+    - 'Created table np_contents_revenue_model_job'
+    - builder_table_create_np_contents_revenue_model_job.php
+1.0.23:
+    - 'Created table np_contents_revenue_model_tender'
+    - builder_table_create_np_contents_revenue_model_tender.php
+1.0.24:
+    - 'Created table np_contents_revenue_model_advertisement'
+    - builder_table_create_np_contents_revenue_model_advertisement.php
+1.0.25:
+    - 'Created table np_contents_innovation_content'
+    - builder_table_create_np_contents_innovation_content.php
+1.0.26:
+    - 'Created table np_contents_social_media_corner'
+    - builder_table_create_np_contents_social_media_corner.php
+1.0.34:
+    - 'Created table np_contents_page'
+    - builder_table_create_np_contents_page.php
+1.0.35:
+    - 'Created table np_contents_footer_menu'
+    - builder_table_create_np_contents_footer_menu.php
+1.0.36:
+    - 'Created table np_contents_external_links'
+    - builder_table_create_np_contents_external_links.php
+1.0.37:
+    - 'Created table np_contents_photogallery'
+    - builder_table_create_np_contents_photogallery.php
+1.0.42:
+    - 'Created table np_contents_files'
+    - builder_table_create_np_contents_files.php
+1.0.43:
+    - 'Created table np_contents_office_process_map'
+    - builder_table_create_np_contents_office_process_map.php
+1.0.44:
+    - 'Updated table np_contents_office_process_map'
+    - builder_table_update_np_contents_office_process_map.php
+1.0.48:
+    - 'Created table np_contents_download'
+    - builder_table_create_np_contents_download.php
+1.0.49:
+    - 'Created table np_contents_leaders'
+    - builder_table_create_np_contents_leaders.php
+1.0.51:
+    - 'Created table np_contents_important_links'
+    - builder_table_create_np_contents_important_links.php
+1.0.52:
+    - 'Created table np_contents_law_policy'
+    - builder_table_create_np_contents_law_policy.php
+1.0.53:
+    - 'Created table np_contents_meeting'
+    - builder_table_create_np_contents_meeting.php
+1.0.54:
+    - 'Created table np_contents_monthly_schedule'
+    - builder_table_create_np_contents_monthly_schedule.php
+1.0.55:
+    - 'Created table np_contents_protibedon'
+    - builder_table_create_np_contents_protibedon.php
+1.0.56:
+    - 'Created table np_contents_religious_institutes'
+    - builder_table_create_np_contents_religious_institutes.php
+1.0.57:
+    - 'Created table np_contents_tourist_spot'
+    - builder_table_create_np_contents_tourist_spot.php
+1.0.58:
+    - 'Created table np_contents_digital_guard_file'
+    - builder_table_create_np_contents_digital_guard_file.php
+1.0.60:
+    - 'Created table np_contents_divcom'
+    - builder_table_create_np_contents_divcom.php
+1.0.61:
+    - 'Created table np_contents_divcom_meeting'
+    - builder_table_create_np_contents_divcom_meeting.php
+1.0.62:
+    - 'Created table np_contents_videogallery'
+    - builder_table_create_np_contents_videogallery.php
+1.0.63:
+    - 'Created table np_contents_golpo_noy_shotti'
+    - builder_table_create_np_contents_golpo_noy_shotti.php
+1.0.64:
+    - 'Created table np_contents_district_branding'
+    - builder_table_create_np_contents_district_branding.php
+1.0.65:
+    - 'Created table np_contents_dc_section_wise_form'
+    - builder_table_create_np_contents_dc_section_wise_form.php
+1.0.66:
+    - 'Created table np_contents_hotel_motel_guesthouse'
+    - builder_table_create_np_contents_hotel_motel_guesthouse.php
+1.0.67:
+    - 'Created table np_contents_bank_financial_org'
+    - builder_table_create_np_contents_bank_financial_org.php
+1.0.68:
+    - 'Updated table np_contents_bank_financial_org'
+    - builder_table_update_np_contents_bank_financial_org.php
+1.0.69:
+    - 'Created table np_contents_newspaper'
+    - builder_table_create_np_contents_newspaper.php
+1.0.70:
+    - 'Created table np_contents_officer_list'
+    - builder_table_create_np_contents_officer_list.php
+1.0.71:
+    - 'Created table np_contents_staff_list'
+    - builder_table_create_np_contents_staff_list.php
+1.0.72:
+    - 'Created table np_contents_info_officer'
+    - builder_table_create_np_contents_info_officer.php
+1.0.73:
+    - 'Created table np_contents_onik'
+    - builder_table_create_np_contents_onik.php
+1.0.74:
+    - 'Created table np_contents_focal_point'
+    - builder_table_create_np_contents_focal_point.php
+1.0.76:
+    - 'Created table np_contents_field_office'
+    - builder_table_create_np_contents_field_office.php
+1.0.77:
+    - 'Created table np_contents_project'
+    - builder_table_create_np_contents_project.php
+1.0.78:
+    - 'Created table np_contents_education_institute'
+    - builder_table_create_np_contents_education_institute.php
+1.0.81:
+    - 'Created table np_contents_hatbazar'
+    - builder_table_create_np_contents_hatbazar.php
+1.0.84:
+    - 'Created table np_contents_hospitalclinic'
+    - builder_table_create_np_contents_hospitalclinic_2.php
+1.0.87:
+    - 'Created table np_contents_divcom_section'
+    - builder_table_create_np_contents_divcom_section.php
+1.0.88:
+    - 'Created table np_contents_dcoffice_section'
+    - builder_table_create_np_contents_dcoffice_section.php
+1.0.89:
+    - 'Updated table np_contents_internal_esheba'
+    - builder_table_update_np_contents_internal_eservices.php
+1.0.90:
+    - 'Updated table np_contents_service_box'
+    - builder_table_update_np_contents_front_service_box.php
+1.0.98:
+    - 'Updated table np_contents_social_media_corner'
+    - builder_table_update_np_contents_social_media_corner.php
+1.0.99:
+    - 'Updated table np_contents_project'
+    - builder_table_update_np_contents_project.php
+1.0.100:
+    - 'Updated table np_contents_office_process_map'
+    - builder_table_update_np_contents_office_process_map_2.php
+1.0.103:
+    - 'Updated table np_contents_meeting'
+    - builder_table_update_np_contents_meeting.php
+1.0.106:
+    - 'Updated table np_contents_divcom_meeting'
+    - builder_table_update_np_contents_divcom_meeting.php
+1.0.111:
+    - 'make body field to longText'
+    - migration10111.php
+1.0.112:
+    - 'Created table np_contents_testtable'
+    - builder_table_create_np_contents_testtable.php
+1.0.113:
+    - 'Created table np_contents_site_feedback'
+    - builder_table_create_np_contents_site_feedback.php
+1.0.114:
+    - 'Updated table np_contents_site_feedback'
+    - builder_table_update_np_contents_site_feedback.php
+1.0.115:
+    - 'Updated table np_contents_site_feedback'
+    - builder_table_update_np_contents_site_feedback2.php
+1.0.118:
+    - 'Created table np_contents_service_box_category'
+    - builder_table_create_np_contents_service_box_category2.php
+1.0.119:
+    - 'Created table np_contents_service_box_items'
+    - builder_table_create_np_contents_service_box_items.php
+1.0.120:
+    - 'Created table np_contents_press_release'
+    - builder_table_create_np_contents_press_release.php
+1.0.121:
+    - 'Drop table np_contents_press_release'
+    - builder_table_delete_np_contents_press_release.php
+1.0.122:
+    - 'Created table np_contents_press_release'
+    - builder_table_create_np_contents_press_release_2.php
+1.0.123:
+    - 'Created table np_contents_calendar_event'
+    - builder_table_create_np_contents_calendar_event.php
+1.0.124:
+    - 'Created table np_contents_officers_profile'
+    - builder_table_create_np_contents_officers_profile.php
+1.0.125:
+    - 'Created table np_contents_study_bangladesh'
+    - builder_table_create_np_contents_study_bangladesh.php
+1.0.126:
+    - 'Created table np_contents_foreign_service_academy'
+    - builder_table_create_np_contents_foreign_service_academy.php
+1.0.127:
+    - 'Created table np_contents_ambassador'
+    - builder_table_create_np_contents_ambassador.php
+1.0.128:
+    - 'Updated table np_contents_officers_profile'
+    - builder_table_update_np_contents_officers_profile.php
+1.0.129:
+    - 'Updated table np_contents_officers_profile'
+    - builder_table_update_np_contents_officers_profile_2.php
+1.0.130:
+    - 'Updated table np_contents_officers_profile'
+    - builder_table_update_np_contents_officers_profile_3.php
+1.0.131:
+    - 'Updated table np_contents_menus'
+    - builder_table_update_np_contents_menus.php
+1.0.132:
+    - 'Updated table np_contents_calendar_event'
+    - builder_table_update_np_contents_calendar_event.php
+1.0.133:
+    - 'Updated table np_contents_calendar_event'
+    - builder_table_update_np_contents_calendar_event_2.php
+1.0.134:
+    - 'Updated table np_contents_press_release'
+    - builder_table_update_np_contents_press_release.php
+1.0.135:
+    - 'Updated table np_contents_calendar_event'
+    - builder_table_update_np_contents_calendar_event_3.php
+1.0.136:
+    - 'Updated table np_contents_calendar_event'
+    - builder_table_update_np_contents_calendar_event_4.php
+1.0.137:
+    - 'Updated table np_contents_officers_profile'
+    - builder_table_update_np_contents_officers_profile_4.php
+1.0.138:
+    - 'Updated table np_contents_photogallery'
+    - builder_table_update_np_contents_photogallery.php
+1.0.139:
+    - 'Created table np_contents_freedom_fighter'
+    - builder_table_create_np_contents_freedom_fighter.php
+1.0.140:
+    - 'Created table np_contents_uno'
+    - builder_table_create_np_contents_uno.php
+1.0.141:
+    - 'Created table np_contents_adc'
+    - builder_table_create_np_contents_adc.php
+1.0.142:
+    - 'Created table np_contents_addldivcom'
+    - builder_table_create_np_contents_addldivcom.php
+1.0.143:
+    - 'Created table np_contents_forms'
+    - builder_table_create_np_contents_forms.php
+1.0.144:
+    - 'Created table np_contents_union'
+    - builder_table_create_np_contents_union.php
+1.0.145:
+    - 'Created table np_contents_covid19_red_zone'
+    - builder_table_create_np_contents_covid19_red_zone.php
+1.0.146:
+    - 'Created table np_contents_digitalfair_video'
+    - builder_table_create_np_contents_digitalfair_video.php
+1.0.147:
+    - 'Created table np_contents_digitalfair_photo'
+    - builder_table_create_np_contents_digitalfair_photo.php
+1.0.148:
+    - 'Created table np_contents_digitalfair_startup_inventor'
+    - builder_table_create_np_contents_digitalfair_startup_inventor.php
+1.0.149:
+    - 'Created table np_contents_digitalfair_mujib'
+    - builder_table_create_np_contents_digitalfair_mujib.php
+1.0.150:
+    - 'Created table np_contents_digitalfair_contact'
+    - builder_table_create_np_contents_digitalfair_contact.php
+1.0.151:
+    - 'Created table np_contents_digitalfair_info'
+    - builder_table_create_np_contents_digitalfair_info.php
+1.0.152:
+    - 'Created table np_contents_digitalfair_dcenter_institute'
+    - builder_table_create_np_contents_digitalfair_dcenter_institute.php
+1.0.153:
+    - 'Created table np_contents_digitalfair_eservice'
+    - builder_table_create_np_contents_digitalfair_eservice.php
+1.0.154:
+    - 'Created table np_contents_digitalfair_edu_emp'
+    - builder_table_create_np_contents_digitalfair_edu_emp.php
+1.0.155:
+    - 'Updated table np_contents_freedom_fighter'
+    - builder_table_update_np_contents_freedom_fighter.php
+1.0.156:
+    - 'Updated table np_contents_freedom_fighter'
+    - builder_table_update_np_contents_freedom_fighter_2.php
+1.0.157:
+    - 'Created table np_contents_test'
+    - builder_table_create_np_contents_test.php
+1.0.158:
+    - 'Drop table np_contents_test'
+    - builder_table_delete_np_contents_test.php
+1.0.159:
+    - 'Drop table np_contents_testtable'
+    - builder_table_delete_np_contents_testtable.php
+1.0.160:
+    - 'Updated table np_contents_leaders'
+    - builder_table_update_np_contents_leaders.php
+1.0.161:
+    - 'Created table np_contents_header_menu'
+    - builder_table_create_np_contents_header_menu.php
+1.0.162:
+    - 'Updated table np_contents_header_menu'
+    - builder_table_update_np_contents_header_menu.php
+1.0.163:
+    - 'Created table np_contents_event_government'
+    - builder_table_create_np_contents_event_government.php
+1.0.164:
+    - 'Created table np_contents_motto'
+    - builder_table_create_np_contents_motto.php
+1.0.165:
+    - 'Created table np_contents_tcv_media_home_page'
+    - builder_table_create_np_contents_tcv_media_home_page.php
+1.0.166:
+    - 'Created table np_contents_tcv_details'
+    - builder_table_create_np_contents_tcv_details.php
+1.0.167:
+    - 'Created table np_contents_about'
+    - builder_table_create_np_contents_about.php
+1.0.168:
+    - 'Created table np_contents_teachers'
+    - builder_table_create_np_contents_teachers.php
+1.0.169:
+    - 'Updated table np_contents_header_menu'
+    - builder_table_update_np_contents_header_menu_2.php
+1.0.170:
+    - 'Created table np_contents_initiative_categories'
+    - builder_table_create_np_contents_initiative_categories.php
+1.0.171:
+    - 'Updated table np_contents_initiative_categories'
+    - builder_table_update_np_contents_initiative_categories.php
+1.0.172:
+    - 'Created table np_contents_initiative_sub_categories'
+    - builder_table_create_np_contents_initiative_sub_categories.php
+1.0.173:
+    - 'Created table np_contents_initiatives_about'
+    - builder_table_create_np_contents_initiatives_about.php
+1.0.174:
+    - 'Updated table np_contents_initiatives_about'
+    - builder_table_update_np_contents_initiative_about.php
+1.0.175:
+    - 'Created table np_contents_initiative_tcv'
+    - builder_table_create_np_contents_initiative_tcv.php
+1.0.176:
+    - 'Created table np_contents_sub_initiative_partners'
+    - builder_table_create_np_contents_sub_initiative_partners.php
+1.0.177:
+    - 'Updated table np_contents_initiative_sub_categories'
+    - builder_table_update_np_contents_initiative_sub_categories.php
+1.0.178:
+    - 'Updated table np_contents_initiative_about'
+    - builder_table_update_np_contents_initiative_about_2.php
+1.0.179:
+    - 'Updated table np_contents_initiative_tcv'
+    - builder_table_update_np_contents_initiative_tcv.php
+1.0.180:
+    - 'Updated table np_contents_sub_initiative_partners'
+    - builder_table_update_np_contents_sub_initiative_partners.php
+1.0.181:
+    - 'Created table np_contents_sub_initiative_challenges'
+    - builder_table_create_np_contents_sub_initiative_challenges.php
+1.0.182:
+    - 'Created table np_contents_sub_initiative_about'
+    - builder_table_create_np_contents_sub_initiative_about.php
+1.0.183:
+    - 'Created table np_contents_sub_initiative_key_impacts'
+    - builder_table_create_np_contents_sub_initiative_key_impacts.php
+1.0.184:
+    - 'Created table np_contents_sub_initiative_system_analysis'
+    - builder_table_create_np_contents_sub_initiative_system_analysis.php
+1.0.185:
+    - 'Created table np_contents_sub_initiative_tcv'
+    - builder_table_create_np_contents_sub_initiative_tcv.php
+1.0.186:
+    - 'Created table np_contents_sub_initiative_awards'
+    - builder_table_create_np_contents_sub_initiative_awards.php
+1.0.187:
+    - 'Created table np_contents_sub_initiative_publications'
+    - builder_table_create_np_contents_sub_initiative_publications.php
+1.0.188:
+    - 'Created table np_contents_sub_initiative_case_studies'
+    - builder_table_create_np_contents_sub_initiative_case_studies.php
+1.0.189:
+    - 'Created table np_contents_sub_initiative_stories'
+    - builder_table_create_np_contents_sub_initiative_stories.php
+1.0.190:
+    - 'Created table np_contents_sub_initiative_blogs'
+    - builder_table_create_np_contents_sub_initiative_blogs.php
+1.0.191:
+    - 'Updated table np_contents_sub_initiative_challenges'
+    - builder_table_update_np_contents_sub_initiative_challenges.php
+1.0.192:
+    - 'Updated table np_contents_sub_initiative_about'
+    - builder_table_update_np_contents_sub_initiative_about.php
+1.0.193:
+    - 'Updated table np_contents_sub_initiative_system_analysis'
+    - builder_table_update_np_contents_sub_initiative_system_analysis.php
+1.0.194:
+    - 'Updated table np_contents_sub_initiative_about'
+    - builder_table_update_np_contents_sub_initiative_about_2.php
+1.0.195:
+    - 'Updated table np_contents_sub_initiative_publications'
+    - builder_table_update_np_contents_sub_initiative_publications.php
+1.0.196:
+    - 'Updated table np_contents_sub_initiative_case_studies'
+    - builder_table_update_np_contents_sub_initiative_case_studies.php
+1.0.197:
+    - 'Updated table np_contents_sub_initiative_blogs'
+    - builder_table_update_np_contents_sub_initiative_blogs.php
+1.0.198:
+    - 'Updated table np_contents_sub_initiative_stories'
+    - builder_table_update_np_contents_sub_initiative_stories.php
+1.0.199:
+    - 'Created table np_contents_simplifying_government_videos'
+    - builder_table_create_np_contents_simplifying_government_videos.php
+1.0.200:
+    - 'Created table np_contents_award_recognitions'
+    - builder_table_create_np_contents_award_recognitions.php
+1.0.201:
+    - 'Updated table np_contents_about'
+    - builder_table_update_np_contents_about.php
+1.0.202:
+    - 'Created table np_contents_contact_infos'
+    - builder_table_create_np_contents_contact_infos.php
+1.0.203:
+    - 'Created table np_contents_tender_infos'
+    - builder_table_create_np_contents_tender_infos.php
+1.0.204:
+    - 'Created table np_contents_tenders'
+    - builder_table_create_np_contents_tenders.php
+1.0.205:
+    - 'Updated table np_contents_tenders'
+    - builder_table_update_np_contents_tenders.php
+1.0.206:
+    - 'Created table np_contents_team_clusters'
+    - builder_table_create_np_contents_team_clusters.php
+1.0.207:
+    - 'Created table np_contents_team_names'
+    - builder_table_create_np_contents_team_names.php
+1.0.208:
+    - 'Created table np_contents_team_members'
+    - builder_table_create_np_contents_team_members.php
+1.0.209:
+    - 'Updated table np_contents_team_members'
+    - builder_table_update_np_contents_team_members.php
+1.0.210:
+    - 'Updated table np_contents_team_members'
+    - builder_table_update_np_contents_team_members_2.php
+1.0.211:
+    - 'Updated table np_contents_team_members'
+    - builder_table_update_np_contents_team_members_3.php
+1.0.212:
+    - 'Updated table np_contents_team_members'
+    - builder_table_update_np_contents_team_members_4.php
+1.0.213:
+    - 'Created table np_contents_career_infos'
+    - builder_table_create_np_contents_career_infos.php
+1.0.214:
+    - 'Created table np_contents_jobs'
+    - builder_table_create_np_contents_jobs.php
+1.0.215:
+    - 'Updated table np_contents_motto'
+    - builder_table_update_np_contents_motto.php
+1.0.216:
+    - 'Updated table np_contents_sub_initiative_publications'
+    - builder_table_update_np_contents_sub_initiative_publications_2.php
+1.0.217:
+    - 'Updated table np_contents_sub_initiative_tcv'
+    - builder_table_update_np_contents_sub_initiative_tcv.php
+1.0.218:
+    - 'Updated table np_contents_notices'
+    - builder_table_update_np_contents_notices.php
+1.0.219:
+    - 'Created table np_contents_office_location'
+    - builder_table_create_np_contents_office_location.php
+1.0.220:
+    - 'Updated table np_contents_office_location'
+    - builder_table_update_np_contents_office_location.php
+1.0.221:
+    - 'Updated table np_contents_office_location'
+    - builder_table_update_np_contents_office_location_2.php
+1.0.222:
+    - 'Created table np_contents_physical_locations'
+    - builder_table_create_np_contents_physical_locations.php
+1.0.223:
+    - 'Updated table np_contents_physical_locations'
+    - builder_table_update_np_contents_physical_locations.php

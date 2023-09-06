@@ -1,0 +1,10 @@
+name: HeaderMenu
+form: $/np/contents/models/headermenu/fields.yaml
+modelClass: Np\Contents\Models\HeaderMenu
+defaultRedirect: np/contents/headermenu
+create:
+    redirect: 'np/contents/headermenu/update/:id'
+    redirectClose: np/contents/headermenu
+update:
+    redirect: np/contents/headermenu
+    redirectClose: np/contents/headermenu

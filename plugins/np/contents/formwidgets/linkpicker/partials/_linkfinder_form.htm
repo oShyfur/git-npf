@@ -1,0 +1,66 @@
+<div id="<?= $this->getId('popup') ?>" class="popup">
+    <?= Form::open() ?>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title"> Find Links</h4>
+        <hr>
+    </div>
+
+
+    <div class="modal-body">
+        <table class="table">
+
+            <tr>
+                <td>Contents</td>
+                <td>
+                    <button type="button" data-control="popup" class="btn btn-primary"
+                        data-handler="<?= $this->getEventHandler('onFindContentTypes') ?>"
+                        data-request-data="contenttypefinder_flag: 1" data-dismiss="popup">
+                        <i class="icon-align-justify icon-1x"></i>
+                    </button>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Views</td>
+                <td>
+                    <button type="button" data-control="popup" class="btn btn-primary"
+                        data-handler="<?= $this->getEventHandler('onFindViews') ?>"
+                        data-request-data="viewfinder_flag: 1" data-dismiss="popup">
+
+                        <i class="icon-align-justify icon-1x"></i>
+                    </button>
+
+                </td>
+            </tr>
+
+
+            <!-- <tr>
+                <td>Forms</td>
+                <td>
+                    <button type="button" data-control="popup" class="btn btn-primary"
+                        data-handler="<?= $this->getEventHandler('onFindForms') ?>"
+                        data-request-data="formfinder_flag: 1" data-dismiss="popup">
+
+                        <i class="icon-align-justify icon-1x"></i>
+                    </button>
+
+                </td>
+            </tr> -->
+
+
+
+
+        </table>
+
+    </div>
+
+
+
+
+    <div class="modal-footer">
+
+    </div>
+    <?= Form::close() ?>
+</div>

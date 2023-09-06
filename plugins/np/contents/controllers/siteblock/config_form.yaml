@@ -1,0 +1,10 @@
+name: SiteBlock
+form: $/np/contents/models/siteblocks/fields.yaml
+modelClass: Np\Contents\Models\SiteBlocks
+defaultRedirect: np/contents/siteblock
+create:
+    redirect: 'np/contents/siteblock/update/:id'
+    redirectClose: np/contents/siteblock
+update:
+    redirect: np/contents/siteblock
+    redirectClose: np/contents/siteblock

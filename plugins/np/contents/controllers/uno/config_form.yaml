@@ -1,0 +1,10 @@
+name: Uno
+form: $/np/contents/models/uno/fields.yaml
+modelClass: Np\Contents\Models\Uno
+defaultRedirect: np/contents/uno
+create:
+    redirect: 'np/contents/uno/update/:id'
+    redirectClose: np/contents/uno
+update:
+    redirect: np/contents/uno
+    redirectClose: np/contents/uno

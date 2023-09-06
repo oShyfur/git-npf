@@ -1,0 +1,10 @@
+name: ServiceBoxItems
+form: $/np/contents/models/serviceboxitems/fields.yaml
+modelClass: Np\Contents\Models\ServiceBoxItems
+defaultRedirect: np/contents/serviceboxitems
+create:
+    redirect: 'np/contents/serviceboxitems/update/:id'
+    redirectClose: np/contents/serviceboxitems
+update:
+    redirect: np/contents/serviceboxitems
+    redirectClose: np/contents/serviceboxitems

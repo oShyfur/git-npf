@@ -1,0 +1,10 @@
+name: Site
+form: $/np/structure/models/site/fields.yaml
+modelClass: Np\Structure\Models\Site
+defaultRedirect: np/structure/site
+create:
+    redirect: 'np/structure/site/update/:id'
+    redirectClose: np/structure/site
+update:
+    redirect: np/structure/site
+    redirectClose: np/structure/site

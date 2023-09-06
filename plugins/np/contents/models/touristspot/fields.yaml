@@ -1,0 +1,49 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    field_tourist_spot_transportation:
+        label: যাতায়াত
+        size: large
+        span: full
+        type: richeditor
+    field_contact_person:
+        label: 'উক্ত স্থানে সহায়তার জন্য যোগাযোগ'
+        size: large
+        span: auto
+        type: richeditor
+    field_tourist_spot_location_new:
+        label: অবস্থান
+        size: large
+        span: auto
+        type: richeditor
+    images:
+        label: ছবি
+        mode: image
+        imageWidth: '960'
+        imageHeight: '250'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

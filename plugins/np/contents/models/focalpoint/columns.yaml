@@ -1,0 +1,19 @@
+columns:
+    title:
+        label: বিষয়
+        type: text
+        searchable: true
+        sortable: true
+        width: 40%
+    officer[title]:
+        label: ফোকাল পয়েন্ট কর্মকর্তা
+        sortable: true
+            
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

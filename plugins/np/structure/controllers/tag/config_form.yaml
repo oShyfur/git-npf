@@ -1,0 +1,10 @@
+name: Tag
+form: $/np/structure/models/tag/fields.yaml
+modelClass: Np\Structure\Models\Tag
+defaultRedirect: np/structure/tag
+create:
+    redirect: 'np/structure/tag/update/:id'
+    redirectClose: np/structure/tag
+update:
+    redirect: np/structure/tag
+    redirectClose: np/structure/tag

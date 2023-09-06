@@ -1,0 +1,21 @@
+<div id="<?= $this->getId('popup') ?>" class="popup">
+    <?= Form::open() ?>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">&times;</button>
+        <h4 class="modal-title"> Content Type List</h4>
+        <hr>
+    </div>
+
+
+    <div class="modal-body">
+        <?= $listWidget->render() ?>
+    </div>
+
+
+
+
+    <div class="modal-footer">
+
+    </div>
+    <?= Form::close() ?>
+</div>

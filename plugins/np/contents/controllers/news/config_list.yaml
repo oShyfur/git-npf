@@ -1,0 +1,13 @@
+list: $/np/contents/models/news/columns.yaml
+modelClass: Np\Contents\Models\News
+title: News
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+defaultSort: 'created_at'
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'np/contents/news/update/:id'

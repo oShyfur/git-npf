@@ -1,0 +1,53 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    adc:
+        label: পদবি
+        taxonomyType: '11'
+        span: left
+        default: 'null'
+        required: 0
+        type: taxonomypicker
+    field_e_directory_nid:
+        label: জনশক্তি
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\OfficerList
+        list: $/np/contents/models/officerlist/columns.yaml
+        formyaml: $/np/contents/models/officerlist/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: right
+        type: recordfinder
+    field_dc_office_section_nid:
+        label: 'দায়িত্বপ্রাপ্ত শাখাসমূহ'
+        prompt: 'Add দায়িত্বপ্রাপ্ত শাখাসমূহ'
+        span: full
+        type: repeater
+        form:
+            fields:
+                dcoffice_section:
+                    label: 'দায়িত্বপ্রাপ্ত শাখাসমূহ'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\DcofficeSection
+                    list: $/np/contents/models/dcofficesection/columns.yaml
+                    formyaml: $/np/contents/models/dcofficesection/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

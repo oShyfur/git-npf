@@ -1,0 +1,31 @@
+fields:
+    id:
+        label: Id
+        span: auto
+        required: 1
+        type: number
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    name_short:
+        label: 'Short Name'
+        span: auto
+        type: text
+        comment: 'ex. MoPa'
+    office_type:
+        label: 'Office Type'
+        span: auto
+        default: '1'
+        required: 1
+        type: number
+    reference_code:
+        label: 'Reference Code'
+        span: auto
+        type: text
+    status:
+        label: Active
+        span: auto
+        default: 1
+        type: switch

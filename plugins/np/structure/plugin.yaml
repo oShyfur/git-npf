@@ -1,0 +1,126 @@
+plugin:
+    name: 'np.structure::lang.plugin.name'
+    description: 'np.structure::lang.plugin.description'
+    author: NP
+    icon: oc-icon-anchor
+    homepage: ''
+permissions:
+    manage_cluster:
+        tab: NP
+        label: 'Manage Clusters'
+    manage_tag:
+        tab: NP
+        label: 'Manage Tags'
+    manage_db:
+        tab: NP
+        label: 'Manage DBs'
+    manage_layer:
+        tab: NP
+        label: 'Manage Layers'
+    manage_sites:
+        tab: NP
+        label: 'Manage Sites'
+    manage_domain:
+        tab: NP
+        label: 'Manage Domains'
+    manage_texonomy:
+        tab: NP
+        label: 'Manage Texonomy'
+    manage_content_type:
+        tab: NP
+        label: 'Manage Content Type'
+    manage_block:
+        tab: NP
+        label: 'Manage Blocks'
+    manage_ministry:
+        tab: NP
+        label: 'Manage Ministries'
+    manage_clone:
+        tab: NP
+        label: 'Manage Site Clone'
+navigation:
+    np-structure:
+        label: Structure
+        url: np/structure/site
+        icon: icon-life-ring
+        permissions:
+            - manage_sites
+        sideMenu:
+            np-clusters:
+                label: Clusters
+                url: np/structure/cluster
+                icon: icon-sitemap
+                permissions:
+                    - manage_cluster
+            np-sites:
+                label: Sites
+                url: np/structure/site
+                icon: icon-sitemap
+                permissions:
+                    - manage_sites
+            np-structure-blocks:
+                label: 'Blocks / Views'
+                url: np/structure/block
+                icon: icon-sitemap
+                permissions:
+                    - manage_block
+            np-structure-content-types:
+                label: 'Content Types'
+                url: np/structure/contenttype
+                icon: icon-sitemap
+                permissions:
+                    - manage_content_type
+            np-texonomy-types:
+                label: 'Taxonomy Types'
+                url: np/structure/texonomytype
+                icon: icon-sitemap
+                permissions:
+                    - manage_texonomy
+            np-structure-site-resource:
+                label: 'Site Resources'
+                url: np/structure/siteresource
+                icon: icon-sitemap
+            np-dbs:
+                label: DBs
+                url: np/structure/db
+                icon: icon-sitemap
+                permissions:
+                    - manage_db
+            np-tags:
+                label: Tags
+                url: np/structure/tag
+                icon: icon-sitemap
+                permissions:
+                    - manage_tag
+            np-layers:
+                label: Layers
+                url: np/structure/layer
+                icon: icon-sitemap
+                permissions:
+                    - manage_layer
+            np-domains:
+                label: Domains
+                url: np/structure/domain
+                icon: icon-sitemap
+                permissions:
+                    - manage_domain
+            np-ministries:
+                label: Ministries
+                url: np/structure/ministry
+                icon: icon-sitemap
+                permissions:
+                    - manage_ministry
+            np-layer-resource:
+                label: 'Layer Resources'
+                url: np/structure/layerresource
+                icon: icon-sitemap
+            side-menu-item:
+                label: 'Site Clone'
+                url: np/structure/siteclone
+                icon: icon-sitemap
+                permissions:
+                    - manage_clone
+            np-site-type:
+                label: 'Site Type'
+                url: np/structure/sitetype
+                icon: icon-sitemap

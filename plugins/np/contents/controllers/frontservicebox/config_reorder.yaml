@@ -1,0 +1,5 @@
+title: FrontServiceBox
+modelClass: Np\Contents\Models\FrontServiceBox
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Ministry
+form: $/np/structure/models/ministry/fields.yaml
+modelClass: Np\Structure\Models\Ministry
+defaultRedirect: np/structure/ministry
+create:
+    redirect: 'np/structure/ministry/update/:id'
+    redirectClose: np/structure/ministry
+update:
+    redirect: np/structure/ministry
+    redirectClose: np/structure/ministry

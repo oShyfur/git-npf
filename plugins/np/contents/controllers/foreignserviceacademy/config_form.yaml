@@ -1,0 +1,10 @@
+name: ForeignServiceAcademy
+form: $/np/contents/models/foreignserviceacademy/fields.yaml
+modelClass: Np\Contents\Models\ForeignServiceAcademy
+defaultRedirect: np/contents/foreignserviceacademy
+create:
+    redirect: 'np/contents/foreignserviceacademy/update/:id'
+    redirectClose: np/contents/foreignserviceacademy
+update:
+    redirect: np/contents/foreignserviceacademy
+    redirectClose: np/contents/foreignserviceacademy

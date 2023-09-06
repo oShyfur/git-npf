@@ -1,0 +1,25 @@
+fields:
+    cluster:
+        label: Cluster
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+        context: create
+    name:
+        label: Name
+        span: left
+        required: 1
+        type: text
+    id:
+        label: UUID
+        span: right
+        disabled: 1
+        readOnly: 1
+        type: text
+    status:
+        label: Status
+        span: full
+        default: 1
+        type: switch

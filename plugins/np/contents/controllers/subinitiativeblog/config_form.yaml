@@ -1,0 +1,10 @@
+name: SubInitiativeBlog
+form: $/np/contents/models/subinitiativeblog/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeBlog
+defaultRedirect: np/contents/subinitiativeblog
+create:
+    redirect: 'np/contents/subinitiativeblog/update/:id'
+    redirectClose: np/contents/subinitiativeblog
+update:
+    redirect: np/contents/subinitiativeblog
+    redirectClose: np/contents/subinitiativeblog

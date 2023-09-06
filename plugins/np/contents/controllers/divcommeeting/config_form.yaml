@@ -1,0 +1,10 @@
+name: DivcomMeeting
+form: $/np/contents/models/divcommeeting/fields.yaml
+modelClass: Np\Contents\Models\DivcomMeeting
+defaultRedirect: np/contents/divcommeeting
+create:
+    redirect: 'np/contents/divcommeeting/update/:id'
+    redirectClose: np/contents/divcommeeting
+update:
+    redirect: np/contents/divcommeeting
+    redirectClose: np/contents/divcommeeting

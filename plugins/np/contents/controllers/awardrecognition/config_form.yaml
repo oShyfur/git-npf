@@ -1,0 +1,10 @@
+name: AwardRecognition
+form: $/np/contents/models/awardrecognition/fields.yaml
+modelClass: Np\Contents\Models\AwardRecognition
+defaultRedirect: np/contents/awardrecognition
+create:
+    redirect: 'np/contents/awardrecognition/update/:id'
+    redirectClose: np/contents/awardrecognition
+update:
+    redirect: np/contents/awardrecognition
+    redirectClose: np/contents/awardrecognition

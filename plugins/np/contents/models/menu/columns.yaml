@@ -1,0 +1,11 @@
+columns:
+   
+    title:
+        label: title
+        type: partial
+        clickable: false
+    actions:
+        label: actions
+        type: partial
+        width: 125px
+        clickable: false

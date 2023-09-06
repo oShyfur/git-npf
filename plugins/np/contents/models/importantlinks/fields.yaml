@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: ''
+        span: full
+        type: richeditor
+    link:
+        label: 'Ministry Important Link'
+        span: full
+        type: linkpicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

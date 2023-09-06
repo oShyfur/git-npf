@@ -1,0 +1,11 @@
+name: FrontServiceBox
+modelClass: Np\Contents\Models\FrontServiceBox
+form: $/np/contents/models/frontservicebox/fields.yaml
+defaultRedirect: np/contents/frontservicebox
+create:
+    redirect: 'np/contents/frontservicebox/update/:id'
+    redirectClose: np/contents/frontservicebox
+update:
+    redirect: np/contents/frontservicebox
+    redirectClose: np/contents/frontservicebox
+preview: {  }

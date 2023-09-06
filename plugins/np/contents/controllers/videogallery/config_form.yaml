@@ -1,0 +1,10 @@
+name: VideoGallery
+form: $/np/contents/models/videogallery/fields.yaml
+modelClass: Np\Contents\Models\VideoGallery
+defaultRedirect: np/contents/videogallery
+create:
+    redirect: 'np/contents/videogallery/update/:id'
+    redirectClose: np/contents/videogallery
+update:
+    redirect: np/contents/videogallery
+    redirectClose: np/contents/videogallery

@@ -1,0 +1,3 @@
+    
+    //jsonable
+    public $jsonable = {jsonableColumns};

@@ -1,0 +1,111 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li><a href="<?= Backend::url('np/setting/menus') ?>">Menus</a></li>
+    <li><?= e($this->pageTitle) ?></li>
+</ul>
+<?php Block::endPut() ?>
+
+<div class="container" style="margin-bottom: 30px;">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>
+                Menu Preview
+                <button class="collapse-all btn btn-primary pull-right" style="margin-left: 10px;">Collapse All</button>
+                <button class="expand-all btn btn-primary pull-right">Expand All</button>
+            </h4>
+            <div id="menuList" class="dd" style="margin-top: 25px;"></div>
+        </div>
+        <div class="col-md-4">
+            <button class="new-menu btn btn-primary pull-right">Add New Menu</button>
+            <div id="createForm" style="display: none;">
+                <h4>Add Menu</h4>
+                <form class="menuForm form-elements" data-request="onSubmitMenuForm"
+                    data-request-success="updateMenuForm()">
+                    <div class="form-group span-full">
+                        <label>Title (En)</label>
+                        <input type="text" name="title[en]" value="" class="form-control" />
+                    </div>
+                    <div class="form-group span-full">
+                        <label>Title (Bn)</label>
+                        <input type="text" name="title[bn]" value="" class="form-control" />
+                    </div>
+                    <div class="form-group dropdown-field span-full">
+                        <label>Parent Menu</label>
+                        <select id="parent_id" name="parent_id" class="form-control custom-select"></select>
+                    </div>
+                    <div class="form-group dropdown-field span-full">
+                        <label>Link Type</label>
+                        <select id="link_type" name="link_type" class="form-control custom-select">
+                            <option value="">Select Link Type</option>
+                            <option value="1">External</option>
+                            <option value="2">Front Page</option>
+                            <option value="3">No Link</option>
+                            <option value="4">Content Reference</option>
+                        </select>
+                    </div>
+                    <div id="link_path_holder">
+                    </div>
+                    <div class="form-group span-full">
+                        <label>Weight</label>
+                        <input type="number" name="weight" value="" class="form-control" />
+                    </div>
+                    <div class="form-group span-full">
+                        <div class="checkbox custom-checkbox">
+                            <input id="status" name="status" value="1" type="checkbox" checked>
+                            <label for="status">Active</label>
+                        </div>
+                    </div>
+                    <div class="form-group span-right">
+                        <button data-attach-loading class="btn btn-primary pull-right">Save</button>
+                    </div>
+                </form>
+            </div>
+            <div id="editForm" style="display: none;">
+                <h4>Edit Menu</h4>
+                <form class="menuForm form-elements" data-request="onEditMenuForm"
+                    data-request-success="updateMenuForm()">
+                    <input id="edit_id" type="hidden" name="id" value="" />
+                    <div class="form-group span-full">
+                        <label>Title (En)</label>
+                        <input id="edit_title_en" type="text" name="title[en]" value="" class="form-control" />
+                    </div>
+                    <div class="form-group span-full">
+                        <label>Title (Bn)</label>
+                        <input id="edit_title_bn" type="text" name="title[bn]" value="" class="form-control" />
+                    </div>
+                    <div class="form-group dropdown-field span-full">
+                        <label>Parent Menu</label>
+                        <select id="edit_parent_id" name="parent_id" class="form-control custom-select"
+                            disabled></select>
+                    </div>
+                    <div class="form-group dropdown-field span-full">
+                        <label>Link Type</label>
+                        <select id="edit_link_type" name="link_type" class="form-control custom-select">
+                            <option value="">Select Link Type</option>
+                            <option value="1">External</option>
+                            <option value="2">Front Page</option>
+                            <option value="3">No Link</option>
+                            <option value="4">Content Reference</option>
+                        </select>
+                    </div>
+                    <div id="edit_link_path_holder">
+                    </div>
+                    <div class="form-group span-full">
+                        <label>Weight</label>
+                        <input id="edit_weight" type="number" name="weight" value="" class="form-control" />
+                    </div>
+                    <div class="form-group span-full">
+                        <div class="checkbox custom-checkbox">
+                            <input id="edit_status" name="status" value="1" type="checkbox" checked>
+                            <label for="status">Active</label>
+                        </div>
+                    </div>
+                    <div class="form-group span-right">
+                        <button data-attach-loading class="btn btn-primary pull-right">Save</button>
+                        <a class="btn-cancel btn btn-danger pull-right" style="margin-right: 5px;">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

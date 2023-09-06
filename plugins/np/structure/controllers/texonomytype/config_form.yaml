@@ -1,0 +1,10 @@
+name: TexonomyType
+form: $/np/structure/models/texonomytype/fields.yaml
+modelClass: Np\Structure\Models\TexonomyType
+defaultRedirect: np/structure/texonomytype
+create:
+    redirect: 'np/structure/texonomytype/update/:id'
+    redirectClose: np/structure/texonomytype
+update:
+    redirect: np/structure/texonomytype
+    redirectClose: np/structure/texonomytype

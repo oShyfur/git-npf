@@ -1,0 +1,95 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    tcv_about:
+        label: 'About TCV'
+        size: large
+        span: full
+        type: richeditor
+    image:
+        label: 'Cover Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    image2:
+        label: 'About Photo'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    time_number:
+        label: 'Time (Number)'
+        span: right
+        default: '0'
+        type: number
+    cost_number:
+        label: 'Cost (Number)'
+        span: left
+        default: '0'
+        type: number
+    value_number:
+        label: 'Value (Number)'
+        span: right
+        default: '0'
+        type: number
+    bsd_about:
+        label: 'Billion Services Delivered - About'
+        size: large
+        span: left
+        type: richeditor
+    bsd_number:
+        label: 'Billion Services Delivered (Number)'
+        span: right
+        default: '0'
+        type: number
+    bvs_about:
+        label: 'Billion Visits Saved - About'
+        size: large
+        span: left
+        type: richeditor
+    bvs_number:
+        label: 'Billion Visits Saved (Number)'
+        span: right
+        default: '0'
+        type: number
+    bmds_about:
+        label: 'Billion Man Days Saved - About'
+        size: large
+        span: left
+        type: richeditor
+    bmds_number:
+        label: 'Billion Man Days Saved (Number)'
+        span: right
+        default: '0'
+        type: number
+    bsc_about:
+        label: 'Billion Saved by Citizen - About'
+        size: large
+        span: left
+        type: richeditor
+    bsc_number:
+        label: 'Billion Saved by Citizen (Number)'
+        span: right
+        default: '0'
+        type: number
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: Name
+        span: full
+        required: 1
+        type: text
+    status:
+        label: Status
+        span: auto
+        default: 1
+        type: switch

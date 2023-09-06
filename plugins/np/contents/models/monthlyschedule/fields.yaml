@@ -1,0 +1,30 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    field_agenda:
+        label: এজেন্ডা
+        size: large
+        span: full
+        stretch: 0
+        required: 1
+        type: richeditor
+    field_monthly_activity_time:
+        label: 'সভার সময়'
+        mode: datetime
+        span: auto
+        type: datepicker
+    field_monthly_schedule_place:
+        label: 'সভার স্থান'
+        span: auto
+        type: text
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        type: switch

@@ -1,0 +1,7 @@
+columns:
+    id:
+        label: Id
+        type: text
+    content_types:
+        label: CT
+        type: text

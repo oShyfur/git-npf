@@ -1,0 +1,5 @@
+title: ServiceBox
+modelClass: Np\Contents\Models\ServiceBox
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

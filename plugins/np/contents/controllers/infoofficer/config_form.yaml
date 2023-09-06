@@ -1,0 +1,10 @@
+name: InfoOfficer
+form: $/np/contents/models/infoofficer/fields.yaml
+modelClass: Np\Contents\Models\InfoOfficer
+defaultRedirect: np/contents/infoofficer
+create:
+    redirect: 'np/contents/infoofficer/update/:id'
+    redirectClose: np/contents/infoofficer
+update:
+    redirect: np/contents/infoofficer
+    redirectClose: np/contents/infoofficer

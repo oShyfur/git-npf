@@ -1,0 +1,45 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Manage Menu</h4>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+            <?= $this->listRender() ?>
+
+        </div>
+
+        <div class="col-md-6">
+
+
+            <div id="menuForm" data-attach-loading>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<style>
+    #LinkPicker-formLinkPath-container-link_path div>div.col-md-6 {
+        width: 100%;
+    }
+
+    #LinkPicker-formLinkPath-container-link_path div>div.col-md-3 {
+        display: none
+    }
+    #Lists {
+        max-height: 757px;
+        overflow-y: scroll;
+    }
+</style>
+
+<script> $.request('onGetMenuForm') </script>

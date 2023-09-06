@@ -1,0 +1,10 @@
+name: DigitalfairContact
+form: $/np/contents/models/digitalfaircontact/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairContact
+defaultRedirect: np/contents/digitalfaircontact
+create:
+    redirect: 'np/contents/digitalfaircontact/update/:id'
+    redirectClose: np/contents/digitalfaircontact
+update:
+    redirect: np/contents/digitalfaircontact
+    redirectClose: np/contents/digitalfaircontact

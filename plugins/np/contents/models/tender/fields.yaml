@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: Title
+        span: full
+        hidden: 0
+        required: 1
+        type: text
+    body:
+        label: Description
+        size: large
+        span: full
+        required: 0
+        type: richeditor
+    publish_date:
+        label: 'Publish Date'
+        mode: date
+        span: auto
+        default: now
+        required: 1
+        type: datepicker
+    archive_date:
+        label: 'Closing Date'
+        mode: date
+        span: auto
+        default: now
+        required: 1
+        type: datepicker
+    tender_type:
+        label: Type
+        taxonomyType: '55'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    attachments:
+        label: Attachments
+        mode: file
+        fileTypes: pdf
+        mimeTypes: pdf
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'pdf File Only, Maximum File Size 10MB'
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

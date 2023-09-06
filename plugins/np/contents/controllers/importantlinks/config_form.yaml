@@ -1,0 +1,10 @@
+name: ImportantLinks
+form: $/np/contents/models/importantlinks/fields.yaml
+modelClass: Np\Contents\Models\ImportantLinks
+defaultRedirect: np/contents/importantlinks
+create:
+    redirect: 'np/contents/importantlinks/update/:id'
+    redirectClose: np/contents/importantlinks
+update:
+    redirect: np/contents/importantlinks
+    redirectClose: np/contents/importantlinks

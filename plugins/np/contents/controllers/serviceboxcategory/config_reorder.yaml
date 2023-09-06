@@ -1,0 +1,4 @@
+title: ServiceBoxCategory
+modelClass: Np\Contents\Models\ServiceBoxCategory
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Page
+form: $/np/contents/models/page/fields.yaml
+modelClass: Np\Contents\Models\Page
+defaultRedirect: np/contents/page
+create:
+    redirect: 'np/contents/page/update/:id'
+    redirectClose: np/contents/page
+update:
+    redirect: np/contents/page
+    redirectClose: np/contents/page

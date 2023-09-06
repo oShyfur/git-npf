@@ -1,0 +1,88 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    designation:
+        label: পদবি
+        span: auto
+        # required: 1
+        type: text
+    field_batch:
+        label: 'ব্যাচ (বিসিএস)'
+        span: auto
+        default: '0'
+        type: number
+    image:
+        label: ছবি
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        # required: 1
+        imageWidth: '280'
+        imageHeight: '320'
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    id_number:
+        label: 'আইডি নং'
+        span: auto
+        default: '0'
+        type: number
+    phone_office:
+        label: 'ফোন (অফিস)'
+        span: auto
+        # required: 1
+        type: text
+    phone_residence:
+        label: 'ফোন (বাসা)'
+        span: auto
+        type: text
+    fax:
+        label: ফ্যাক্স
+        span: auto
+        type: text
+    mobile:
+        label: মোবাইল
+        span: auto
+        type: text
+    email:
+        label: ইমেইল
+        span: auto
+        type: text
+    field_own_district:
+        label: 'নিজ জেলা'
+        span: auto
+        type: text
+    field_current_join_date:
+        label: 'বর্তমান কর্মস্থলে যোগদানের তারিখ'
+        mode: date
+        span: auto
+        type: datepicker
+    type:
+        label: 'ক্যাটাগরি'
+        taxonomyType: '49'
+        # useSiteScope: 1
+        span: auto
+        placeholder: ''
+        # required: 1
+        type: taxonomypicker
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '0'
+        type: number
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox

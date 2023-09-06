@@ -1,0 +1,10 @@
+name: BankFinancialOrg
+form: $/np/contents/models/bankfinancialorg/fields.yaml
+modelClass: Np\Contents\Models\BankFinancialOrg
+defaultRedirect: np/contents/bankfinancialorg
+create:
+    redirect: 'np/contents/bankfinancialorg/update/:id'
+    redirectClose: np/contents/bankfinancialorg
+update:
+    redirect: np/contents/bankfinancialorg
+    redirectClose: np/contents/bankfinancialorg

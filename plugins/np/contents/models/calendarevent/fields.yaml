@@ -1,0 +1,41 @@
+fields:
+    title:
+        label: Title
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    location:
+        label: Location
+        span: left
+        type: text
+    contact:
+        label: Contact
+        span: right
+        type: text
+    event_date:
+        label: 'Event Date & Time'
+        mode: datetime
+        span: left
+        required: 1
+        default: now
+        type: datepicker
+    end_date:
+        label: 'Event End Date & Time'
+        mode: datetime
+        span: auto
+        type: datepicker
+    email:
+        label: Email
+        span: auto
+        type: text
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        required: 0
+        type: switch

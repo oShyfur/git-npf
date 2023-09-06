@@ -1,0 +1,10 @@
+name: SubInitiativeStory
+form: $/np/contents/models/subinitiativestory/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativeStory
+defaultRedirect: np/contents/subinitiativestory
+create:
+    redirect: 'np/contents/subinitiativestory/update/:id'
+    redirectClose: np/contents/subinitiativestory
+update:
+    redirect: np/contents/subinitiativestory
+    redirectClose: np/contents/subinitiativestory

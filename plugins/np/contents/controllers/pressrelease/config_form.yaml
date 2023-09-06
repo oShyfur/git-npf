@@ -1,0 +1,10 @@
+name: PressRelease
+form: $/np/contents/models/pressrelease/fields.yaml
+modelClass: Np\Contents\Models\PressRelease
+defaultRedirect: np/contents/pressrelease
+create:
+    redirect: 'np/contents/pressrelease/update/:id'
+    redirectClose: np/contents/pressrelease
+update:
+    redirect: np/contents/pressrelease
+    redirectClose: np/contents/pressrelease

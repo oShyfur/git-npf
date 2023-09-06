@@ -1,0 +1,10 @@
+name: DigitalfairEservice
+form: $/np/contents/models/digitalfaireservice/fields.yaml
+modelClass: Np\Contents\Models\DigitalfairEservice
+defaultRedirect: np/contents/digitalfaireservice
+create:
+    redirect: 'np/contents/digitalfaireservice/update/:id'
+    redirectClose: np/contents/digitalfaireservice
+update:
+    redirect: np/contents/digitalfaireservice
+    redirectClose: np/contents/digitalfaireservice

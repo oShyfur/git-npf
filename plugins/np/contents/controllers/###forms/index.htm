@@ -1,0 +1,26 @@
+<div class="row">
+
+    <div class="col-md-6 mx-auto">
+
+        <table class="table">
+
+            <tr>
+                <th>Name</th>
+                <th>Submissions</th>
+            </tr>
+            <?php foreach($data as $item):?>
+            <tr>
+                <td> <a href="<?= Backend::url('np/contents/SiteFeedback/').'?code='.$item['code']?>">
+                        <?= $item['name']?></a></td>
+                <td><?= $item['submissions']? $item['submissions']->submission_count:0 ?></td>
+            </tr>
+            <?php endforeach;?>
+
+
+        </table>
+
+
+    </div>
+
+
+</div>

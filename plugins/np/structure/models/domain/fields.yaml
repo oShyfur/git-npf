@@ -1,0 +1,37 @@
+fields:
+    fqdn:
+        label: FQDN
+        span: auto
+        required: 1
+        type: text
+    is_secure:
+        label: 'Https?'
+        span: auto
+        type: switch
+    is_redirect:
+        label: 'Is Redirected ?'
+        span: full
+        type: switch
+    redirect_url:
+        label: 'Redirect Url'
+        span: full
+        dependsOn: {  }
+        trigger:
+            action: show
+            field: is_redirect
+            condition: checked
+        type: text
+    site:
+        label: Site
+        span: full
+        nameFrom: name
+        descriptionFrom: description
+        context:
+            - create
+            - update
+        type: relation
+    status:
+        label: Active
+        span: auto
+        default: 1
+        type: switch

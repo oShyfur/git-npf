@@ -1,0 +1,11 @@
+name: InnovationContent
+modelClass: Np\Contents\Models\InnovationContent
+form: $/np/contents/models/innovationcontent/fields.yaml
+defaultRedirect: np/contents/innovationcontent
+create:
+    redirect: 'np/contents/innovationcontent/update/:id'
+    redirectClose: np/contents/innovationcontent
+update:
+    redirect: np/contents/innovationcontent
+    redirectClose: np/contents/innovationcontent
+preview: {  }

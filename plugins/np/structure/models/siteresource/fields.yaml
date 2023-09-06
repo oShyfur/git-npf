@@ -1,0 +1,39 @@
+fields:
+    site:
+        label: Site
+        nameFrom: name
+        descriptionFrom: description
+        emptyOption: 'Select Site'
+        span: auto
+        required: 1
+        type: relation
+        context:
+            - create
+            - update
+tabs:
+    fields:
+        content_types:
+            label: 'Content Types'
+            span: full
+            type: checkboxlist
+            tab: 'Content Types'
+        taxonomies:
+            label: 'Taxonomy Type'
+            span: full
+            type: checkboxlist
+            tab: 'Taxonomy Type'
+        blocks:
+            label: Blocks
+            span: full
+            type: checkboxlist
+            tab: Blocks
+        views:
+            label: Views
+            span: full
+            type: checkboxlist
+            tab: Views
+        forms:
+            label: Forms
+            span: full
+            type: checkboxlist
+            tab: Forms

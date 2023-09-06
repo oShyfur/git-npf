@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css" crossorigin="anonymous">
+
+<div class="file-upload-modal-image-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <img src="<?= $file->thumbUrl ?>" class="img-responsive center-block " id="usecaption_image" alt=""
+        title="<?= e(trans('backend::lang.fileupload.attachment')) ?>: <?= e($file->file_name) ?>"
+        style="<?= $cssDimensions ?>" />
+</div>
+<div id="dimension">
+    <input type="hidden" name="x" value="">
+    <input type="hidden" name="y" value="">
+    <input type="hidden" name="width" value="">
+    <input type="hidden" name="height" value="">
+    <p>Dimension : <span class="cropping_dimension"></span></p>
+</div>
+
+<script>
+
+    var initInterval = setInterval(function () {
+        if (window.jQuery) {
+            clearInterval(initInterval);
+            init(); // where init is the entry point for your code execution
+        }
+    }, 500);
+
+
+    function init() {
+
+        const cropper = new Cropper(document.getElementById('usecaption_image'), {
+            //aspectRatio: 16 / 9,
+            crop: function (e) {
+                // Output the result data for cropping image.
+                var dimension = e.detail;
+                var dimensionHtml = parseInt(dimension.width) + 'x' + parseInt(dimension.height);
+                $(".cropping_dimension").html(dimensionHtml);
+                $("#dimension input[name='x']").val(dimension.x);
+                $("#dimension input[name='y']").val(dimension.y);
+                $("#dimension input[name='width']").val(dimension.width);
+                $("#dimension input[name='height']").val(dimension.height);
+            }
+        });
+
+    }
+
+
+</script>
+<script src="https://unpkg.com/cropperjs@1.5.12/dist/cropper.js"></script>
+<script src="https://fengyuanchen.github.io/jquery-cropper/js/jquery-cropper.js"></script>

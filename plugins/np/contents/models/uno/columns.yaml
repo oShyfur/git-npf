@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: 'np.contents::lang.name'
+        type: text
+        searchable: true
+        sortable: true
+        width: 20%
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true

@@ -1,0 +1,34 @@
+users:
+    label: Site User
+    view:
+        list: ~/modules/backend/models/user/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: ~/plugins/np/structure/models/user/fields.yaml
+        showSearch: true
+        recordsPerPage: 10
+        context: relation
+        
+site_resource:
+    label: Site Resource
+    view:
+        list: ~/plugins/np/structure/models/siteresource/columns.yaml
+        form: ~/plugins/np/structure/models/siteresource/fields.yaml
+    manage:
+        form: ~/plugins/np/structure/models/siteresource/fields.yaml
+        showSearch: true
+        context: relation
+
+tags:
+    label: Site Tag
+    list: ~/plugins/np/structure/models/tag/columns.yaml
+    form: ~/plugins/np/structure/models/tag/fields.yaml
+    manage:
+domains:
+    label: Domain
+    list: ~/plugins/np/structure/models/domain/columns.yaml
+    form: ~/plugins/np/structure/models/domain/fields.yaml
+    manage:
+        context: relation
+        showSearch: true
+        recordsPerPage: 10

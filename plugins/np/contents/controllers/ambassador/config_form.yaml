@@ -1,0 +1,10 @@
+name: Ambassador
+form: $/np/contents/models/ambassador/fields.yaml
+modelClass: Np\Contents\Models\Ambassador
+defaultRedirect: np/contents/ambassador
+create:
+    redirect: 'np/contents/ambassador/update/:id'
+    redirectClose: np/contents/ambassador
+update:
+    redirect: np/contents/ambassador
+    redirectClose: np/contents/ambassador

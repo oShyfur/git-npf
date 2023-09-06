@@ -1,0 +1,149 @@
+<?= Form::open(array('class' => 'login-form-submit')) ?>
+<input type="hidden" name="postback" value="1"/>
+<input type="hidden" id="signin_secure_type" value="captcha"/>
+<div class="form-elements">
+    <div class="form-group text-field horizontal-form october">
+        <!--Sign In Section Start-->
+        <div class="otp_send_after_hide">
+            <div class="text-danger server_error_message"></div>
+            <div class="mb-3">
+                <label for="user-name" class="col-form-label col-form-label-sm fz-0 text-muted">
+                    <span><i class="fas fa-user"></i></span>
+                    <span>ইউজার আইডি</span>
+                </label>
+                <input type="text" name="login" value="<?= e(post('login')) ?>"
+                       class="form-control shadow-none rounded-0"
+                       placeholder="আপনার উইউজার নামটি লিখুন..." autocomplete="off" maxlength="255" id="user-name">
+                <div class="text-danger email_error"></div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="col-form-label col-form-label-sm fz-0 text-muted">
+                    <span><i class="fas fa-lock"></i></span>
+                    <span>পাসওয়ার্ড</span>
+                </label>
+                <input type="password" name="password" value="" class="form-control shadow-none rounded-0"
+                       placeholder="আপনার পাসওয়ার্ডটি লিখুন..." autocomplete="off"
+                       maxlength="255" id="password">
+                <div class="text-danger password_error"></div>
+            </div>
+            <div class="mb-3 text-end">
+                <a href="<?= Backend::url('backend/auth/restore') ?>" class="text-muted">
+                    *পাসওয়ার্ড রিসেট করুন
+                </a>
+            </div>
+            <div class="mb-3 align-items-center captcha-section">
+                <div class="card card-body p-0 col-12 position-relative mb-2">
+                    <img src="/plugins/np/contents/assets/loginImages/captcha-demo.png" class="w-100" alt="">
+                    <div class="position-absolute top-50 start-50 translate-middle text-light w-100 text-center"
+                         style="z-index: 1000">
+                        <h3 class="otp-question"></h3>
+                    </div>
+                </div>
+                <div class="card card-body p-0 border-0 col-12">
+                    <label for="otp-ans"></label>
+                    <input id="otp-ans" type="text" autocomplete="off"
+                           style="text-align: center;font-size: small;height:30px;" placeholder="ফলাফল টি এখানে লিখুন">
+                </div>
+            </div>
+            <div class="mb-3 text-center">
+                <div class="otp-validation-message" style="margin-top: 10px;margin-bottom: 10px;">যাচাই করুন</div>
+                <button type="button" class="otp-send-button">লগইন</button>
+                <button type="reset" class="signin-reset" value="reset"
+                        style="font-family: 'Open Sans',serif;font-weight: lighter;font-size: 15px;">রিসেট
+                    <i class="fas fa-retweet"></i>
+                </button>
+            </div>
+        </div>
+        <!--Sign In Section End-->
+        <!--OTP Section Start-->
+        <div class="otp_send_after_show" style="display: none">
+            <p style="color: #5a6268;font-size: 14px">
+                আপনার অ্যাকাউন্ট যাচাই করতে অনুগ্রহ করে OTP (one time password) লিখুন। একটি কোড
+                <span class="otp_send_address"></span> এ পাঠানো হয়েছে
+            </p>
+            <div class="text-danger phone_otp_error"></div>
+            <div class="mb-3 otp-field-class">
+                <label for="otp" class="col-form-label col-form-label-sm fz-0 text-muted">
+                    <span><i class="fas fa-lock"></i></span>
+                    <span>6 সংখ্যার কোড লিখুন</span>
+                </label>
+                <input type="number" name="otp" value="" class="form-control shadow-none rounded-0 otp_input_box"
+                       placeholder="আপনার OTP লিখুন" autocomplete="off" maxlength="255" id="otp">
+                <div class="text-danger otp_error"></div>
+                <small id="otp_countdown_text" class="form-text text-muted">
+                    কোডের মেয়াদ শেষ হবে: <span class="otp_countdown"></span>
+                </small>
+                <small id="otp_expired_text" class="form-text text-muted" style="display: none">
+                    কোডের মেয়াদ শেষ: <a href="#" class="otp-send-button email-otp-resend">আবার পাঠান</a>
+                    <a href="#" class="mobile_submit_button mobile-otp-resend" style="display: none">আবার পাঠান</a>
+                </small>
+                <div class="text-danger" id="otp_error"></div>
+            </div>
+            <div class="mb-3">
+                <button type="submit" id="login_submit_button" value="submit"
+                        style="font-family: 'Open Sans',serif;font-weight: lighter;font-size: 15px;float:left">যাচাই
+                    করুন
+                    <i class="fas fa-sign-in-alt"></i></button>
+                <a href="#" class="mobile_submit_button email-otp-resend"
+                   style="font-size: 14px;float: right;margin-top: 3px;"><u>ফোন নম্বর দিয়ে
+                    চেষ্টা করুন?</u></a>
+                <a href="#" class="otp-send-button mobile-otp-resend"
+                   style="font-size: 14px;float: right;margin-top: 3px;display: none"><u>ইমেইল এড্রেস দিয়ে চেষ্টা
+                    করুন?</u></a>
+            </div>
+        </div>
+        <!--OTP Section End-->
+        <!--after mail error Section start-->
+        <div class="otp_send_after_show_error_email" style="display: none">
+            <p style="color: #5a6268;font-size: 14px">
+                ইমেলে OTP পাঠাতে সমস্যা হচ্ছে।
+                <a href="#" class="mobile_submit_button email-otp-resend"><u>অনুগ্রহ করে ফোন নম্বর দিয়ে চেষ্টা করুন</u></a>
+            </p>
+        </div>
+        <!--after mail error Section End-->
+        <div class="text-center mt-5 pt-5 mb-5 pb-5">
+            <a href="https://www.facebook.com/groups/NPFTEAM/?ref=share" class="fz-0" target="_blank"><i
+                class="fab fa-facebook-square"></i> জাতীয় তথ্য বাতায়ন ফেসবুক গ্রুপ</a>
+        </div>
+    </div>
+</div>
+<style>
+    .otp-question {
+        background-size: cover;
+        background: transparent no-repeat;
+        color: #999090;
+        font-size: 60px;
+        display: block;
+        padding: 25px;
+        word-spacing: 15px;
+        border-radius: 7px;
+        font-family: 'Brush Script MT', cursive;
+    }
+
+    button {
+        border: none;
+        border-radius: 1.5em;
+        color: #FFFFFF;
+        background: #00BB69;
+        padding: 3px 10px;
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+        transition: background .5s ease-in-out;
+    }
+
+    button:hover:enabled {
+        background: #007943;
+    }
+
+    button:disabled {
+        opacity: .5;
+        cursor: default;
+    }
+
+    .password_error, .email_error, .otp_error{
+        font-size: 14px;
+        margin-left: 4px;
+    }
+</style>
+<?= Form::close() ?>

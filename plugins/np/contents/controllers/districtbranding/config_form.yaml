@@ -1,0 +1,10 @@
+name: DistrictBranding
+form: $/np/contents/models/districtbranding/fields.yaml
+modelClass: Np\Contents\Models\DistrictBranding
+defaultRedirect: np/contents/districtbranding
+create:
+    redirect: 'np/contents/districtbranding/update/:id'
+    redirectClose: np/contents/districtbranding
+update:
+    redirect: np/contents/districtbranding
+    redirectClose: np/contents/districtbranding

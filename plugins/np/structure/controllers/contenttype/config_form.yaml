@@ -1,0 +1,10 @@
+name: ContentType
+form: $/np/structure/models/contenttype/fields.yaml
+modelClass: Np\Structure\Models\ContentType
+defaultRedirect: np/structure/contenttype
+create:
+    redirect: 'np/structure/contenttype/update/:id'
+    redirectClose: np/structure/contenttype
+update:
+    redirect: np/structure/contenttype
+    redirectClose: np/structure/contenttype

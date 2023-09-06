@@ -1,0 +1,111 @@
+fields:
+    className:
+        label: rainlab.builder::lang.model.field_class_name
+        span: left
+
+    baseModel:
+        label: Base Model
+        type: dropdown
+        span: right
+        options:
+            NPContentsBaseModel: NPContentsBaseModel
+            NPBaseModel: NPBaseModel
+
+    databaseTable:
+        label: rainlab.builder::lang.model.field_database_table
+        type: dropdown
+   
+    translatable:
+        label: Translation
+        type: checkbox
+        default: 1
+        span: storm
+        cssClass: col-md-3
+        
+    transColumns:
+        label: Translatable Columns
+        span: storm
+        cssClass: col-md-9
+        comment: "Example: [ 'title', ['slug', 'index' => true]  ]"
+        trigger:
+            action: show
+            field: translatable
+            condition: checked
+    sluggable:
+        label: Sluggable
+        type: checkbox
+        default: 1
+        span: storm
+        cssClass: col-md-3
+        
+    sluggableColumns:
+        label: Sluggable Columns
+        span: storm
+        cssClass: col-md-9
+        comment: "Example: 'title' or ['title','name']"
+        trigger:
+            action: show
+            field: sluggable
+            condition: checked
+ 
+    versionLimit:
+        label: Limit
+        span: storm
+        cssClass: col-md-2
+        default: 5
+        trigger:
+            action: show
+            field: versionable
+            condition: checked
+
+    attachable:
+        label: Attachable
+        type: checkbox
+        default: 1
+        span: storm
+        cssClass: col-md-3
+        
+    attachableColumns:
+        label: Attachable Relation Name
+        span: storm
+        cssClass: col-md-9
+        comment: "Example: ['attachment'=>'*','image'=>'1']"
+        trigger:
+            action: show
+            field: attachable
+            condition: checked
+    jsonable:
+        label: Jsonable
+        type: checkbox
+        default: 1
+        span: storm
+        cssClass: col-md-3
+        
+    jsonableColumns:
+        label: Jsonable Columns
+        span: storm
+        cssClass: col-md-9
+        comment: "Example: ['link1'],['link1','link2']"
+        trigger:
+            action: show
+            field: jsonable
+            condition: checked
+    rules:
+        label: Validation Rules - laravel pipe style rules, one line per field
+        type: textarea
+        size: small
+        comment: "Example: ['title'=>'required','name'=>'required|slug']"
+
+    addTimestamps:
+        label: rainlab.builder::lang.model.field_add_timestamps
+        comment: rainlab.builder::lang.model.field_add_timestamps_description
+        type: checkbox
+        span: left
+        default: 1
+
+    addSoftDeleting:
+        label: rainlab.builder::lang.model.field_add_soft_deleting
+        comment: rainlab.builder::lang.model.field_add_soft_deleting_description
+        type: checkbox
+        span: right
+        default: 1

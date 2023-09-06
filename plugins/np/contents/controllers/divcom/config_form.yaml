@@ -1,0 +1,10 @@
+name: Divcom
+form: $/np/contents/models/divcom/fields.yaml
+modelClass: Np\Contents\Models\Divcom
+defaultRedirect: np/contents/divcom
+create:
+    redirect: 'np/contents/divcom/update/:id'
+    redirectClose: np/contents/divcom
+update:
+    redirect: np/contents/divcom
+    redirectClose: np/contents/divcom

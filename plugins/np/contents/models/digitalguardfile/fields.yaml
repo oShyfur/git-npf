@@ -1,0 +1,56 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    body:
+        label: Body
+        size: large
+        span: full
+        type: richeditor
+    field_digital_guard:
+        label: 'পত্র প্ররকের নাম/ঠিকানা'
+        span: left
+        type: text
+    field_memo_no:
+        label: 'স্মারক নং'
+        span: right
+        required: 1
+        type: text
+    field_digital_guard_file_nid:
+        label: 'ডিজিটাল গার্ড ফাইল'
+        nameFrom: title
+        descriptionFrom: description
+        modelClass: Np\Contents\Models\Files
+        list: $/np/contents/models/files/columns.yaml
+        formyaml: $/np/contents/models/files/fields.yaml
+        useRelation: 0
+        createRecord: 0
+        recordsPerPage: 10
+        span: auto
+        type: recordfinder
+    digital_guard_file:
+        label: 'গার্ড ফাইল টাইপ'
+        taxonomyType: '19'
+        span: auto
+        type: taxonomypicker
+    section_dcoffice:
+        label: 'জেলা প্রশাসনের শাখা'
+        taxonomyType: '3'
+        span: auto
+        type: taxonomypicker
+    section_divcom:
+        label: 'বিভাগীয় প্রশাসনের শাখা'
+        span: auto
+        taxonomyType: '25'
+        type: taxonomypicker
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

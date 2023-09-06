@@ -1,0 +1,10 @@
+name: ContactInfo
+form: $/np/contents/models/contactinfo/fields.yaml
+modelClass: Np\Contents\Models\ContactInfo
+defaultRedirect: np/contents/contactinfo
+create:
+    redirect: 'np/contents/contactinfo/update/:id'
+    redirectClose: np/contents/contactinfo
+update:
+    redirect: np/contents/contactinfo
+    redirectClose: np/contents/contactinfo

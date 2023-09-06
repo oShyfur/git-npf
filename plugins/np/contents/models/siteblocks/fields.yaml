@@ -1,0 +1,51 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        required: 0
+        type: text
+    predefined_template_code:
+        label: Partial
+        emptyOption: '--Select--'
+        showSearch: true
+        span: auto
+        type: dropdown
+    body:
+        label: Body
+        size: huge
+        span: full
+        type: richeditor
+    region:
+        label: Region
+        emptyOption: '-- Select Region--'
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+        dependsOn:
+            - predefined_template_code
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        default: '10'
+        type: number
+    title_color:
+        label: 'Title Color'
+        span: auto
+        type: colorpicker
+        comment: '(Example: #ff0000)'
+    title_bgcolor:
+        label: 'Titile Background'
+        span: auto
+        type: colorpicker
+        comment: '(Example: #ff0000)'
+    show_title:
+        label: 'show  title'
+        span: auto
+        default: 0
+        type: switch
+    status:
+        label: Status
+        span: auto
+        default: 1
+        type: switch

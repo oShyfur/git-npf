@@ -1,0 +1,10 @@
+name: InternalEservices
+modelClass: Np\Contents\Models\InternalEservices
+form: $/np/contents/models/internaleservices/fields.yaml
+defaultRedirect: np/contents/internaleservices
+create:
+    redirect: 'np/contents/internaleservices/update/:id'
+    redirectClose: np/contents/internaleservices
+update:
+    redirect: np/contents/internaleservices
+    redirectClose: np/contents/internaleservices

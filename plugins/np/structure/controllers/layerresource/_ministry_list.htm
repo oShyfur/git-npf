@@ -1,0 +1,26 @@
+<div class="control-tabs secondary-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+
+        <?php foreach($ministries as $ministry):?>
+
+        <li><a href="#secondaryTabTwo" data-request="onSelectMinistry"
+                data-request-data="ministry_id:<?= $ministry->id ?>"><?= $ministry->name_short ?></a></li>
+
+        <?php endforeach;?>
+
+    </ul>
+
+    <hr>
+    <div class="tab-content">
+        <div class="tab-pane active">
+
+
+            <div id="ministryLayerResource">
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

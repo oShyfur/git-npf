@@ -1,0 +1,20 @@
+<form data-request="onMenuSave" data-request-success="resetForm(event)">
+    <input type="hidden" name="Menu[id]" value="<?= isset($formModel->id) ? $formModel->id:'' ?>">
+    <?= $formRender ?>
+
+    <button class="btn btn-primary">
+        Save
+    </button>
+    <button class="btn btn-secondary" class="reset-button" onclick="resetForm(event)">
+        Reset
+    </button>
+</form>
+
+<script>
+
+
+    function resetForm(e) {
+        if(e) e.preventDefault()
+        $.request('onMenuReset') 
+    }
+</script>

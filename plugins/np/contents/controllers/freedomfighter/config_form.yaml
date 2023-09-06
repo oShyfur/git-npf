@@ -1,0 +1,10 @@
+name: FreedomFighter
+form: $/np/contents/models/freedomfighter/fields.yaml
+modelClass: Np\Contents\Models\FreedomFighter
+defaultRedirect: np/contents/freedomfighter
+create:
+    redirect: 'np/contents/freedomfighter/update/:id'
+    redirectClose: np/contents/freedomfighter
+update:
+    redirect: np/contents/freedomfighter
+    redirectClose: np/contents/freedomfighter

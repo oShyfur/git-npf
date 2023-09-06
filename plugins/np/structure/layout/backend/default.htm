@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="<?= App::getLocale() ?>" class="no-js <?= $this->makeLayoutPartial('browser_detector') ?>">
+
+<head>
+    <?= $this->makeLayoutPartial('head') ?>
+    <?= $this->fireViewEvent('backend.layout.extendHead', ['layout' => 'default.htm']) ?>
+</head>
+
+<body class="<?= $this->bodyClass ?>">
+    <div id="layout-canvas">
+        <div class="layout">
+
+            <!-- Main Menu -->
+            <div class="layout-row min-size">
+                <?php if($this->user->adminLevelUser()):?>
+                <?= $this->makeLayoutPartial('mainmenu') ?>
+                <?php else:?>
+                <?= $this->makeLayoutPartial('sitemenu') ?>
+                <?php endif?>
+
+            </div>
+
+            <?php $flyoutContent = Block::placeholder('sidepanel-flyout') ?>
+
+            <div class="layout-row">
+                <div class="layout flyout-container" <?php if ($flyoutContent): ?> data-control="flyout"
+                    data-flyout-width="400" data-flyout-toggle="#layout-sidenav" <?php endif ?>>
+                    <?php if ($flyoutContent): ?>
+                    <div class="layout-cell flyout"> <?= $flyoutContent ?></div>
+                    <?php endif ?>
+
+                    <!-- Side Navigation -->
+                    <?= $this->makeLayoutPartial('sidenav') ?>
+
+                    <!-- Side panel -->
+                    <?php if ($sidePanelContent = Block::placeholder('sidepanel')): ?>
+                    <div class="layout-cell w-350 hide-on-small" id="layout-side-panel" data-control="layout-sidepanel">
+                        <?= $sidePanelContent ?>
+                    </div>
+                    <?php endif ?>
+
+                    <!-- Content Body -->
+                    <div class="layout-cell layout-container" id="layout-body">
+                        <div class="layout-relative add-layout-relative">
+
+                            <div class="layout">
+                                <?php if ($breadcrumbContent = Block::placeholder('breadcrumb')): ?>
+                                <!-- Breadcrumb -->
+                                <div class="control-breadcrumb">
+                                    <?= $breadcrumbContent ?>
+                                </div>
+                                <?php endif ?>
+
+                                <!-- Content -->
+                                <div class="layout-row">
+                                    <?= Block::placeholder('body') ?>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Flash Messages -->
+    <div id="layout-flash-messages"><?= $this->makeLayoutPartial('flash_messages') ?></div>
+
+    <!-- Support Social Widget Links Start -->
+    <div id="batworld"></div>
+    <script>
+        window.ba_sw_id = 'd0f7e42a-0faa-472c-aacd-83cef5168928';
+        var s1 = document.createElement('script');
+        s1.setAttribute('src', 'https://feedback.oss.net.bd/src/0.1.3/social_widget_link.js');
+        document.body.appendChild(s1);
+    </script>
+    <!-- Support Social Widget Links End -->
+    <!-- Global site tag (gtag.js) - Google Analytics Start -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XL3REV1DHW"></script>
+    <script>
+    	window.dataLayer = window.dataLayer || [];
+    	function gtag(){dataLayer.push(arguments);}
+    	gtag('js', new Date());
+
+    	gtag('config', 'G-XL3REV1DHW');
+    	gtag('event', '<?php echo $_SERVER["HTTP_HOST"]; ?> (Backend)', {
+    		'event_category' : 'Backend'
+    	});
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics End -->
+
+
+</body>
+
+<style>
+/*.add-layout-relative{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:630px !important;
+    padding-top: 20px;
+}*/
+</style>
+</html>

@@ -1,0 +1,10 @@
+name: DcofficeSection
+form: $/np/contents/models/dcofficesection/fields.yaml
+modelClass: Np\Contents\Models\DcofficeSection
+defaultRedirect: np/contents/dcofficesection
+create:
+    redirect: 'np/contents/dcofficesection/update/:id'
+    redirectClose: np/contents/dcofficesection
+update:
+    redirect: np/contents/dcofficesection
+    redirectClose: np/contents/dcofficesection

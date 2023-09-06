@@ -1,0 +1,105 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    field_hospitalclinic_estd:
+        label: 'প্রতিষ্ঠার তারিখ'
+        mode: date
+        span: auto
+        type: datepicker
+    field_hospitalclinic_type:
+        label: ধরণ
+        taxonomyType: '31'
+        span: auto
+        required: 1
+        type: taxonomypicker
+    field_hospitalclinic_ave_patient:
+        label: 'বাৎসরিক রোগীর সংখ্যা'
+        span: auto
+        type: text
+    images:
+        label: 'হাসপাতালের ছবি'
+        mode: image
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    field_hospitalclinic_address:
+        label: 'হাসপাতাল/ক্লিনিকের ঠিকানা'
+        size: large
+        span: full
+        type: richeditor
+    field_hospitalclinic_doctor_nid:
+        label: 'ডাক্তারদের তালিকা'
+        prompt: 'Add New Officer'
+        span: full
+        type: repeater
+        form:
+            fields:
+                officer_list:
+                    label: 'কর্মকর্তা প্রোফাইল'
+                    nameFrom: title
+                    descriptionFrom: description
+                    modelClass: Np\Contents\Models\OfficerList
+                    list: $/np/contents/models/officerlist/columns.yaml
+                    formyaml: $/np/contents/models/officerlist/fields.yaml
+                    useRelation: 0
+                    createRecord: 0
+                    recordsPerPage: 10
+                    span: full
+                    type: recordfinder
+    field_hospitalclinic_serv_list:
+        label: 'সেবার তালিকা'
+        size: large
+        span: full
+        type: richeditor
+    field_contact_person_name:
+        label: 'তথ্য প্রদানকারী ব্যক্তির নাম'
+        span: auto
+        type: text
+    field_contact_person_designation:
+        label: 'তথ্য প্রদানকারী ব্যক্তির পদবি'
+        span: auto
+        type: text
+    field_contact_person_phone:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ফোন'
+        span: auto
+        type: text
+    field_contact_person_mobile:
+        label: 'তথ্য প্রদানকারী ব্যক্তির মোবাইল'
+        span: auto
+        type: text
+    image:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ছবি'
+        mode: image
+        imageWidth: '280'
+        imageHeight: '320'
+        fileTypes: 'jpg,png,jpeg,heic'
+        mimeTypes: 'jpg,png,jpeg,heic'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        comment: 'jpg,png,jpeg Image Only, Maximum Image Size 4MB'
+    field_contact_person_email:
+        label: 'তথ্য প্রদানকারী ব্যক্তির ইমেইল'
+        span: auto
+        type: text
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

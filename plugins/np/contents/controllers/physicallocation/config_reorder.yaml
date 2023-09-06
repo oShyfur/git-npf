@@ -1,0 +1,4 @@
+title: PhysicalLocation
+modelClass: Np\Contents\Models\PhysicalLocation
+toolbar:
+    buttons: reorder_toolbar

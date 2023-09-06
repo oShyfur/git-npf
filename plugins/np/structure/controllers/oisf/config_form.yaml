@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Oisf
+
+# Model Form Field configuration
+form: $/np/structure/models/oisf/fields.yaml
+
+# Model Class name
+modelClass: Np\Structure\Models\Oisf
+
+# Default redirect location
+defaultRedirect: np/structure/oisf
+
+# Create page
+create:
+    title: Create Oisf
+    redirect: np/structure/oisf/update/:id
+    redirectClose: np/structure/oisf
+
+# Update page
+update:
+    title: Edit Oisf
+    redirect: np/structure/oisf
+    redirectClose: np/structure/oisf
+
+# Preview page
+preview:
+    title: Preview Oisf

@@ -1,0 +1,18 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+    host:
+        label: Host
+        type: text
+        searchable: true
+    username:
+        label: Username
+        type: text
+    password:
+        label: Password
+        type: text
+    status:
+        label: Status
+        type: switch

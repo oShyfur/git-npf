@@ -1,0 +1,33 @@
+columns:
+    title:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+        width: 20%
+    type_taxonomy[name]:
+        label: Type
+        sortable: true
+    designation:
+        label: Designation
+        type: text
+        searchable: true
+        sortable: true
+        width: 20%
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true
+    sort_order:
+        label: 'Sort Order'
+        type: number
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    publish:
+        label: Publish
+        type: switch
+        sortable: true
+    

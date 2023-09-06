@@ -1,0 +1,10 @@
+name: SubInitiativePublication
+form: $/np/contents/models/subinitiativepublication/fields.yaml
+modelClass: Np\Contents\Models\SubInitiativePublication
+defaultRedirect: np/contents/subinitiativepublication
+create:
+    redirect: 'np/contents/subinitiativepublication/update/:id'
+    redirectClose: np/contents/subinitiativepublication
+update:
+    redirect: np/contents/subinitiativepublication
+    redirectClose: np/contents/subinitiativepublication

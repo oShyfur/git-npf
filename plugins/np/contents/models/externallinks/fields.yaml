@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: নাম
+        span: full
+        required: 1
+        type: text
+    link:
+        label: Link
+        span: auto
+        required: 1
+        type: linkpicker
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        required: 1
+        type: number
+    # is_right_side_bar:
+    #     label: 'Turn off Right Side Bar'
+    #     span: auto
+    #     type: checkbox
+    publish:
+        label: Publish
+        span: auto
+        default: 1
+        type: switch

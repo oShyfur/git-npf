@@ -1,0 +1,10 @@
+name: ReligiousInstitutes
+form: $/np/contents/models/religiousinstitutes/fields.yaml
+modelClass: Np\Contents\Models\ReligiousInstitutes
+defaultRedirect: np/contents/religiousinstitutes
+create:
+    redirect: 'np/contents/religiousinstitutes/update/:id'
+    redirectClose: np/contents/religiousinstitutes
+update:
+    redirect: np/contents/religiousinstitutes
+    redirectClose: np/contents/religiousinstitutes
