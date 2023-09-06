@@ -1,0 +1,11 @@
+U: rootu2
+P: rootu2
+H: localhost
+
+
+php -S 172.19.224.1:8080
+php -S 127.0.0.1:8088 -t public
+
+config set requirepass testPass
+AUTH testPass
+ping

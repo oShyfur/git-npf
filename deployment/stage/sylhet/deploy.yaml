@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: np-frontend
+  namespace: prod-national-portal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: np-frontend
+  template:
+    metadata:
+      annotations:
+        kubernetes.io/change-cause: $DOCKER_TAG
+      labels:
+        app: np-frontend
+    spec:
+      imagePullSecrets:
+      - name: docker-reg.portal.gov.bd    
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: $CONFIG_MAP
+        - secretRef:
+            name: $SECRET_REF
+        image: $DOCKER_TAG
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 7
+          httpGet:
+            path: /serverStatus
+            port: npf-fr-my-port
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 10
+        name: np-frontend
+        ports:
+        - containerPort: 80
+          name: npf-fr-sh-port
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /serverStatus
+            port: npf-fr-sh-port
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 10
+        resources:
+          limits:
+            cpu: 800m
+            memory: 2560Mi
+          requests:
+            cpu: 200m
+            memory: 500Mi

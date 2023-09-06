@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: np-frontend
+  namespace: rajshahi
+spec:
+  ports:
+  - nodePort: 30400
+    name: npf-fr-raj-port
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: np-frontend
+  type: NodePort

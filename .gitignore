@@ -1,0 +1,13 @@
+.idea
+
+/.idea
+Homestead.json
+Homestead.yaml
+.phpunit.result.cache
+default.conf
+Dockerfile
+/con_run
+con_run/
+.env
+.env.*.php
+.env.php

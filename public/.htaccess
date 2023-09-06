@@ -1,0 +1,91 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+
+#redirects
+
+#LOGIN Page Redirection
+#RedirectMatch 301 /user //login.portal.gov.bd/
+#RedirectMatch 301 /user http://login.portal.gov.bd/
+#RedirectMatch 301 /npfadmin http://login.portal.gov.bd/
+#RedirectMatch 301 /npfadmin/public http://login.portal.gov.bd/
+#RedirectMatch 301 /npfadmin/public/session/forgotPassword http://login.portal.gov.bd/
+
+#RedirectMatch 301 /user http://login.sylhet.gov.bd/
+#RedirectMatch 301 /npfadmin/?$ http://login.sylhet.gov.bd/
+#RedirectMatch 301 /npfadmin/public/?$ http://login.sylhet.gov.bd/
+#RedirectMatch 301 /npfadmin/public/session/forgotPassword/?$ http://login.sylhet.gov.bd/
+
+RedirectMatch 301 /site/view/district_branding_home /bn/site/view/district_branding
+#RedirectMatch 301 /site/view/officers /bn/site/view/officer_list
+RedirectMatch 301 /site/view/officers/?$ /bn/site/view/officer_list
+RedirectMatch 301 /site/view/staff /bn/site/view/StaffList
+RedirectMatch 301 /site/view/innovation_corner /bn/site/view/InnovationContent
+RedirectMatch 301 /site/view/adcorner /bn/site/view/RevenueModelAdvertisement
+RedirectMatch 301 /site/view/tendercorner /bn/site/view/RevenueModelTender
+RedirectMatch 301 /site/view/jobcorner /bn/site/view/RevenueModelJob
+RedirectMatch 301 /site/view/info_officers /bn/site/view/info_officer
+RedirectMatch 301 /site/view/staff_divcom /bn/site/view/StaffList
+RedirectMatch 301 /site/view/staff_upazila /bn/site/view/StaffList
+RedirectMatch 301 /site/view/offices /bn/site/view/FieldOffice
+RedirectMatch 301 /site/view/meetings /bn/site/view/meeting
+RedirectMatch 301 /site/view/divcom_sections /bn/site/view/DivcomSection
+RedirectMatch 301 /site/view/sections /bn/site/view/DcofficeSection
+RedirectMatch 301 /site/view/divcom_officers /bn/site/view/officer_list
+#RedirectMatch 301 /site/view/divcom_meeting /bn/site/view/meeting
+
+#Financial institutes
+RedirectMatch 301 /site/view/financial_institution /bn/site/view/financial_institutes
+
+#Religious institutes
+#RedirectMatch 301 /site/view/madrasa /bn/site/view/religious_institutes_count
+#RedirectMatch 301 /site/view/religious_institutes /bn/site/view/religious_institutes_count
+RedirectMatch 301 /site/view/madrasa /bn/site/view/religious_institutes
+
+#Educational institutes
+RedirectMatch 301 /site/view/medical_college /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/others /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/university /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/technical /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/vocational /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/college /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/high_school /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/junior_school /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/primary_school /bn/site/view/EducationInstitutes
+RedirectMatch 301 /site/view/education-institutes /bn/site/view/EducationInstitutes
+
+RedirectMatch 301 /site/view/staff_dc /bn/site/view/staff_list
+RedirectMatch 301 /site/view/dc_meetings /bn/site/view/meeting
+RedirectMatch 301 /site/view/dc_officers /bn/site/view/officer_list
+RedirectMatch 301 /site/view/divcom_officers /bn/site/view/officer_list
+#RedirectMatch 301 /site/view/forms /bn/site/view/DcSectionWiseForm
+RedirectMatch 301 /site/view/dc_section_forms /bn/site/view/DcSectionWiseForm
+RedirectMatch 301 /site/view/internal_e_services /bn/site/view/InternalEservices
+RedirectMatch 301 /site/view/newspapers /bn/site/view/newspaper
+RedirectMatch 301 /site/view/hat_bazar_list /bn/site/view/Hatbazar
+RedirectMatch 301 /site/view/hotel /bn/site/view/HotelMotelGuesthouse
+RedirectMatch 301 /site/view/leader /bn/site/view/Leaders
+RedirectMatch 301 /site/view/dcsections /bn/site/view/DcofficeSection
+RedirectMatch 301 /site/view/process_map /bn/site/view/office_process_map
+RedirectMatch 301 /site/view/divcom_sections /bn/site/view/divcom_section
+
+RedirectMatch 301 /site/view/photogallery /bn/site/view/photo_gallery

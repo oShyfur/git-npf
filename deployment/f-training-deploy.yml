@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: np-frontend
+  namespace: $NAMESPACE
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 4
+  selector:
+    matchLabels:
+      app: np-frontend
+  template:
+    metadata:
+      annotations:
+        kubernetes.io/change-cause: $DOCKER_TAG
+      creationTimestamp: null
+      labels:
+        app: np-frontend
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: group
+                operator: In
+                values:
+                - $VALUES
+      tolerations:
+        - key: group
+          operator: Equal
+          value: $VALUE
+          effect: NoSchedule    
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: $CONFIG_MAP
+        - secretRef:
+            name: $SECRET_REF
+        image: $DOCKER_TAG
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 7
+          httpGet:
+            path: /serverStatus
+            port: np-cport
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 10
+        name: np-frontend
+        ports:
+        - containerPort: 80
+          name: np-cport
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /serverStatus
+            port: np-cport
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 10
+        resources:
+          limits:
+            cpu: 800m
+            memory: 2560Mi
+          requests:
+            cpu: 200m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: docker-reg.portal.gov.bd
+      restartPolicy: Always

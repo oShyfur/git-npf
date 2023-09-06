@@ -1,0 +1,16 @@
+{
+    "name": "National Portal",
+    "short_name": "NP",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2A3443",
+    "description": "National Portal ecosystem for all governemnt agencies of Bangladesh",
+    "theme_color": "#2A3443",
+    "icons": [
+        {
+            "src": "./pwa.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

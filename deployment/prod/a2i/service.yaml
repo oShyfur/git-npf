@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a2i-frontend
+  namespace: a2i
+spec:
+  ports:
+  - nodePort: 30900
+    name: fr-a2i-port
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: a2i-frontend
+  type: NodePort

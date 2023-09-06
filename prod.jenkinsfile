@@ -1,0 +1,224 @@
+pipeline {
+    agent any
+    environment {
+        REGISTRY="docker-reg.portal.gov.bd"
+        dockerRegistryCredential='docker-reg.portal.gov.bd'
+        dockerImage = ''
+        DOCKER_REGISTRY_URL="https://$REGISTRY"
+        CONFIG_MAP="np-frontend-configmap"
+	    SECRET_REF="np-frontend-secret"
+        DEPLOYMENT_ENV="prod"
+        IMAGE_CREATED_BY="jenkins"
+        PROJECT_NAME="np-frontend"
+ 
+        GIT_TAG=sh(returnStdout: true, script: '''        
+            echo $(git describe --tags)
+        ''').trim()
+
+
+        PROJECT_LOCATION="$JENKINS_DATA_LOCATION/workspace/$JOB_NAME"
+        IMAGE_VERSION="$BUILD_NUMBER-$IMAGE_CREATED_BY-$GIT_TAG"
+        DOCKER_TAG="$REGISTRY/$PROJECT_NAME:$IMAGE_VERSION"
+  //    DOCKER_TAG="docker-reg.portal.gov.bd/npf_backennd:1.60"
+        DEPLOYMENT_DIRECTORY="./deployment/$DEPLOYMENT_ENV" 
+
+        //k8s cluster specific configuration
+        K8S_SERVICE_NAME="np-frontend"
+        K8S_CHANGE_CAUSE="$IMAGE_VERSION"
+		
+        DEPLOYMENT_TIMEOUT="120s"
+
+	    }
+
+    stages {
+
+        stage('Init') {
+            steps {
+                sh '''
+                COMMIT_ID=$(git log -1|head -1|awk -F ' ' ' {print $NF}')
+                echo "........result of commit .... $COMMIT_ID"
+                '''
+            }
+        }
+        stage('Check for tag') {
+                steps {
+                    sh '''        
+                    if [ -z "$GIT_TAG" ] #empty check
+                    then
+                        echo ERROR: Tag not found
+                        exit 1 # terminate and indicate error                 
+                    fi
+                    echo "git checking out to $GIT_TAG tag"
+                    git checkout $GIT_TAG
+                    '''    
+                }
+        }
+      
+        stage('Building Docker image') { 
+            steps { 
+                script { 
+                    dockerImage = docker.build("$DOCKER_TAG", "-f ./frontend.Dockerfile .")
+                }
+                sh '''
+                docker images|grep $PROJECT_NAME
+                '''
+            } 
+        }
+
+        stage('Push docker image') {
+            steps{
+                script {
+                    docker.withRegistry( "$DOCKER_REGISTRY_URL", dockerRegistryCredential ) {
+                        dockerImage.push()
+                        sh "docker images|grep $PROJECT_NAME"
+                    }
+                    
+                }
+            }
+        }
+     
+
+
+        stage('Deleted image After upload to Registry') {
+            steps {
+                echo "Cleaning local docker registry $DOCKER_TAG image"
+                sh 'docker rmi $DOCKER_TAG'
+            }
+        }
+ 
+ 
+        stage('K8S Deployment-dhaka') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/dhaka/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/dhaka/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n dhaka deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                envsubst < $DEPLOYMENT_DIRECTORY/dhaka/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/dhaka/service.yaml | kubectl apply -f -                
+                '''
+            }
+        }
+
+        stage('K8S Deployment-mymensingh') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/mymensingh/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/mymensingh/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n mymensingh deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                
+                '''
+            }
+        }
+        stage('Deploy service-mymensingh') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/mymensingh/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/mymensingh/service.yaml | kubectl apply -f -
+                '''
+            }
+        }
+        stage('K8S Deployment-sylhet') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/sylhet/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/sylhet/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n sylhet deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                
+                '''
+            }
+        }
+        stage('Deploy service-sylhet') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/sylhet/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/sylhet/service.yaml | kubectl apply -f -
+                '''
+            }
+        }
+        stage('K8S Deployment-barisal') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/barisal/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/barisal/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n barisal deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                
+                '''
+            }
+        }
+        stage('Deploy service-barisal') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/barisal/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/barisal/service.yaml | kubectl apply -f -
+                '''
+            }
+        }
+        stage('K8S Deployment-rajshahi') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/rajshahi/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/rajshahi/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n rajshahi deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                
+                '''
+            }
+        }
+        stage('Deploy service-rajshahi') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/rajshahi/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/rajshahi/service.yaml | kubectl apply -f -
+                '''
+            }
+        } 
+        stage('K8S Deployment-Chittagong') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/chittagong/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/chittagong/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n chittagong deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                envsubst < $DEPLOYMENT_DIRECTORY/chittagong/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/chittagong/service.yaml | kubectl apply -f -                
+                '''
+            }
+        }
+        stage('K8S Deployment-Khulna') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/khulna/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/khulna/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n khulna deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                envsubst < $DEPLOYMENT_DIRECTORY/khulna/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/khulna/service.yaml | kubectl apply -f -                
+                '''
+            }
+        }
+        stage('K8S Deployment-Rangpur') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/rangpur/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/rangpur/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n rangpur deployment np-frontend --timeout $DEPLOYMENT_TIMEOUT
+                envsubst < $DEPLOYMENT_DIRECTORY/rangpur/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/rangpur/service.yaml | kubectl apply -f -                
+                '''
+            }
+        } 
+        stage('K8S Deployment-a2i') {
+            steps {
+                sh '''
+                envsubst < $DEPLOYMENT_DIRECTORY/a2i/deploy.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/a2i/deploy.yaml | kubectl apply -f -
+                kubectl rollout status -n a2i deployment a2i-frontend --timeout $DEPLOYMENT_TIMEOUT
+                envsubst < $DEPLOYMENT_DIRECTORY/a2i/service.yaml | xargs -I{} echo {}
+                envsubst < $DEPLOYMENT_DIRECTORY/a2i/service.yaml | kubectl apply -f -                
+                '''
+            }
+        }
+
+
+//-----------------------------------------------------------
+
+
+    }
+}
