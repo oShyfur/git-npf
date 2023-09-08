@@ -9,8 +9,8 @@ RUN apt update && \
     apt install -y apache2 php7.3 php7.3-fpm
 
 # Modify PHP configurations
-RUN sed -i 's/memory_limit = 128M/memory_limit = 2G/g' /etc/php/7.3/apache2/php.ini
-RUN sed -i 's/expose_php = On/expose_php = off/g' /etc/php/7.3/apache2/php.ini
+RUN sed -i 's/memory_limit = 128M/memory_limit = 2G/g' /etc/php/7.3/cli/php.ini
+RUN sed -i 's/expose_php = On/expose_php = off/g' /etc/php/7.3/cli/php.ini
 
 WORKDIR /var/www/app
 RUN rm -rf *
